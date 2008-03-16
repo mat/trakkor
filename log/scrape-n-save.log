@@ -477,3 +477,37 @@ Piece Create (0.000500)  INSERT INTO pieces ("text_raw", "error", "updated_at", 
 <table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
 			</tr></table></td>
 </tr>', NULL, '2008-03-16 20:09:19', 7, '2008-03-16 20:09:19')
+Tracker Load (0.002156)  SELECT * FROM trackers 
+Piece Create (0.001093)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', NULL, '2008-03-16 20:19:31', 1, '2008-03-16 20:19:31')
+Piece Create (0.000645)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-16 20:19:32', 2, '2008-03-16 20:19:32')
+Piece Create (0.000637)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://bethesignal.org/blog/2008/03/17/links-for-2008-03-16/">links for 2008-03-16</a>', NULL, '2008-03-16 20:19:32', 3, '2008-03-16 20:19:32')
+Piece Create (0.000447)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-16 20:19:32', 4, '2008-03-16 20:19:32')
+Piece Create (0.000646)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('54,714', NULL, '2008-03-16 20:19:34', 5, '2008-03-16 20:19:34')
+Piece Create (0.000677)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-16 20:19:34', 6, '2008-03-16 20:19:34')
+Piece Create (0.000662)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-16 20:19:34', 7, '2008-03-16 20:19:34')
+Piece Create (0.000643)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('Harvard Scientists Aim To Stop Cancer In Its Tracks', NULL, '2008-03-16 20:19:36', 8, '2008-03-16 20:19:36')
+Tracker Load (0.002074)  SELECT * FROM trackers 
+Piece Create (0.001011)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', NULL, '2008-03-16 20:21:03', 1, '2008-03-16 20:21:03')
+Piece Create (0.000604)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-16 20:21:04', 2, '2008-03-16 20:21:04')
+Piece Create (0.000687)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://bethesignal.org/blog/2008/03/17/links-for-2008-03-16/">links for 2008-03-16</a>', NULL, '2008-03-16 20:21:05', 3, '2008-03-16 20:21:05')
+Piece Create (0.000611)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-16 20:21:05', 4, '2008-03-16 20:21:05')
+Piece Create (0.000432)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('54,714', NULL, '2008-03-16 20:21:06', 5, '2008-03-16 20:21:06')
+Piece Create (0.000718)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-16 20:21:06', 6, '2008-03-16 20:21:06')
+Piece Create (0.000490)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-16 20:21:07', 7, '2008-03-16 20:21:07')
+Piece Create (0.000465)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "created_at") VALUES('Harvard Scientists Aim To Stop Cancer In Its Tracks', NULL, '2008-03-16 20:21:08', 8, '2008-03-16 20:21:08')

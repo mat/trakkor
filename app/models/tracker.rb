@@ -32,12 +32,12 @@ class Tracker < ActiveRecord::Base
   end
 
   def last_update
-    return 'now update recognized' if pieces_dupefree.empty?
+    #return 'now update recognized' if pieces_dupefree.empty?
     pieces_dupefree.first.created_at
   end
 
   def last_piece
-    return 'now pieces recorded' if pieces.empty?
+    #return 'now pieces recorded' if pieces.empty?
     pieces.first.created_at
   end
 

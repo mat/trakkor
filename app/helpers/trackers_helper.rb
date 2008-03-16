@@ -6,6 +6,7 @@ module TrackersHelper
 
 
   def relative_time(time)
+   return '' if time.nil?
 
     delta = Time.now - time
     case delta
