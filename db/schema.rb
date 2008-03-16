@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "pieces", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tracker_id"
     t.text     "text_raw"
+    t.string   "error"
   end
 
   create_table "trackers", :force => true do |t|

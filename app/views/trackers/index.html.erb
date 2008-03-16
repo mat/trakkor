@@ -6,7 +6,8 @@
 
 <% for tracker in @trackers %>
   <tr>
-    <td><%= link_to 'Show', tracker %></td>
+    <td><%= link_to "#{tracker.uri}", tracker %></td>
+    <td>last update: <%= tracker.last_update %></td>
     <td><%= link_to 'Edit', edit_tracker_path(tracker) %></td>
     <td><%= link_to 'Destroy', tracker, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

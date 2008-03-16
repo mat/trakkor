@@ -18,6 +18,13 @@
          <%= h change.created_at %>
       </abbr>
     </td>
+
+<% unless change.error.nil? %>
+    <td class="error">
+      <i><%= h change.error %></i>
+    </td>
+<% end %>
+
   </tr>
   <tr>
     <td>
