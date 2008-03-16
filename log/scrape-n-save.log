@@ -198,3 +198,40 @@ ScrapeResult Create (0.001343)  INSERT INTO scrape_results ("text_raw", "updated
 ScrapeResult Create (0.000479)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:12:48', 3, '2008-03-16 14:12:48')
 ScrapeResult Create (0.000453)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:12:48', 4, '2008-03-16 14:12:48')
 ScrapeResult Create (0.000715)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:12:49', 5, '2008-03-16 14:12:49')
+Tracker Load (0.001877)  SELECT * FROM trackers 
+ScrapeResult Create (0.000697)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:21:03', 1, '2008-03-16 14:21:03')
+ScrapeResult Create (0.003058)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:21:04', 2, '2008-03-16 14:21:04')
+ScrapeResult Create (0.000438)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:21:04', 3, '2008-03-16 14:21:04')
+ScrapeResult Create (0.000424)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:21:04', 4, '2008-03-16 14:21:04')
+ScrapeResult Create (0.000456)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:21:06', 5, '2008-03-16 14:21:06')
+Tracker Load (0.001664)  SELECT * FROM trackers 
+ScrapeResult Create (0.000757)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:51:03', 1, '2008-03-16 14:51:03')
+ScrapeResult Create (0.000466)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:51:04', 2, '2008-03-16 14:51:04')
+ScrapeResult Create (0.000736)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:51:04', 3, '2008-03-16 14:51:04')
+ScrapeResult Create (0.000472)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:51:04', 4, '2008-03-16 14:51:04')
+ScrapeResult Create (0.000677)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:51:06', 5, '2008-03-16 14:51:06')
+Tracker Load (0.001687)  SELECT * FROM trackers 
+ScrapeResult Create (0.006336)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 15:21:03', 1, '2008-03-16 15:21:03')
+ScrapeResult Create (0.000735)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 15:21:03', 2, '2008-03-16 15:21:03')
+ScrapeResult Create (0.000521)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 15:21:04', 3, '2008-03-16 15:21:04')
+ScrapeResult Create (0.000467)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 15:21:04', 4, '2008-03-16 15:21:04')
+ScrapeResult Create (0.000494)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,710', '2008-03-16 15:21:06', 5, '2008-03-16 15:21:06')
+ScrapeResult Create (0.000519)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', '2008-03-16 15:21:06', 6, '2008-03-16 15:21:06')
+Tracker Load (0.001779)  SELECT * FROM trackers 
+ScrapeResult Create (0.002292)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 15:23:32', 1, '2008-03-16 15:23:32')
+ScrapeResult Create (0.000463)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 15:23:32', 2, '2008-03-16 15:23:32')
+ScrapeResult Create (0.000714)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 15:23:32', 3, '2008-03-16 15:23:32')
+ScrapeResult Create (0.000657)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 15:23:33', 4, '2008-03-16 15:23:33')
+ScrapeResult Create (0.000674)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,710', '2008-03-16 15:23:34', 5, '2008-03-16 15:23:34')
+ScrapeResult Create (0.000471)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', '2008-03-16 15:23:34', 6, '2008-03-16 15:23:34')
+ScrapeResult Create (0.000500)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', '2008-03-16 15:23:34', 7, '2008-03-16 15:23:34')
