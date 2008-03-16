@@ -18503,3 +18503,878 @@ Rendering template within layouts/trackers
 Rendering trackers/show
   [4;35;1mPiece Load (0.011561)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
 Completed in 0.04974 (20 reqs/sec) | Rendering: 0.01954 (39%) | DB: 0.01194 (24%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:31:05) [GET]
+  Session ID: 7c674871d37f03374665d04213995e3a
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000387)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.129083)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.25360 (3 reqs/sec) | Rendering: 0.08378 (33%) | DB: 0.12947 (51%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 19:31:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--89a4cfbdfe3b182cbf5a507ca8298e07efd8df75
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001637)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.013379)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.013612)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.011196)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011913)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004171)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003101)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003111)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.17059 (5 reqs/sec) | Rendering: 0.04439 (26%) | DB: 0.06212 (36%) | 200 OK [http://localhost/trackers/]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:32:38) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000408)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012008)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+Completed in 0.04968 (20 reqs/sec) | Rendering: 0.01463 (29%) | DB: 0.01242 (24%) | 200 OK [http://localhost/trackers/2]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:32:41) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000395)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011482)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05028 (19 reqs/sec) | Rendering: 0.01654 (32%) | DB: 0.01188 (23%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 19:36:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001522)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.014397)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011085)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.011226)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.010634)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004035)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003975)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003860)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.11405 (8 reqs/sec) | Rendering: 0.03801 (33%) | DB: 0.06073 (53%) | 200 OK [http://localhost/trackers/]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 19:36:49) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001629)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.011458)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011249)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.013020)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.013309)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004183)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003123)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003060)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.21542 (4 reqs/sec) | Rendering: 0.13779 (63%) | DB: 0.06103 (28%) | 200 OK [http://localhost/trackers/]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:36:54) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000378)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.017279)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #25 of trackers/show.html.erb:
+22:     <td>
+23:       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
+24:       <abbr class="foo" title="<%= change.created_at.iso8601 %>">
+25:          <%= h relative_time(change.created_at) %>
+26:       </abbr>
+27:     </td>
+28: 
+
+    app/views/trackers/show.html.erb:25:in `relative_time'
+    app/views/trackers/show.html.erb:25:in `_run_erb_47app47views47trackers47show46html46erb'
+    app/views/trackers/show.html.erb:13:in `each'
+    app/views/trackers/show.html.erb:13:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:37:19) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000397)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012872)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05059 (19 reqs/sec) | Rendering: 0.01969 (38%) | DB: 0.01327 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:41:10) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000435)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.013025)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05501 (18 reqs/sec) | Rendering: 0.01781 (32%) | DB: 0.01346 (24%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:43:40) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000372)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.030809)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.06451 (15 reqs/sec) | Rendering: 0.01586 (24%) | DB: 0.03118 (48%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:43:41) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000483)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011588)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04585 (21 reqs/sec) | Rendering: 0.01686 (36%) | DB: 0.01207 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:45:32) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000416)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011629)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+
+
+ActionView::TemplateError (uninitialized constant TrackersHelper::ONE_MINUTE) on line #25 of trackers/show.html.erb:
+22:     <td>
+23:       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
+24:       <abbr class="foo" title="<%= change.created_at.iso8601 %>">
+25:          <%= h relative_time(change.created_at) %>
+26:       </abbr>
+27:     </td>
+28: 
+
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:263:in `load_missing_constant'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:453:in `const_missing'
+    app/helpers/trackers_helper.rb:12:in `relative_time'
+    app/views/trackers/show.html.erb:25:in `_run_erb_47app47views47trackers47show46html46erb'
+    app/views/trackers/show.html.erb:13:in `each'
+    app/views/trackers/show.html.erb:13:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:45:40) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000372)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012131)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.06455 (15 reqs/sec) | Rendering: 0.03448 (53%) | DB: 0.01250 (19%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:45:59) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000379)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.014436)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05027 (19 reqs/sec) | Rendering: 0.01782 (35%) | DB: 0.01482 (29%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:28) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000459)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012364)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04552 (21 reqs/sec) | Rendering: 0.01534 (33%) | DB: 0.01282 (28%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:28) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000957)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011179)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04528 (22 reqs/sec) | Rendering: 0.01694 (37%) | DB: 0.01214 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:29) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000369)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.023692)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.15127 (6 reqs/sec) | Rendering: 0.10085 (66%) | DB: 0.02406 (15%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:29) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000384)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.014996)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04940 (20 reqs/sec) | Rendering: 0.01558 (31%) | DB: 0.01538 (31%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:30) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000373)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012137)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04662 (21 reqs/sec) | Rendering: 0.01546 (33%) | DB: 0.01251 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:46:55) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000367)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011596)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04456 (22 reqs/sec) | Rendering: 0.01516 (34%) | DB: 0.01196 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:21) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000405)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011944)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+Completed in 0.12170 (8 reqs/sec) | Rendering: 0.01694 (13%) | DB: 0.01235 (10%) | 200 OK [http://localhost/trackers/2]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:25) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000387)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 6) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.003200)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+Completed in 0.03284 (30 reqs/sec) | Rendering: 0.01149 (35%) | DB: 0.00359 (10%) | 200 OK [http://localhost/trackers/6]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:28) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000383)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004034)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03681 (27 reqs/sec) | Rendering: 0.01248 (33%) | DB: 0.00442 (11%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:30) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000372)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004194)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03336 (29 reqs/sec) | Rendering: 0.01268 (38%) | DB: 0.00457 (13%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:32) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000370)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.015779)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.12150 (8 reqs/sec) | Rendering: 0.08919 (73%) | DB: 0.01615 (13%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 19:47:52) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001819)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.011196)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.014328)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.027019)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.010680)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003937)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.002983)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003073)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.13012 (7 reqs/sec) | Rendering: 0.03933 (30%) | DB: 0.07504 (57%) | 200 OK [http://localhost/trackers/]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:55) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000458)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011503)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.04537 (22 reqs/sec) | Rendering: 0.01606 (35%) | DB: 0.01196 (26%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:47:56) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000415)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.014523)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.05142 (19 reqs/sec) | Rendering: 0.01680 (32%) | DB: 0.01494 (29%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:49:45) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000392)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012324)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.04568 (21 reqs/sec) | Rendering: 0.01501 (32%) | DB: 0.01272 (27%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:49:46) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000377)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011619)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.04430 (22 reqs/sec) | Rendering: 0.01478 (33%) | DB: 0.01200 (27%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:53:12) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.003689)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012540)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.04945 (20 reqs/sec) | Rendering: 0.01503 (30%) | DB: 0.01623 (32%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:53:13) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000408)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 1) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011057)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+Completed in 0.06245 (16 reqs/sec) | Rendering: 0.01878 (30%) | DB: 0.01146 (18%) | 200 OK [http://localhost/trackers/1]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 19:53:21) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001555)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.011616)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.014493)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.011669)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.010049)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004117)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003167)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003210)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.11899 (8 reqs/sec) | Rendering: 0.04335 (36%) | DB: 0.05988 (50%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:53:23) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"6", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 6) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.003313)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+Completed in 0.03329 (30 reqs/sec) | Rendering: 0.01115 (33%) | DB: 0.00368 (11%) | 200 OK [http://localhost/trackers/6]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:53:24) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000377)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012172)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+Completed in 0.04379 (22 reqs/sec) | Rendering: 0.01404 (32%) | DB: 0.01255 (28%) | 200 OK [http://localhost/trackers/2]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:53:26) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011744)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.12332 (8 reqs/sec) | Rendering: 0.09495 (76%) | DB: 0.01212 (9%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:58:05) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000379)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.014957)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05826 (17 reqs/sec) | Rendering: 0.02348 (40%) | DB: 0.01534 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:58:08) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000372)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.038206)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.10000 (10 reqs/sec) | Rendering: 0.02019 (20%) | DB: 0.03858 (38%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:59:16) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000369)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011592)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04474 (22 reqs/sec) | Rendering: 0.01604 (35%) | DB: 0.01196 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 19:59:17) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012172)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.12313 (8 reqs/sec) | Rendering: 0.09373 (76%) | DB: 0.01254 (10%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:00:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000419)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.012617)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.05135 (19 reqs/sec) | Rendering: 0.01955 (38%) | DB: 0.01304 (25%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:00:56) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000539)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.015417)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04871 (20 reqs/sec) | Rendering: 0.01516 (31%) | DB: 0.01596 (32%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:00:58) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000369)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011649)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04473 (22 reqs/sec) | Rendering: 0.01680 (37%) | DB: 0.01202 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:01:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001578)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.012300)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.012510)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.013859)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011568)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.005888)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.012172)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004332)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.21609 (4 reqs/sec) | Rendering: 0.05200 (24%) | DB: 0.07421 (34%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:03:45) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001538)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.012076)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011053)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.014773)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.009739)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004403)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003294)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003150)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.11265 (8 reqs/sec) | Rendering: 0.03757 (33%) | DB: 0.06003 (53%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:04:15) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001652)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.011452)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011078)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.011400)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.009940)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004007)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003097)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003260)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.11037 (9 reqs/sec) | Rendering: 0.03958 (35%) | DB: 0.05589 (50%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:04:27) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001762)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.013225)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.012844)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.012358)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011924)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.005044)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.004344)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.009040)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.14287 (6 reqs/sec) | Rendering: 0.04647 (32%) | DB: 0.07054 (49%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:04:59) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001805)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.011126)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.014506)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.011383)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.011714)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004113)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.003228)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003367)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.11578 (8 reqs/sec) | Rendering: 0.03837 (33%) | DB: 0.06124 (52%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 20:06:02) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001535)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+  [4;35;1mPiece Load (0.012345)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 1) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.012119)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 2) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.012473)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.009843)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.004380)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mPiece Load (0.004181)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mPiece Load (0.003163)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.12473 (8 reqs/sec) | Rendering: 0.04090 (32%) | DB: 0.06004 (48%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:06:59) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000445)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.013062)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.06522 (15 reqs/sec) | Rendering: 0.02791 (42%) | DB: 0.01351 (20%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:07:18) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000374)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.011639)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.07513 (13 reqs/sec) | Rendering: 0.04650 (61%) | DB: 0.01201 (15%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:07:22) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004330)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.04691 (21 reqs/sec) | Rendering: 0.01153 (24%) | DB: 0.00470 (10%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:07:34) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004348)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03260 (30 reqs/sec) | Rendering: 0.01175 (36%) | DB: 0.00472 (14%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:08:05) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000384)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004300)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03366 (29 reqs/sec) | Rendering: 0.01229 (36%) | DB: 0.00468 (13%) | 200 OK [http://localhost/trackers/5]
+  [4;36;1mTracker Load (0.000409)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+  [4;35;1mTracker Load (0.001138)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+  [4;36;1mPiece Load (0.007818)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mTracker Load (0.000818)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+  [4;36;1mPiece Load (0.013273)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mTracker Load (0.000802)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+  [4;36;1mPiece Load (0.012966)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;35;1mTracker Load (0.000815)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+  [4;36;1mPiece Load (0.013530)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:09:27) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000377)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004375)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03661 (27 reqs/sec) | Rendering: 0.01546 (42%) | DB: 0.00475 (12%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:10:03) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004353)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03258 (30 reqs/sec) | Rendering: 0.01160 (35%) | DB: 0.00472 (14%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:10:07) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.008837)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03961 (25 reqs/sec) | Rendering: 0.01325 (33%) | DB: 0.00921 (23%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:10:25) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000387)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004698)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03400 (29 reqs/sec) | Rendering: 0.01199 (35%) | DB: 0.00508 (14%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:10:29) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000377)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004641)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03675 (27 reqs/sec) | Rendering: 0.01532 (41%) | DB: 0.00502 (13%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:10:50) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000379)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004351)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.05473 (18 reqs/sec) | Rendering: 0.01176 (21%) | DB: 0.00473 (8%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:11:01) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000371)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004523)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03986 (25 reqs/sec) | Rendering: 0.01521 (38%) | DB: 0.00489 (12%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 20:11:02) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlYTQ5NmY1N2Q5ZTA0NTAxMmZm%0ANDU0YzJlOTE2NmU1NDY%3D--5dc8529f0c39e607a8196c4d6563ddac03d4028e
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000384)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.004752)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.03429 (29 reqs/sec) | Rendering: 0.01218 (35%) | DB: 0.00514 (14%) | 200 OK [http://localhost/trackers/5]
