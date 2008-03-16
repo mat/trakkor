@@ -1,4 +1,4 @@
-class ScrapeResult < ActiveRecord::Base
+class Piece < ActiveRecord::Base
   belongs_to :tracker
 
   def same_content(other)

@@ -15970,3 +15970,683 @@ Rendering template within layouts/trackers
 Rendering trackers/show
   [4;36;1mScrapeResult Load (0.008647)[0m   [0;1mSELECT * FROM scrape_results WHERE (scrape_results.tracker_id = 3) ORDER BY created_at DESC[0m
 Completed in 0.10620 (9 reqs/sec) | Rendering: 0.01412 (13%) | DB: 0.00905 (8%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:44:44) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;35;1mTracker Load (0.000385)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+
+
+ActionView::TemplateError (undefined local variable or method `scrape_results' for #<Tracker:0xb69d2630>) on line #6 of trackers/show.html.erb:
+3:   <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
+4:   <li><strong><%= @tracker.xpath %></strong></li>
+5:   <li>created: <%= @tracker.created_at %></li>
+6:   <li>last update detected at: <%= @tracker.last_update %></li>
+7:   <li>last piece recorded at: <%= @tracker.last_piece %></li>
+8: </ul>
+9: 
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    app/models/tracker.rb:16:in `scrape_results_dupefree'
+    app/models/tracker.rb:33:in `last_update'
+    app/views/trackers/show.html.erb:6:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:44:45) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000386)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+
+
+ActionView::TemplateError (undefined local variable or method `scrape_results' for #<Tracker:0xb681c14c>) on line #6 of trackers/show.html.erb:
+3:   <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
+4:   <li><strong><%= @tracker.xpath %></strong></li>
+5:   <li>created: <%= @tracker.created_at %></li>
+6:   <li>last update detected at: <%= @tracker.last_update %></li>
+7:   <li>last piece recorded at: <%= @tracker.last_piece %></li>
+8: </ul>
+9: 
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    app/models/tracker.rb:16:in `scrape_results_dupefree'
+    app/models/tracker.rb:33:in `last_update'
+    app/views/trackers/show.html.erb:6:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:44:47) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;35;1mTracker Load (0.000448)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+
+
+ActionView::TemplateError (undefined local variable or method `scrape_results' for #<Tracker:0xb68d56b0>) on line #6 of trackers/show.html.erb:
+3:   <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
+4:   <li><strong><%= @tracker.xpath %></strong></li>
+5:   <li>created: <%= @tracker.created_at %></li>
+6:   <li>last update detected at: <%= @tracker.last_update %></li>
+7:   <li>last piece recorded at: <%= @tracker.last_piece %></li>
+8: </ul>
+9: 
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    app/models/tracker.rb:16:in `scrape_results_dupefree'
+    app/models/tracker.rb:33:in `last_update'
+    app/views/trackers/show.html.erb:6:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:45:44) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000426)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.000000)[0m   [0mSQLite3::SQLException: no such table: pieces: SELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such table: pieces: SELECT * FROM pieces   WHERE (pieces.tracker_id = 3)  ORDER BY created_at DESC) on line #6 of trackers/show.html.erb:
+3:   <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
+4:   <li><strong><%= @tracker.xpath %></strong></li>
+5:   <li>created: <%= @tracker.created_at %></li>
+6:   <li>last update detected at: <%= @tracker.last_update %></li>
+7:   <li>last piece recorded at: <%= @tracker.last_piece %></li>
+8: </ul>
+9: 
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract_adapter.rb:150:in `log'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/sqlite_adapter.rb:345:in `catch_schema_changes'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/sqlite_adapter.rb:256:in `select'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:74:in `cache_sql'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:53:in `select_all'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:481:in `find_by_sql'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:1160:in `find_every'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/base.rb:452:in `find'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/associations/has_many_association.rb:66:in `find'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/associations/association_collection.rb:182:in `find_target'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/associations/has_many_association.rb:78:in `load_target'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/associations/association_proxy.rb:123:in `method_missing'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/associations/association_collection.rb:162:in `method_missing'
+    app/models/tracker.rb:16:in `pieces_dupefree'
+    app/models/tracker.rb:33:in `last_update'
+    app/views/trackers/show.html.erb:6:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000553)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000342)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000353)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000234)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to RenameScrapeResults (6)
+  [4;35;1mSQL (0.043977)[0m   [0mALTER TABLE scrape_results RENAME TO pieces[0m
+  [4;36;1mSQL (0.003769)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.000321)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000416)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000096)[0m   [0mPRAGMA index_list(pieces)[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mPRAGMA index_list(trackers)[0m
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:48:07) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000402)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.008464)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+
+
+ActionView::TemplateError (undefined method `scrape_results_dupefree' for #<Tracker:0xb69b0e04>) on line #13 of trackers/show.html.erb:
+10: 
+11: <h2>Changes</h2>
+12: <table>
+13: <% for change in @tracker.scrape_results_dupefree %>
+14:   <tr>
+15:     <td>
+16:       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    app/views/trackers/show.html.erb:13:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:48:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000386)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.039330)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+
+
+ActionView::TemplateError (undefined method `scrape_results_dupefree' for #<Tracker:0xb6a42368>) on line #13 of trackers/show.html.erb:
+10: 
+11: <h2>Changes</h2>
+12: <table>
+13: <% for change in @tracker.scrape_results_dupefree %>
+14:   <tr>
+15:     <td>
+16:       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
+
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    app/views/trackers/show.html.erb:13:in `_run_erb_47app47views47trackers47show46html46erb'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:390:in `compile_and_render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:366:in `render_template'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_view/base.rb:316:in `render_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1110:in `render_for_file'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:51:in `render'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `call'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:156:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `each'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:150:in `respond'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/trackers_controller.rb:25:in `show'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:697:in `call_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:678:in `perform_action'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /var/lib/gems/1.8/gems/activerecord-2.0.1/lib/active_record/query_cache.rb:8:in `cache'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/caching.rb:677:in `perform_action'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `send'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:524:in `process_without_filters'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/session_management.rb:123:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/base.rb:388:in `process'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:155:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:154:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel.rb:264:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.1/bin/mongrel_rails:281
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:489:in `load'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /var/lib/gems/1.8/gems/activesupport-2.0.1/lib/active_support/dependencies.rb:496:in `require'
+    /var/lib/gems/1.8/gems/rails-2.0.1/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /var/lib/gems/1.8/gems/actionpack-2.0.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:48:23) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000382)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.008649)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.04872 (20 reqs/sec) | Rendering: 0.01977 (40%) | DB: 0.00903 (18%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:49:23) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000407)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 3) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.009108)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 3) ORDER BY created_at DESC[0m
+Completed in 0.03574 (27 reqs/sec) | Rendering: 0.01318 (36%) | DB: 0.00952 (26%) | 200 OK [http://localhost/trackers/3]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 15:49:28) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.001526)[0m   [0;1mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+Completed in 0.01796 (55 reqs/sec) | Rendering: 0.00529 (29%) | DB: 0.00153 (8%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:49:30) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"trackers"}
+  [4;35;1mTracker Load (0.000378)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 7) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;36;1mPiece Load (0.000920)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 7) ORDER BY created_at DESC[0m
+Completed in 0.02750 (36 reqs/sec) | Rendering: 0.01359 (49%) | DB: 0.00130 (4%) | 200 OK [http://localhost/trackers/7]
+
+
+Processing TrackersController#index (for 127.0.0.1 at 2008-03-16 15:49:33) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"index", "controller"=>"trackers"}
+  [4;35;1mTracker Load (0.001562)[0m   [0mSELECT * FROM trackers [0m
+Rendering template within layouts/trackers
+Rendering trackers/index
+Completed in 0.01774 (56 reqs/sec) | Rendering: 0.00524 (29%) | DB: 0.00156 (8%) | 200 OK [http://localhost/trackers]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-16 15:49:35) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjlhMjJmZWQwZGQyNWJiYWVm%0AOTIzMDdlOWQzMzkxOTM%3D--121b81a3559dd5db30bcd3d56ef4b324a54f1c11
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000417)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 4) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.007404)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 4) ORDER BY created_at DESC[0m
+Completed in 0.10356 (9 reqs/sec) | Rendering: 0.01450 (13%) | DB: 0.00782 (7%) | 200 OK [http://localhost/trackers/4]

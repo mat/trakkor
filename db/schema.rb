@@ -9,9 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
-  create_table "scrape_results", :force => true do |t|
+  create_table "pieces", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tracker_id"
