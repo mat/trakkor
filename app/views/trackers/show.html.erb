@@ -7,6 +7,11 @@
   <li>last piece recorded at: <%= relative_time(@tracker.last_piece) %></li>
 </ul>
 
+<p>
+So far <%= @tracker.pieces.length %> pieces have been fetched which comprise of <%= bytes_to_human(@tracker.bytes_recorded) %>.
+
+<%= @tracker.pieces.length %> pieces could not be fetched due to an error.
+</p>
 
 <h2>Changes</h2>
 <table>
