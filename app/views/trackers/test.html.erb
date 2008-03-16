@@ -1,0 +1,30 @@
+<h1>Testing a tracker</h1>
+
+<%= error_messages_for :tracker %>
+
+
+<ul>
+<li>uri: <%= @tracker.uri %></li>
+<li>domnode: <%= @tracker.domnode %></li>
+</ul>
+
+domnode_html: 
+line: <%= @found_in_line %>
+<pre><%= h(@domnode_html) %>
+</pre>
+
+domnode_text: 
+<pre><%= h(@domnode_text) %>
+</pre>
+
+complete_html: 
+<pre><%= h(@complete_html) %>
+</pre>
+
+<% form_for(@tracker) do |f| %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', trackers_path %>

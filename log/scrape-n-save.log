@@ -1,0 +1,200 @@
+Watch Load (0.001246)  SELECT * FROM watches 
+ScrapeResult Create (0.001233)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<b>We Should Send More Space Probes To?</b>', 1, '2008-03-15 14:26:51', '2008-03-15 14:26:51')
+ScrapeResult Create (0.000691)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 14:26:52', '2008-03-15 14:26:52')
+ScrapeResult Create (0.000475)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 14:26:52', '2008-03-15 14:26:52')
+Watch Load (0.001227)  SELECT * FROM watches 
+ScrapeResult Create (0.000704)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<b>We Should Send More Space Probes To?</b>', 1, '2008-03-15 14:27:16', '2008-03-15 14:27:16')
+ScrapeResult Create (0.000486)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 14:27:17', '2008-03-15 14:27:17')
+ScrapeResult Create (0.000459)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 14:27:17', '2008-03-15 14:27:17')
+Watch Load (0.001216)  SELECT * FROM watches 
+ScrapeResult Create (0.001094)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<b>We Should Send More Space Probes To?</b>', 1, '2008-03-15 14:29:13', '2008-03-15 14:29:13')
+ScrapeResult Create (0.000763)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 14:29:13', '2008-03-15 14:29:13')
+ScrapeResult Create (0.000487)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 14:29:14', '2008-03-15 14:29:14')
+Watch Load (0.001252)  SELECT * FROM watches 
+ScrapeResult Create (0.001096)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 14:38:54', '2008-03-15 14:38:54')
+ScrapeResult Create (0.000687)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 14:38:55', '2008-03-15 14:38:55')
+ScrapeResult Create (0.000637)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 14:38:55', '2008-03-15 14:38:55')
+Watch Load (0.001406)  SELECT * FROM watches 
+ScrapeResult Create (0.001127)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:09:53', '2008-03-15 15:09:53')
+ScrapeResult Create (0.000471)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:09:53', '2008-03-15 15:09:53')
+ScrapeResult Create (0.000692)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:09:53', '2008-03-15 15:09:53')
+ScrapeResult Create (0.000307)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:09:53', '2008-03-15 15:09:53')
+Watch Load (0.001565)  SELECT * FROM watches 
+ScrapeResult Create (0.000638)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:18:14', '2008-03-15 15:18:14')
+ScrapeResult Create (0.000661)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:18:14', '2008-03-15 15:18:14')
+ScrapeResult Create (0.000688)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:18:15', '2008-03-15 15:18:15')
+ScrapeResult Create (0.000439)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:18:15', '2008-03-15 15:18:15')
+Watch Load (0.001382)  SELECT * FROM watches 
+ScrapeResult Create (0.001114)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:20:26', '2008-03-15 15:20:26')
+ScrapeResult Create (0.000824)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:20:27', '2008-03-15 15:20:27')
+ScrapeResult Create (0.000437)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:20:27', '2008-03-15 15:20:27')
+ScrapeResult Create (0.000294)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:20:27', '2008-03-15 15:20:27')
+Watch Load (0.001382)  SELECT * FROM watches 
+ScrapeResult Create (0.001032)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:21:03', '2008-03-15 15:21:03')
+ScrapeResult Create (0.000461)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:21:04', '2008-03-15 15:21:04')
+ScrapeResult Create (0.003561)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:21:04', '2008-03-15 15:21:04')
+ScrapeResult Create (0.000438)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:21:04', '2008-03-15 15:21:04')
+Watch Load (0.001413)  SELECT * FROM watches 
+ScrapeResult Create (0.000746)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:50:06', '2008-03-15 15:50:06')
+ScrapeResult Create (0.000497)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:50:07', '2008-03-15 15:50:07')
+ScrapeResult Create (0.000500)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:50:07', '2008-03-15 15:50:07')
+ScrapeResult Create (0.000485)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:50:07', '2008-03-15 15:50:07')
+Watch Load (0.001391)  SELECT * FROM watches 
+ScrapeResult Create (0.001120)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:51:03', '2008-03-15 15:51:03')
+ScrapeResult Create (0.000699)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:51:04', '2008-03-15 15:51:04')
+ScrapeResult Create (0.000691)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:51:04', '2008-03-15 15:51:04')
+ScrapeResult Create (0.000445)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:51:04', '2008-03-15 15:51:04')
+Watch Load (0.002156)  SELECT * FROM watches 
+ScrapeResult Create (0.000725)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:52:58', '2008-03-15 15:52:58')
+ScrapeResult Create (0.000711)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:52:58', '2008-03-15 15:52:58')
+ScrapeResult Create (0.000714)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:52:59', '2008-03-15 15:52:59')
+ScrapeResult Create (0.000453)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:52:59', '2008-03-15 15:52:59')
+Watch Load (0.001401)  SELECT * FROM watches 
+ScrapeResult Create (0.001154)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 15:53:53', '2008-03-15 15:53:53')
+ScrapeResult Create (0.000721)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 15:53:54', '2008-03-15 15:53:54')
+ScrapeResult Create (0.000494)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 15:53:54', '2008-03-15 15:53:54')
+ScrapeResult Create (0.000709)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 15:53:54', '2008-03-15 15:53:54')
+Watch Load (0.001465)  SELECT * FROM watches 
+ScrapeResult Create (0.001067)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 16:21:03', '2008-03-15 16:21:03')
+ScrapeResult Create (0.000318)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 16:21:04', '2008-03-15 16:21:04')
+ScrapeResult Create (0.002557)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 16:21:04', '2008-03-15 16:21:04')
+ScrapeResult Create (0.000475)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 16:21:05', '2008-03-15 16:21:05')
+Watch Load (0.001427)  SELECT * FROM watches 
+ScrapeResult Create (0.001096)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 16:51:03', '2008-03-15 16:51:03')
+ScrapeResult Create (0.000684)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 16:51:04', '2008-03-15 16:51:04')
+ScrapeResult Create (0.000478)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 16:51:04', '2008-03-15 16:51:04')
+ScrapeResult Create (0.000480)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 16:51:04', '2008-03-15 16:51:04')
+Watch Load (0.001432)  SELECT * FROM watches 
+ScrapeResult Create (0.000728)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 17:21:03', '2008-03-15 17:21:03')
+ScrapeResult Create (0.000480)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 17:21:04', '2008-03-15 17:21:04')
+ScrapeResult Create (0.000480)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://engage.wordpress.com/2008/03/15/an-short-update/">Jerome</a>', 3, '2008-03-15 17:21:04', '2008-03-15 17:21:04')
+ScrapeResult Create (0.000443)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 17:21:05', '2008-03-15 17:21:05')
+Watch Load (0.002616)  SELECT * FROM watches 
+ScrapeResult Create (0.000738)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 17:51:03', '2008-03-15 17:51:03')
+ScrapeResult Create (0.000689)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 17:51:03', '2008-03-15 17:51:03')
+ScrapeResult Create (0.000496)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 17:51:04', '2008-03-15 17:51:04')
+ScrapeResult Create (0.000369)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 17:51:04', '2008-03-15 17:51:04')
+Watch Load (0.001432)  SELECT * FROM watches 
+ScrapeResult Create (0.028460)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 18:21:09', '2008-03-15 18:21:09')
+ScrapeResult Create (0.000634)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 18:21:09', '2008-03-15 18:21:09')
+ScrapeResult Create (0.000678)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 18:21:09', '2008-03-15 18:21:09')
+ScrapeResult Create (0.000420)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 18:21:10', '2008-03-15 18:21:10')
+Watch Load (0.001409)  SELECT * FROM watches 
+ScrapeResult Create (0.000948)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 18:51:03', '2008-03-15 18:51:03')
+ScrapeResult Create (0.000433)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 18:51:04', '2008-03-15 18:51:04')
+ScrapeResult Create (0.000453)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 18:51:04', '2008-03-15 18:51:04')
+ScrapeResult Create (0.000405)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 18:51:04', '2008-03-15 18:51:04')
+Watch Load (0.001405)  SELECT * FROM watches 
+ScrapeResult Create (0.026653)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 19:21:04', '2008-03-15 19:21:04')
+ScrapeResult Create (0.000605)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 19:21:04', '2008-03-15 19:21:04')
+ScrapeResult Create (0.000669)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 19:21:05', '2008-03-15 19:21:05')
+ScrapeResult Create (0.000409)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 19:21:05', '2008-03-15 19:21:05')
+Watch Load (0.001434)  SELECT * FROM watches 
+ScrapeResult Create (0.000852)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 19:51:03', '2008-03-15 19:51:03')
+ScrapeResult Create (0.000659)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 19:51:04', '2008-03-15 19:51:04')
+ScrapeResult Create (0.000472)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 19:51:04', '2008-03-15 19:51:04')
+ScrapeResult Create (0.000636)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 19:51:05', '2008-03-15 19:51:05')
+Watch Load (0.001385)  SELECT * FROM watches 
+ScrapeResult Create (0.001198)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 20:21:03', '2008-03-15 20:21:03')
+ScrapeResult Create (0.000617)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 20:21:03', '2008-03-15 20:21:03')
+ScrapeResult Create (0.000477)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 20:21:04', '2008-03-15 20:21:04')
+ScrapeResult Create (0.000608)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 20:21:04', '2008-03-15 20:21:04')
+Watch Load (0.001434)  SELECT * FROM watches 
+ScrapeResult Create (0.000712)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 20:51:03', '2008-03-15 20:51:03')
+ScrapeResult Create (0.000429)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 20:51:04', '2008-03-15 20:51:04')
+ScrapeResult Create (0.000638)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 20:51:04', '2008-03-15 20:51:04')
+ScrapeResult Create (0.000610)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 20:51:04', '2008-03-15 20:51:04')
+Watch Load (0.001403)  SELECT * FROM watches 
+ScrapeResult Create (0.001076)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 21:21:04', '2008-03-15 21:21:04')
+ScrapeResult Create (0.000815)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 21:21:04', '2008-03-15 21:21:04')
+ScrapeResult Create (0.000741)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 21:21:05', '2008-03-15 21:21:05')
+ScrapeResult Create (0.000488)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 21:21:05', '2008-03-15 21:21:05')
+Watch Load (0.001578)  SELECT * FROM watches 
+ScrapeResult Create (0.001075)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-15 21:51:03', '2008-03-15 21:51:03')
+ScrapeResult Create (0.000795)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-15 21:51:04', '2008-03-15 21:51:04')
+ScrapeResult Create (0.000479)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.screenage.de/blog/2008/03/15/having-a-hardy-day-ten-steps-helping-you-not-to-have-a-hard-time-upgrading/">Having a Hardy day - Ten steps helping you not to have a hard time upgrading</a>', 3, '2008-03-15 21:51:04', '2008-03-15 21:51:04')
+ScrapeResult Create (0.000915)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-15 21:51:04', '2008-03-15 21:51:04')
+Watch Load (0.001425)  SELECT * FROM watches 
+ScrapeResult Create (0.002598)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 09:51:08', '2008-03-16 09:51:08')
+ScrapeResult Create (0.000475)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 09:51:09', '2008-03-16 09:51:09')
+ScrapeResult Create (0.000683)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://www.jonobacon.org/?p=1158">Langridge. Fail.</a>', 3, '2008-03-16 09:51:10', '2008-03-16 09:51:10')
+ScrapeResult Create (0.000444)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 09:51:10', '2008-03-16 09:51:10')
+Watch Load (0.001572)  SELECT * FROM watches 
+ScrapeResult Create (0.000776)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 10:21:03', '2008-03-16 10:21:03')
+ScrapeResult Create (0.000557)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 10:21:04', '2008-03-16 10:21:04')
+ScrapeResult Create (0.000637)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', 3, '2008-03-16 10:21:05', '2008-03-16 10:21:05')
+ScrapeResult Create (0.000362)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 10:21:05', '2008-03-16 10:21:05')
+Watch Load (0.001407)  SELECT * FROM watches 
+ScrapeResult Create (0.001077)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 10:51:03', '2008-03-16 10:51:03')
+ScrapeResult Create (0.001984)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 10:51:04', '2008-03-16 10:51:04')
+ScrapeResult Create (0.000444)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', 3, '2008-03-16 10:51:04', '2008-03-16 10:51:04')
+ScrapeResult Create (0.000448)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 10:51:04', '2008-03-16 10:51:04')
+Watch Load (0.001411)  SELECT * FROM watches 
+ScrapeResult Create (0.001140)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 11:21:03', '2008-03-16 11:21:03')
+ScrapeResult Create (0.000666)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 11:21:04', '2008-03-16 11:21:04')
+ScrapeResult Create (0.000674)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', 3, '2008-03-16 11:21:05', '2008-03-16 11:21:05')
+ScrapeResult Create (0.000270)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 11:21:05', '2008-03-16 11:21:05')
+Watch Load (0.001390)  SELECT * FROM watches 
+ScrapeResult Create (0.001095)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 11:51:03', '2008-03-16 11:51:03')
+ScrapeResult Create (0.000451)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 11:51:03', '2008-03-16 11:51:03')
+ScrapeResult Create (0.000478)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', 3, '2008-03-16 11:51:04', '2008-03-16 11:51:04')
+ScrapeResult Create (0.000463)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 11:51:04', '2008-03-16 11:51:04')
+Watch Load (0.001398)  SELECT * FROM watches 
+ScrapeResult Create (0.000712)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', 1, '2008-03-16 12:21:05', '2008-03-16 12:21:05')
+ScrapeResult Create (0.000532)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', 2, '2008-03-16 12:21:06', '2008-03-16 12:21:06')
+ScrapeResult Create (0.001746)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', 3, '2008-03-16 12:21:06', '2008-03-16 12:21:06')
+ScrapeResult Create (0.000316)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', 4, '2008-03-16 12:21:06', '2008-03-16 12:21:06')
+Tracker Load (0.001364)  SELECT * FROM trackers 
+ScrapeResult Create (0.001041)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('We Should Send More Space Probes To?', NULL, '2008-03-16 12:44:16', '2008-03-16 12:44:16')
+ScrapeResult Create (0.000641)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-16 12:44:16', '2008-03-16 12:44:16')
+ScrapeResult Create (0.000644)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', NULL, '2008-03-16 12:44:17', '2008-03-16 12:44:17')
+ScrapeResult Create (0.000547)  INSERT INTO scrape_results ("text_raw", "watch_id", "updated_at", "created_at") VALUES('Error: 404 Not Found', NULL, '2008-03-16 12:44:17', '2008-03-16 12:44:17')
+Tracker Load (0.001357)  SELECT * FROM trackers 
+ScrapeResult Create (0.000970)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 12:47:01', 1, '2008-03-16 12:47:01')
+ScrapeResult Create (0.000458)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 12:47:02', 2, '2008-03-16 12:47:02')
+ScrapeResult Create (0.000462)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', '2008-03-16 12:47:02', 3, '2008-03-16 12:47:02')
+ScrapeResult Create (0.000472)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 12:47:02', 4, '2008-03-16 12:47:02')
+Tracker Load (0.001735)  SELECT * FROM trackers 
+ScrapeResult Create (0.000669)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 12:50:52', 1, '2008-03-16 12:50:52')
+ScrapeResult Create (0.000458)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 12:50:52', 2, '2008-03-16 12:50:52')
+ScrapeResult Create (0.000681)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', '2008-03-16 12:50:52', 3, '2008-03-16 12:50:52')
+ScrapeResult Create (0.000435)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 12:50:53', 4, '2008-03-16 12:50:53')
+Tracker Load (0.002680)  SELECT * FROM trackers 
+ScrapeResult Create (0.001346)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 12:51:03', 1, '2008-03-16 12:51:03')
+ScrapeResult Create (0.000455)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 12:51:04', 2, '2008-03-16 12:51:04')
+ScrapeResult Create (0.000312)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', '2008-03-16 12:51:04', 3, '2008-03-16 12:51:04')
+ScrapeResult Create (0.000296)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 12:51:04', 4, '2008-03-16 12:51:04')
+Tracker Load (0.001418)  SELECT * FROM trackers 
+ScrapeResult Create (0.001010)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 13:21:03', 1, '2008-03-16 13:21:03')
+ScrapeResult Create (0.000758)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 13:21:04', 2, '2008-03-16 13:21:04')
+ScrapeResult Create (0.000472)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://admiralchicago.wordpress.com/2008/03/16/learn-from-my-failure/">F. Martinez</a>', '2008-03-16 13:21:04', 3, '2008-03-16 13:21:04')
+ScrapeResult Create (0.000438)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 13:21:04', 4, '2008-03-16 13:21:04')
+Tracker Load (0.001362)  SELECT * FROM trackers 
+ScrapeResult Create (0.002723)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:04:18', 1, '2008-03-16 14:04:18')
+ScrapeResult Create (0.000473)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:04:19', 2, '2008-03-16 14:04:19')
+ScrapeResult Create (0.000455)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:04:19', 3, '2008-03-16 14:04:19')
+ScrapeResult Create (0.000309)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:04:19', 4, '2008-03-16 14:04:19')
+Tracker Load (0.001528)  SELECT * FROM trackers 
+ScrapeResult Create (0.000866)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:11:35', 1, '2008-03-16 14:11:35')
+ScrapeResult Create (0.000662)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:11:35', 2, '2008-03-16 14:11:35')
+ScrapeResult Create (0.000455)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:11:36', 3, '2008-03-16 14:11:36')
+ScrapeResult Create (0.000470)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:11:36', 4, '2008-03-16 14:11:36')
+ScrapeResult Create (0.000492)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="/Special:Statistics" title="Special:Statistics">54,709</a>', '2008-03-16 14:11:37', 5, '2008-03-16 14:11:37')
+Tracker Load (0.001708)  SELECT * FROM trackers 
+ScrapeResult Create (0.001137)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:12:22', 1, '2008-03-16 14:12:22')
+ScrapeResult Create (0.000672)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:12:22', 2, '2008-03-16 14:12:22')
+ScrapeResult Create (0.000455)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:12:23', 3, '2008-03-16 14:12:23')
+ScrapeResult Create (0.000472)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:12:23', 4, '2008-03-16 14:12:23')
+ScrapeResult Create (0.000461)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:12:24', 5, '2008-03-16 14:12:24')
+Tracker Load (0.001546)  SELECT * FROM trackers 
+ScrapeResult Create (0.000709)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:12:36', 1, '2008-03-16 14:12:36')
+ScrapeResult Create (0.000649)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:12:36', 2, '2008-03-16 14:12:36')
+ScrapeResult Create (0.000470)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:12:37', 3, '2008-03-16 14:12:37')
+ScrapeResult Create (0.000315)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:12:37', 4, '2008-03-16 14:12:37')
+ScrapeResult Create (0.000659)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:12:38', 5, '2008-03-16 14:12:38')
+Tracker Load (0.001514)  SELECT * FROM trackers 
+ScrapeResult Create (0.000739)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('We Should Send More Space Probes To?', '2008-03-16 14:12:47', 1, '2008-03-16 14:12:47')
+ScrapeResult Create (0.001343)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<span class="">25 </span>', '2008-03-16 14:12:47', 2, '2008-03-16 14:12:47')
+ScrapeResult Create (0.000479)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('<a href="http://www.geekosophical.net/?p=180">Better late than never</a>', '2008-03-16 14:12:48', 3, '2008-03-16 14:12:48')
+ScrapeResult Create (0.000453)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('Error: 404 Not Found', '2008-03-16 14:12:48', 4, '2008-03-16 14:12:48')
+ScrapeResult Create (0.000715)  INSERT INTO scrape_results ("text_raw", "updated_at", "tracker_id", "created_at") VALUES('54,709', '2008-03-16 14:12:49', 5, '2008-03-16 14:12:49')

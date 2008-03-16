@@ -1,0 +1,12 @@
+<h1>Editing tracker</h1>
+
+<%= error_messages_for :tracker %>
+
+<% form_for(@tracker) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tracker %> |
+<%= link_to 'Back', trackers_path %>

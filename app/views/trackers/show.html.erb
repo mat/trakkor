@@ -1,0 +1,25 @@
+
+<ul>
+  <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
+  <li><strong><%= @tracker.xpath %></strong></li>
+</ul>
+
+
+<h2>Changes</h2>
+<table>
+<% for change in @tracker.scrape_results_dupefree %>
+  <tr>
+    <td>
+      <%= h change.created_at %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= h change.text_raw %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_tracker_path(@tracker) %> |
+<%= link_to 'Back', trackers_path %>
