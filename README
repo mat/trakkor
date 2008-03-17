@@ -205,6 +205,13 @@ vendor
 
 === Moduri
 
+==
+
+The libs, gems and whatnot.
+
+Under Debian:
+sudo apt-get install libxml-ruby1.8 libsqlite3-ruby 
+
 == The cron job
 
 Executed every hour on :21 and :51, errors are logged.
@@ -216,5 +223,7 @@ New variable in
 /etc/environment
 must be named:
 SCRAPER_PATH=/home/mat/svn_workspaces/ruby/scraper/rails
+
+
 
 
