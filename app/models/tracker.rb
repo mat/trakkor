@@ -14,6 +14,19 @@ class Tracker < ActiveRecord::Base
 
   has_many :pieces, :order => 'created_at DESC'
 
+  def validate_on_create # is only run the first time a new object is save
+    @first_piece = fetch_piece
+    if @first_piece.error
+       errors.add("URI and XPath", "yield no content")
+    end
+  end
+
+  after_save :fetch_n_save_first_piece
+
+  def fetch_n_save_first_piece
+    @first_piece.save!
+  end
+
   def md5sum
     payload = uri + xpath + created_at.to_s
     Digest::MD5.hexdigest(payload)
