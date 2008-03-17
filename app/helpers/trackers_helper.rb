@@ -9,16 +9,28 @@ module TrackersHelper
    return '' if time.nil?
 
     delta = Time.now - time
-    case delta
-      when 1..90 			: "#{delta.round} seconds ago"
-      when (1+90)..(MINUTE * 90) 	: "#{(delta / MINUTE).round} minutes ago"
-      when (1+MINUTE * 90)..(HOUR * 26) : "#{(delta / HOUR).round} hours ago"
-      when (1+HOUR * 26)..(DAY * 2) 	: "yesterday"
-      when (1+DAY * 2)..(DAY * 6) 	: time.strftime('%A')
-
-      else time.strftime('%A, %d %B')
+    if (1..90) === delta 
+      return "#{delta.round} seconds ago"
     end
-   
+
+    if ((1+90)..(MINUTE * 90)) === delta
+      return "#{(delta / MINUTE).round} minutes ago" 
+    end
+    
+    yesterday = Time.now - DAY
+    if yesterday.wday == time.wday
+      return "yesterday"
+    end
+
+    if ((1+MINUTE * 90)..(HOUR * 23)) === delta
+      return "#{(delta / HOUR).round} hours ago" 
+    end
+
+    if ((1+DAY * 1)..(DAY * 6)) === delta
+      return time.strftime('%A') 
+    end
+
+    time.strftime('%A, %d %B')
   end
 
   def bytes_to_human(bytes)

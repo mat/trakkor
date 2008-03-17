@@ -797,3 +797,75 @@ Piece Create (0.000753)  INSERT INTO pieces ("text_raw", "error", "updated_at", 
 </tr>', NULL, '2008-03-16 23:47:19', 7, 18863, '2008-03-16 23:47:19')
 Piece Create (0.000481)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('UK Police Want DNA of ''Potential Offenders''', NULL, '2008-03-16 23:47:22', 8, 75181, '2008-03-16 23:47:22')
 Piece Create (0.000324)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'No DOM node found for given XPath.', '2008-03-16 23:47:23', 9, 2102, '2008-03-16 23:47:23')
+Tracker Load (0.002194)  SELECT * FROM trackers 
+Piece Create (0.001070)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('We Should Send More Space Probes To?', NULL, '2008-03-16 23:51:13', 1, 75068, '2008-03-16 23:51:13')
+Piece Create (0.000445)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-16 23:51:15', 2, 72644, '2008-03-16 23:51:15')
+Piece Create (0.000447)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<a href="http://www.outflux.net/blog/archives/2008/03/16/selinux-in-hardy/">SELinux in Hardy</a>', NULL, '2008-03-16 23:51:16', 3, 152789, '2008-03-16 23:51:16')
+Piece Create (0.000572)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-16 23:51:17', 4, NULL, '2008-03-16 23:51:17')
+Piece Create (0.000654)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('54,721', NULL, '2008-03-16 23:51:21', 5, 49698, '2008-03-16 23:51:21')
+Piece Create (0.000644)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-16 23:51:29', 6, 18863, '2008-03-16 23:51:29')
+Piece Create (0.000706)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-16 23:51:31', 7, 18863, '2008-03-16 23:51:31')
+Piece Create (0.000453)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('UK Police Want DNA of ''Potential Offenders''', NULL, '2008-03-16 23:51:44', 8, 74404, '2008-03-16 23:51:44')
+Piece Create (0.000447)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'No DOM node found for given XPath.', '2008-03-16 23:51:47', 9, 2102, '2008-03-16 23:51:47')
+Tracker Load (0.002186)  SELECT * FROM trackers 
+Piece Create (0.001067)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('Favorite Slashdot Tag?', NULL, '2008-03-17 09:21:03', 1, 75798, '2008-03-17 09:21:03')
+Piece Create (0.000663)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-17 09:21:04', 2, 71575, '2008-03-17 09:21:04')
+Piece Create (0.000428)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<a href="http://www.outflux.net/blog/archives/2008/03/16/selinux-in-hardy/">SELinux in Hardy</a>', NULL, '2008-03-17 09:21:04', 3, 152789, '2008-03-17 09:21:04')
+Piece Create (0.000623)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-17 09:21:05', 4, NULL, '2008-03-17 09:21:05')
+Piece Create (0.000636)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('54,726', NULL, '2008-03-17 09:21:06', 5, 49427, '2008-03-17 09:21:06')
+Piece Create (0.000539)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-17 09:21:07', 6, 18863, '2008-03-17 09:21:07')
+Piece Create (0.000526)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-17 09:21:07', 7, 18863, '2008-03-17 09:21:07')
+Piece Create (0.000700)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('Vista Service Pack One Almost Here', NULL, '2008-03-17 09:21:08', 8, 75727, '2008-03-17 09:21:08')
+Piece Create (0.000434)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'No DOM node found for given XPath.', '2008-03-17 09:21:09', 9, 2102, '2008-03-17 09:21:09')
+Tracker Load (0.002209)  SELECT * FROM trackers 
+Piece Create (0.000730)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('Favorite Slashdot Tag?', NULL, '2008-03-17 09:51:02', 1, 76008, '2008-03-17 09:51:02')
+Piece Create (0.000671)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-17 09:51:03', 2, 71575, '2008-03-17 09:51:03')
+Piece Create (0.000466)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<a href="http://www.outflux.net/blog/archives/2008/03/16/selinux-in-hardy/">SELinux in Hardy</a>', NULL, '2008-03-17 09:51:03', 3, 152789, '2008-03-17 09:51:03')
+Piece Create (0.000455)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-17 09:51:04', 4, NULL, '2008-03-17 09:51:04')
+Piece Create (0.000657)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('54,726', NULL, '2008-03-17 09:51:05', 5, 49000, '2008-03-17 09:51:05')
+Piece Create (0.000478)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-17 09:51:05', 6, 18863, '2008-03-17 09:51:05')
+Piece Create (0.000419)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-17 09:51:05', 7, 18863, '2008-03-17 09:51:05')
+Piece Create (0.000461)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('Vista Service Pack One Almost Here', NULL, '2008-03-17 09:51:07', 8, 75937, '2008-03-17 09:51:07')
+Piece Create (0.000439)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'No DOM node found for given XPath.', '2008-03-17 09:51:07', 9, 2102, '2008-03-17 09:51:07')
+Tracker Load (0.002200)  SELECT * FROM trackers 
+Piece Create (0.000962)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('Favorite Slashdot Tag?', NULL, '2008-03-17 10:21:03', 1, 75009, '2008-03-17 10:21:03')
+Piece Create (0.000645)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<span class="">25 </span>', NULL, '2008-03-17 10:21:03', 2, 71575, '2008-03-17 10:21:03')
+Piece Create (0.000473)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<a href="http://www.outflux.net/blog/archives/2008/03/16/selinux-in-hardy/">SELinux in Hardy</a>', NULL, '2008-03-17 10:21:05', 3, 152789, '2008-03-17 10:21:05')
+Piece Create (0.000622)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES(NULL, 'Error: 404 Not Found', '2008-03-17 10:21:06', 4, NULL, '2008-03-17 10:21:06')
+Piece Create (0.000433)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('54,726', NULL, '2008-03-17 10:21:07', 5, 48622, '2008-03-17 10:21:07')
+Piece Create (0.000840)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td>Reservierbar ab dem 01.04.08:</td>
+</tr>', NULL, '2008-03-17 10:21:07', 6, 18863, '2008-03-17 10:21:07')
+Piece Create (0.000465)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<tr>
+ <td class="sidebar_border">
+		<table align="center" border="0" cellspacing="0" cellpadding="5" width="208"><tr><td valign="top" align="left" class="sidebar_head"><img src="./images/sidebar_dot.gif" width="15" height="10" alt="" border=""/>Online-Reservierung</td>
+			</tr><tr><td valign="top" align="left" class="sidebar">
+<table align="left" border="0" cellspacing="0" cellpadding="0"><tr><td>Reservierbar ab dem 01.04.08:</td></tr><tr><td><img src="./images/dummy.gif" width="1" height="8" border="0" alt=""/></td></tr><tr><td valign="top" class="sidebar_alt_back1"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>public viewing / in den ARRI Studios München:</b><br/>Mo, 26.05.2008<br/>(20:00h - 18/12 €)</span></td></tr><tr><td valign="top" class="sidebar_alt_back2"><span style="color : #009922; font-weight : normal; text-decoration : none;"><b>live Fernsehsendung / in den ARRI Studios München:</b><br/>Di, 27.05.2008<br/>(22:15h - 18/12 €)</span></td></tr></table></td>
+			</tr></table></td>
+</tr>', NULL, '2008-03-17 10:21:07', 7, 18863, '2008-03-17 10:21:07')
+Piece Create (0.000667)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('What''s Your Favorite Monster?', NULL, '2008-03-17 10:21:09', 8, 75009, '2008-03-17 10:21:09')
+Piece Create (0.000442)  INSERT INTO pieces ("text_raw", "error", "updated_at", "tracker_id", "bytecount", "created_at") VALUES('<h3>Herzlich Willkommen!</h3>', NULL, '2008-03-17 10:21:10', 9, 2102, '2008-03-17 10:21:10')
