@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :trackers
 
+  prefix='moduri/'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -39,6 +41,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.test 'trackers/test/:uri/:domnode', :controller => 'trackers', :action => 'test' 
 
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  map.connect "#{prefix}:controller/:action/:id"
+  map.connect "#{prefix}:controller/:action/:id.:format"
 end

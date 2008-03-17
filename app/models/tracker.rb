@@ -7,6 +7,8 @@ msgs = []
 XML::Parser.register_error_handler lambda { |msg| msgs << msg }
 XML::Parser::default_line_numbers=true
 
+raise 'Ancient libxml-ruby bindings found, need >=0.5.2' unless defined? XML::HTMLParser
+
 class Tracker < ActiveRecord::Base
   validates_presence_of :uri, :xpath
 
