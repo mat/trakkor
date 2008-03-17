@@ -69,6 +69,11 @@ class Tracker < ActiveRecord::Base
   return [text, nil]
 end
 
+  def html_title
+    fetch_piece unless @body 
+    extract_piece(@body, '//head/title/text()').first
+  end
+
   def fetch_piece
     p = Piece.new
     p.tracker = self
@@ -77,8 +82,10 @@ end
     if response.kind_of? Net::HTTPSuccess
       p.text_raw, p.error = extract_piece(response.body, self.xpath)
       p.bytecount = response.body.length
+      @body = response.body
     else
       p.error = "Error: #{response.code} #{response.message}"
+      @body = nil
     end
 
     p

@@ -32188,3 +32188,52 @@ Rendering trackers/show
   [4;36;1mPiece Load (0.009267)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
   [4;35;1mSQL (0.001453)[0m   [0mSELECT SUM(bytecount) FROM pieces WHERE tracker_id=5[0m
 Completed in 0.04444 (22 reqs/sec) | Rendering: 0.01627 (36%) | DB: 0.01111 (24%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-17 12:23:10) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjUyYjEzN2RjZDNjMTVkNzVh%0AM2RkNDY0ZDcyYjEzYTI%3D--ae463f5e11f902d7849dc187ec032761926de2c0
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;36;1mTracker Load (0.000380)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering template within layouts/trackers
+Rendering trackers/show
+  [4;35;1mPiece Load (0.010691)[0m   [0mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+  [4;36;1mSQL (0.000549)[0m   [0;1mSELECT SUM(bytecount) FROM pieces WHERE tracker_id=5[0m
+Completed in 0.06890 (14 reqs/sec) | Rendering: 0.01863 (27%) | DB: 0.01162 (16%) | 200 OK [http://localhost/trackers/5]
+
+
+Processing TrackersController#show (for 127.0.0.1 at 2008-03-17 12:23:26) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlNjUyYjEzN2RjZDNjMTVkNzVh%0AM2RkNDY0ZDcyYjEzYTI%3D--ae463f5e11f902d7849dc187ec032761926de2c0
+  Parameters: {"format"=>"atom", "action"=>"show", "id"=>"5", "controller"=>"trackers"}
+  [4;35;1mTracker Load (0.000432)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 5) [0m
+Rendering trackers/show
+  [4;36;1mPiece Load (0.013628)[0m   [0;1mSELECT * FROM pieces WHERE (pieces.tracker_id = 5) ORDER BY created_at DESC[0m
+Completed in 0.21136 (4 reqs/sec) | Rendering: 0.04002 (18%) | DB: 0.01406 (6%) | 200 OK [http://localhost/trackers/5.atom]
+  [4;35;1mTracker Load (0.000457)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+  [4;36;1mSQL (0.000441)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTracker Load (0.000389)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+  [4;36;1mSQL (0.000413)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTracker Load (0.000634)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 2) [0m
+  [4;36;1mSQL (0.000680)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTracker Load (0.003001)[0m   [0mSELECT * FROM trackers [0m
+  [4;36;1mSQL (0.000678)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTracker Load (0.002637)[0m   [0mSELECT * FROM trackers [0m
+  [4;36;1mTracker Load (0.002553)[0m   [0;1mSELECT * FROM trackers [0m
+  [4;36;1mTracker Load (0.000398)[0m   [0;1mSELECT * FROM trackers WHERE (trackers."id" = 9) [0m
+  [4;35;1mTracker Load (0.000778)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 9) [0m
+  [4;36;1mSQL (0.000773)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTracker Load (0.000759)[0m   [0mSELECT * FROM trackers WHERE (trackers."id" = 9) [0m
