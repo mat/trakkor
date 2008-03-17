@@ -201,3 +201,20 @@ test
 vendor
   External libraries that the application depends on. Also includes the plugins subdirectory.
   This directory is in the load path.
+
+
+=== Moduri
+
+== The cron job
+
+Executed every hour on :21 and :51, errors are logged.
+
+21,51 * * * * ruby /home/mat/svn_workspaces/ruby/scraper/rails/scrape-n-save.rb >> /home/mat/svn_workspaces/ruby/scraper/rails/log/cron.log 2>&1 
+
+
+New variable in 
+/etc/environment
+must be named:
+SCRAPER_PATH=/home/mat/svn_workspaces/ruby/scraper/rails
+
+
