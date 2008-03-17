@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'hpricot'
 require 'open-uri'
 require 'xml/libxml'
 
@@ -55,10 +54,8 @@ class TrackersController < ApplicationController
 
     @complete_html = open(uri) { |f| f.read }
 
-    #doc = Hpricot(@complete_html)
     libxmldoc  = XML::HTMLParser.string(@complete_html).parse
 
-    #fragment = doc.at(@tracker.domnode)
     libxml_fragment = libxmldoc.find(@tracker.domnode)
 
       if libxml_fragment and libxml_fragment.length > 0

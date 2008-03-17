@@ -4,9 +4,12 @@ require 'logger'
 require "rubygems"
 require "activerecord"
 
+SCRAPER_PATH = ENV['SCRAPER_PATH']
 
-require "#{ENV['SCRAPER_PATH']}/app/models/tracker.rb"
-require "#{ENV['SCRAPER_PATH']}/app/models/piece.rb"
+raise 'Env variable SCRAPER_PATH not set.'if SCRAPER_PATH.nil?
+
+require "#{SCRAPER_PATH}/app/models/tracker.rb"
+require "#{SCRAPER_PATH}/app/models/piece.rb"
 
 LOGFILE = "#{ENV['SCRAPER_PATH']}/log/scrape-n-save.log"
 DATABASE = "#{ENV['SCRAPER_PATH']}/db/dev.sqlite3"
