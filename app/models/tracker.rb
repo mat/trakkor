@@ -91,15 +91,21 @@ end
     p = Piece.new
     p.tracker = self
 
-    response = Net::HTTP.get_response(URI.parse(self.uri))
+    parsed_uri = URI.parse(self.uri)
+
+    start = Time.now.to_f
+    response = Net::HTTP.get_response(parsed_uri)
+    p.duration = Time.now.to_f - start
+    p.bytecount = response.body.length if response.body
+
     if response.kind_of? Net::HTTPSuccess
       p.text_raw, p.error = extract_piece(response.body, self.xpath)
-      p.bytecount = response.body.length
       @body = response.body
     else
       p.error = "Error: #{response.code} #{response.message}"
       @body = nil
     end
+    
 
     p
 
