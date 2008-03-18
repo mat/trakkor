@@ -10,9 +10,11 @@ XML::Parser::default_line_numbers=true
 raise 'Ancient libxml-ruby bindings found, need >=0.5.2' unless defined? XML::HTMLParser
 
 class Tracker < ActiveRecord::Base
-  validates_presence_of :uri, :xpath
+  R_URI = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
 
-  validates_format_of :uri, :with => /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
+
+  validates_presence_of :uri, :xpath
+  validates_format_of :uri, :with =>  R_URI
 
   has_many :pieces, :order => 'created_at DESC'
 

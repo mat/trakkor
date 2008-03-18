@@ -1,4 +1,23 @@
-<h1>Listing trackers</h1>
+<h1>Wanted: URI and XPath</h1>
+
+Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom feeds. But sometimes you just want to track changes to a single page element, for example a price for an item or. blabla
+<h1>Start tracking</h1>
+
+<%= error_messages_for :tracker %>
+
+
+<% form_for :tracker, nil, :url => { :action => "create" }, :html => { :class => 'cmxform' }do |f| %>
+<ul>
+  <li><label for="name">URI </label><%= f.text_field(:uri, :size => 80) %> </li>
+  <li><label for="xpath">XPath</label><%= f.text_field(:xpath, :size => 80) %> </li>
+
+  <li><%= submit_tag 'Test and track' %></li>
+</ul>
+<% end %>
+
+
+
+<h1>Live examples</h1>
 
 <table>
   <tr>
@@ -8,12 +27,17 @@
   <tr>
     <td><%= link_to "#{tracker.uri}", tracker %></td>
     <td>last updated <%= relative_time(tracker.last_update) %></td>
-    <td><%= link_to 'Edit', edit_tracker_path(tracker) %></td>
-    <td><%= link_to 'Destroy', tracker, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><a href="<%= "#{tracker_path(tracker)}.atom" %>"><%= image_tag("17.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New tracker', new_tracker_path %>
+<h1>Caveats</h1>
+
+Finding an appropriate XPath that describes the desired page element page can be difficult and is the trickiest part of using Moduri: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. 
+
+<h1>FAQ</h1>
+
+

@@ -87,6 +87,8 @@ class TrackersController < ApplicationController
   def create
     @tracker = Tracker.new(params[:tracker])
 
+    #unless @tracker.uri =~ Tracker::R_URI
+
     respond_to do |format|
       if @tracker.save
         flash[:notice] = 'Tracker was successfully created.'
@@ -122,6 +124,7 @@ class TrackersController < ApplicationController
     @tracker = Tracker.find(params[:id])
     @tracker.destroy
 
+    flash[:notice] = 'Tracker was deleted.'
     respond_to do |format|
       format.html { redirect_to(trackers_url) }
       format.xml  { head :ok }

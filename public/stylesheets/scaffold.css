@@ -6,6 +6,9 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+img {
+ border: none;
+}
 pre {
   background-color: #eee;
   padding: 10px;
@@ -72,3 +75,21 @@ div.progressBar div.background {
   width: 0%;
 }
 
+form.cmxform label {
+  display: inline-block;
+  line-height: 1.4;
+  vertical-align: top;
+}
+form.cmxform ol {
+  margin: 0;
+  padding: 0;
+}
+form.cmxform li {
+  list-style: none;
+  padding: 3px;
+  margin: 0;
+}
+
+form.cmxform label {
+  width: 4em; /* Width of labels */
+}
