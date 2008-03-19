@@ -39,11 +39,17 @@ class TrackersController < ApplicationController
     end
   end
 
+  def ajax_get_piece
+    uri = params[:uri]
+    xpath = params[:xpath]
+    render :text => "hossa we got #{uri}<br> and #{xpath}"
+  end
+
   def test
     @tracker = Tracker.new
 
     @tracker.uri = params[:uri]
-    @tracker.domnode = params[:domnode]
+    @tracker.xpath = params[:xpath]
 
     uri = '/home/mat/svn_workspaces/ruby/scraper/test_simple.html'
     remote_uri = 'http://localhost:8808/doc_root/activerecord-2.0.1/rdoc/index.html'
@@ -56,7 +62,7 @@ class TrackersController < ApplicationController
 
     libxmldoc  = XML::HTMLParser.string(@complete_html).parse
 
-    libxml_fragment = libxmldoc.find(@tracker.domnode)
+    libxml_fragment = libxmldoc.find(@tracker.xpath)
 
       if libxml_fragment and libxml_fragment.length > 0
         flash[:notice] = "DOM elem found in uri, #{libxml_fragment.set.length} matches" 

@@ -5,8 +5,23 @@
 
 <ul>
 <li>uri: <%= @tracker.uri %></li>
-<li>domnode: <%= @tracker.domnode %></li>
+<li>xpath: <%= @tracker.xpath %></li>
 </ul>
+
+
+<form>
+   <label for="field1">URI:</label> <input id="uri" type="text" name="uri" /><br />
+   <label for="field2">XPath:</label> <input id="xpath" type="text" name="xpath" /><br />
+   <%= submit_to_remote 'button', 'Test XPath', :url => { :action =>  'ajax_get_piece' },
+:update => { :success => "foobar", :failure => "foobar" }  -%>
+
+</form>
+
+
+<p id='foobar'>
+huch
+</p>
+
 
 domnode_html: 
 line: <%= @found_in_line %>
@@ -21,10 +36,5 @@ complete_html:
 <pre><%= h(@complete_html) %>
 </pre>
 
-<% form_for(@tracker) do |f| %>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
 
 <%= link_to 'Back', trackers_path %>

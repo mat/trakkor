@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   #map.resources :pieces
+ map.test 'trackers/test', :controller => 'trackers', :action => 'test' 
+
   map.resources :trackers
 
   prefix='moduri/'
@@ -38,7 +40,6 @@ ActionController::Routing::Routes.draw do |map|
   #
 
 
-  map.test 'trackers/test/:uri/:domnode', :controller => 'trackers', :action => 'test' 
 
   map.connect "#{prefix}:controller/:action/:id"
   map.connect "#{prefix}:controller/:action/:id.:format"

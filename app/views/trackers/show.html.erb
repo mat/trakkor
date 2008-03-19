@@ -18,6 +18,8 @@ So far <%= @tracker.pieces.length %> pieces have been fetched which comprise of 
 <h2>Changes</h2>
 <table>
 <% for change in @tracker.pieces_dupefree %>
+<% div_for(change) do %>
+
   <tr>
     <td>
       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
@@ -45,6 +47,7 @@ So far <%= @tracker.pieces.length %> pieces have been fetched which comprise of 
       <%= h change.text_raw %>
     </td>
   </tr>
+<% end %>
 <% end %>
 </table>
 
