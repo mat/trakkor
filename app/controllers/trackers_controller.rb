@@ -43,7 +43,7 @@ class TrackersController < ApplicationController
   # GET /trackers
   # GET /trackers.xml
   def index
-    @trackers = [Tracker.find(3)] + [Tracker.find(1] + [Tracker.find(2)]
+    @trackers = [Tracker.find(3)] + [Tracker.find(1)] + [Tracker.find(2)]
 
     respond_to do |format|
       format.html # index.html.erb
