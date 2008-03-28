@@ -6,9 +6,10 @@ module TrackersHelper
 
 
   def relative_time(time)
-   return '' if time.nil?
+    return '' if time.nil?
 
-    delta = Time.now - time
+    now = Time.now
+    delta = now - time
     if (1..90) === delta 
       return "#{delta.round} seconds ago"
     end
@@ -17,8 +18,11 @@ module TrackersHelper
       return "#{(delta / MINUTE).round} minutes ago" 
     end
     
-    yesterday = Time.now - DAY
-    if yesterday.wday == time.wday
+    # Prefer 'yesterday' over '19 hours ago'
+    yday = now - DAY
+    if yday.day == time.day && 
+       yday.month == time.month && 
+       yday.year == time.year
       return "yesterday"
     end
 
@@ -27,10 +31,14 @@ module TrackersHelper
     end
 
     if ((1+DAY * 1)..(DAY * 6)) === delta
-      return time.strftime('%A') 
+      return time.strftime('last %A') 
     end
 
-    time.strftime('%A, %d %B')
+    if time.year == now.year
+      return time.strftime('%A, %d %B')
+    end
+
+    time.strftime('%A, %d %B %Y')
   end
 
   def bytes_to_human(bytes)

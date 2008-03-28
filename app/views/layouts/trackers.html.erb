@@ -9,6 +9,9 @@
   <%= javascript_include_tag 'prototype' %>
 
 
+  <link rel="shortcut icon" href="<%= image_path('favicon.png') %>" />
+
+
   <% if @tracker %>
    <link rel="alternate" type="application/atom+xml" 
          href="<%= "#{url_for(@tracker)}.atom" %>" >
@@ -16,9 +19,23 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div id='logodiv'>
+  <p class='title'><a href='<%= index_path %>'><strong>Moduri</strong></a> scratches a single element out of a web page and tracks its changes via <b>Atom feed</b> - <b>Jabber</b> notifications included.
+<br />
 
-<%= yield  %>
+</p>
+
+</div>
+
+
+<div id='contentdiv' class='textonly'>
+  <%= yield  %>
+</div>
+
+<div id='footer'>
+  <hr />
+  <p><a href='<%= index_url %>'>Moduri</a>, created by Matthias Lüdtke <br /> in April 2008 during cold, wintery hours.</p>
+</div>
 
 </body>
 </html>

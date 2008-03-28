@@ -30,9 +30,6 @@ test:
   host: localhost
 
 production:
-  adapter: mysql
-  encoding: utf8
-  database: mediator_production
-  username: root
-  password: 
-  host: localhost
+  adapter: sqlite3
+  database: db/dev.sqlite3
+

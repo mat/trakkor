@@ -2,9 +2,10 @@ body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+  font-size:   15px;
+  line-height: 20px;
 }
+
 
 img {
  border: none;
@@ -13,17 +14,72 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
+  border: 1px solid #905029;
+
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+#tracker_uri {
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+#tracker_xpath {
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
 
+hr {
+ color: #905029;
+ width: 300px;
+ padding: 0px;
+}
+strong {
+ color: #905029;
+}
+
+a { color: #905029;}
+a:visited { color: #333;}
+
+.biglink {
+  font-size: 1.5em;
+}
+
+.errorchange span {
+  background-color: #f9be40;
+}
+
+.errorchange a {
+  background-color: #f9be40;
+}
+
+
+.errorchange tr {
+  margin: 10px;
+}
+
+#changetable {
+  padding-left: 50px;
+}
+
+table#changetable tr td {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  line-height: 20px;
+}
+
+table#changetable tr th {
+  text-align: left;
+}
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
   display: table;
 }
+
+
 
 #errorExplanation {
   width: 400px;
@@ -92,4 +148,78 @@ form.cmxform li {
 
 form.cmxform label {
   width: 4em; /* Width of labels */
+}
+
+
+#logodiv {
+  color: #905029;
+ padding: 10px;
+}
+
+
+.subtitle {
+  font-size: 0.8em;
+  color: #905029;
+  padding: 0px;
+  margin: 0px;
+}
+
+.logo {
+ font-size: 2.5em;
+  color: #905029;
+  padding: 0px;
+}
+
+#contentdiv {
+  padding-left: 50px;
+  width: 90%;
+}
+
+#contentdiv .textonly {
+  padding-left: 50px;
+  width: 500px;
+}
+
+#footer p {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0px;
+}
+
+.title {
+  font-style: italic;
+}
+
+.title #title {
+  font-size: 2.5em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+}
+
+.title strong {
+  font-size: 2.5em;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  font-family: courier;
+}
+
+.examples a {
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.examples strong {
+  font-weight: bold;
+}
+
+.examples td {
+  padding-left: 3px;
+}
+
+.piece {
+  font-family: courier;
+  font-weight: normal;
+  letter-spacing: 0em;
+  font-size: 1.1em;
 }

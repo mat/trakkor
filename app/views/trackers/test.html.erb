@@ -1,40 +1,50 @@
-<h1>Testing a tracker</h1>
+<h2>Testing range</h2>
 
-<%= error_messages_for :tracker %>
+<ol>
+<li>Use either XPath Checker or XPather to obtain an XPath for the desired element. If you're lucky this Moduri recognizes this XPath an yields the edsired text.</li>
+<li>Use the brute force HTML diving method and locate the text with your browser's search funtion.</li>
+<li>Use the trial and error approach until it works.</li>
+</ol>
 
 
+<% form_tag test_path, :method => :get, :class => 'cmxform' do -%>
 <ul>
-<li>uri: <%= @tracker.uri %></li>
-<li>xpath: <%= @tracker.xpath %></li>
+ <li><label for="name">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
+ <li><label for="xpath">XPath</label><%= text_field_tag 'xpath', @xpath, :size => 80 %> </li>
+
+ <li><%= submit_tag 'Test again' %>
+<% end -%>
+
+
+
+<% form_tag new_path, :action => :new, :method => :get, :class => 'cmxform' do -%>
+
+ <%= hidden_field_tag 'uri', @uri, :size => 80 %>
+ <%= hidden_field_tag 'xpath', @xpath, :size => 80 %>
+
+ <%= submit_tag 'Create tracker' %>
+<% end -%>
+
+
+</li>
+
+
+
 </ul>
 
 
-<form>
-   <label for="field1">URI:</label> <input id="uri" type="text" name="uri" /><br />
-   <label for="field2">XPath:</label> <input id="xpath" type="text" name="xpath" /><br />
-   <%= submit_to_remote 'button', 'Test XPath', :url => { :action =>  'ajax_get_piece' },
-:update => { :success => "foobar", :failure => "foobar" }  -%>
+<p style="color: red"><%= flash[:error] %></p>
+<p style="color: green"><%= flash[:notice] %></p>
+<p style="color: yellow"><%= flash[:hint] %></p>
 
-</form>
+<%= error_messages_for :tracker %>
 
-
-<p id='foobar'>
-huch
-</p>
-
-
-domnode_html: 
+<h2>Piece HTML</h2>
 line: <%= @found_in_line %>
 <pre><%= h(@domnode_html) %>
 </pre>
 
-domnode_text: 
-<pre><%= h(@domnode_text) %>
+<h2>Full page HTML</h2>
+<pre><%= @complete_html %>
 </pre>
 
-complete_html: 
-<pre><%= h(@complete_html) %>
-</pre>
-
-
-<%= link_to 'Back', trackers_path %>

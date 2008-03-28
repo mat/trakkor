@@ -2,10 +2,14 @@
 
 <%= error_messages_for :tracker %>
 
-<% form_for(@tracker) do |f| %>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
 
-<%= link_to 'Back', trackers_path %>
+<% form_for @tracker, :url => {:action => "create"}, :html => {:class => 'cmxform'} do |f| -%>
+<ul>
+ <li><label for="name">URI </label><%= f.text_field 'uri', :size => 80 %></li>
+ <li><label for="xpath">XPath</label><%= f.text_field 'xpath', :size => 80 %> </li>
+
+ <li><%= f.submit 'Create' %></li>
+</ul>
+<% end -%>
+
+

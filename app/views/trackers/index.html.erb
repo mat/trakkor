@@ -1,43 +1,75 @@
-<h1>Wanted: URI and XPath</h1>
+
+<h2>Wanted: URI and XPath</h2>
 
 Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom feeds. But sometimes you just want to track changes to a single page element, for example a price for an item or. blabla
-<h1>Start tracking</h1>
+<h2>Start tracking</h2>
 
 <%= error_messages_for :tracker %>
 
+<% 
+ example_uri ='http://localhost:8808/doc_root/libxml-ruby-0.5.3/rdoc/classes/XML/Node.html' 
+ example_xpath = '//title/text()'
+-%>
 
-<% form_for :tracker, nil, :url => { :action => "create" }, :html => { :class => 'cmxform' }do |f| %>
+
+<% form_tag test_path, :method => :get, :class => 'cmxform' do -%>
 <ul>
-  <li><label for="name">URI </label><%= f.text_field(:uri, :size => 80) %> </li>
-  <li><label for="xpath">XPath</label><%= f.text_field(:xpath, :size => 80) %> </li>
+ <li><label for="name">URI </label><%= text_field_tag 'uri', example_uri, :size => 80 %></li>
+ <li><label for="xpath">XPath</label><%= text_field_tag 'xpath', example_xpath, :size => 80 %> </li>
 
-  <li><%= submit_tag 'Test and track' %></li>
+ <li><%= submit_tag 'Test and track' %></li>
 </ul>
-<% end %>
+<% end -%>
 
 
 
-<h1>Live examples</h1>
+<h2>Live examples</h2>
 
-<table>
-  <tr>
-  </tr>
+<table class='examples'>
 
 <% for tracker in @trackers %>
   <tr>
-    <td><%= link_to "#{tracker.uri}", tracker %></td>
-    <td>last updated <%= relative_time(tracker.last_update) %></td>
-    <td><a href="<%= "#{tracker_path(tracker)}.atom" %>"><%= image_tag("17.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
+
+    <td><a href="<%= "#{trackers_path(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
+    <td><%= link_to "#{tracker.name}", tracker %></td>
+    <td class='piece'><%= tracker.last_change.text_raw %></td>
+    <td>updated <%= relative_time(tracker.last_change.created_at) %></td>
   </tr>
 <% end %>
+
+
+
+  <tr>
+   <td></td>
+   <td colspan="2"><%= link_to "more...", { :action => "examples" } %> </td>
+  </tr>
+
 </table>
 
 <br />
 
-<h1>Caveats</h1>
+<h2>What it is not</h2>
+<p>
+Moduri is just a change tracker for single web page elements which happens to present its findings via Atom feeds and Jabber messages. That is what it's good at.
+</p>
+
+But Moduri is certainly...
+
+<ul>
+  <li>...not a tool to create Atom feeds for web sites which don't publish an Atom feed but probably should.</li>
+  <li>...not good at recognizing the structure of the HTML pieces it scrapes out of a document. That's why it treats those pieces as raw strings: If one character changes, it differs for Moduri.</li>
+</ul>
+
+It's really just a change tracker, believe me. As always, your mileage may vary.
+
+<h2>Caveats</h2>
 
 Finding an appropriate XPath that describes the desired page element page can be difficult and is the trickiest part of using Moduri: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. 
 
-<h1>FAQ</h1>
+<h2>FAQ</h2>
 
-
+ <ul id='faq'>
+   <li class='q'>I try to fetch the //head/style element but cannot fetch the content.</li>
+   <li class='q'>Were animals or software tools hurt during the creation of Moduri?</li>
+   <li class='a'>Moduri is written in <a href='http://ruby-lang.org'>Ruby</a> and uses <a href='http://rubyonrails.com'>Ruby on Rails</a>. Behind the scenes cron, <a href='gibtsnet'>libxml</a> and <a href='gibtsauchnet'>sqlite3</a> are heavily abused, but certainly not hurt. No anmials have been hurt.</li>
+ <ul>

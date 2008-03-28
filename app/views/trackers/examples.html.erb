@@ -1,0 +1,23 @@
+<div id='logo'>
+  <h1 class='logo'>Moduri</h1>
+  scratches a single element out of a web page and tracks its changes via feed.
+<div>
+
+
+<h2>Live examples</h2>
+
+<table>
+<% for tracker in @trackers %>
+  <tr>
+
+    <td><a href="<%= "#{tracker_path(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
+    <td><%= link_to "#{tracker.name}", tracker %></td>
+    <td class='piece'><%= tracker.last_change.text_raw %></td>
+    <td>updated <%= relative_time(tracker.last_change.created_at) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<td><%= link_to "Test it out", { :action => "test" } %> </td>

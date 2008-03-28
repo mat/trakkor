@@ -1,55 +1,65 @@
 
-<ul>
-  <li><a href='<%= @tracker.uri %>'><%= @tracker.uri %></a></li>
-  <li><strong><%= @tracker.xpath %></strong></li>
-  <li>created: <%= @tracker.created_at %></li>
-  <li>last update detected at: <%= relative_time(@tracker.last_update) %></li>
-  <li>last piece recorded at: <%= relative_time(@tracker.last_piece) %></li>
-</ul>
 
-<%= link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete %>
+<h2><%= @tracker.name %></h2>
 
 <p>
-So far <%= @tracker.pieces.length %> pieces have been fetched which comprise of <%= bytes_to_human(@tracker.bytes_recorded) %>.
 
-<!-- <%= @tracker.pieces.length %> pieces could not be fetched due to an error. 
-</p> !-->
+This tracker fetches the document at <br />
+  <a id='tracker_uri' href='<%= @tracker.uri %>'><%= @tracker.uri %></a> <br/>
+and monitors changes to the element at <br />
+  <strong id='tracker_xpath'><%= @tracker.xpath %></strong>
+
+</p>
+
+<p>
+md5sum: <%= @tracker.md5sum %>
+</p>
+
+<%= link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete %>
+<h2>Stats</h2>
+<p>
+This tracker has been created on <%= @tracker.created_at %>, this was XXX days ago.
+The last change was recognized 
+<abbr class="foo" title="<%= @tracker.last_change.created_at.iso8601 %>">
+ <%= relative_time(@tracker.last_change.created_at) %>
+</abbr>
+
+</p>
+
+<p>
+So far <%= @tracker.pieces_errorfree.length %> pieces have been fetched which comprise of <strong><%= bytes_to_human(@tracker.bytes_recorded) %></strong>.
+Additionaly Moduri tried to fetch 
+<%= @tracker.error_pieces.length %> pieces
+which could not be used due to an error. 
+
+<a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Display errors</a>
+</p>
 
 <h2>Changes</h2>
-<table>
-<% for change in @tracker.pieces_dupefree %>
+<table id='changetable'>
+<% for change in @changes %>
 <% div_for(change) do %>
 
   <tr>
-    <td>
-      <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
-      <abbr class="foo" title="<%= change.created_at.iso8601 %>">
-         <%= h change.created_at %>
-      </abbr>
-    </td>
-
-    <td>
+    <th>
       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
       <abbr class="foo" title="<%= change.created_at.iso8601 %>">
          <%= h relative_time(change.created_at) %>
       </abbr>
-    </td>
+    </th>
+  </tr>
 
-<% unless change.error.nil? %>
-    <td class="error">
-      <i><%= h change.error %></i>
-    </td>
+<% if change.error %>
+  <tr class='errorchange'>
+    <td><span class='errorchange'><%= h change.error %></span></td>
+  </tr>
 <% end %>
 
-  </tr>
   <tr>
-    <td>
-      <%= h change.text_raw %>
-    </td>
+    <td class='piece'><%= h change.text_raw %></td>
   </tr>
+
 <% end %>
 <% end %>
 </table>
 
-<%= link_to 'Edit', edit_tracker_path(@tracker) %> |
-<%= link_to 'Back', trackers_path %>

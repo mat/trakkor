@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "pieces", :force => true do |t|
     t.datetime "created_at"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 9) do
     t.datetime "updated_at"
     t.string   "uri"
     t.string   "xpath"
+    t.string   "name"
+    t.string   "md5sum"
   end
 
 end

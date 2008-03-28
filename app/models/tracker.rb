@@ -10,13 +10,22 @@ XML::Parser::default_line_numbers=true
 raise 'Ancient libxml-ruby bindings found, need >=0.5.2' unless defined? XML::HTMLParser
 
 class Tracker < ActiveRecord::Base
-  R_URI = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/ix
+  R_URI = /^(http|https):\/\/.*?$/ix
 
 
   validates_presence_of :uri, :xpath
   validates_format_of :uri, :with =>  R_URI
+  validates_uniqueness_of :md5sum
 
-  has_many :pieces, :order => 'created_at DESC'
+  # order: oldest piece first, most recent last
+  has_many :pieces, :order => 'created_at ASC' 
+
+  def before_create
+    payload = uri + xpath + created_at.to_s
+    self.md5sum = Digest::MD5.hexdigest(payload)
+
+    set_name
+  end
 
   def validate_on_create # is only run the first time a new object is save
     @first_piece = fetch_piece
@@ -25,19 +34,33 @@ class Tracker < ActiveRecord::Base
     end
   end
 
-  after_save :fetch_n_save_first_piece
-
-  def fetch_n_save_first_piece
-    @first_piece.save!
+  def set_name
+    self.name ||= "Tracker for #{html_title || uri}"
   end
 
-  def md5sum
-    payload = uri + xpath + created_at.to_s
-    Digest::MD5.hexdigest(payload)
+  def before_update
+    set_name
   end
 
-  def pieces_dupefree()
-    all_changes = pieces.reverse
+  def Tracker.uri?(str)
+    str =~ R_URI
+  end
+
+  def after_create
+    fetch_piece.save!
+  end
+
+  def pieces_errorfree
+    pieces.find( :all, :conditions => { :error => nil}, :order => 'created_at ASC' )
+  end
+
+  def error_pieces
+    pieces.find( :all, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' )
+   # pieces.find( :all, :conditions => { :error => nil}, :order => 'created_at ASC' )
+  end
+
+  def changes
+    all_changes = pieces_errorfree
     dupefree_changes = []
 
    prev_change = nil
@@ -50,15 +73,13 @@ class Tracker < ActiveRecord::Base
      prev_change = c
    end
 
+   # return most recent change first and on top
    dupefree_changes.reverse
   end
 
-  def pieces_with_error
-  end
-
-  def last_update
-    #return 'now update recognized' if pieces_dupefree.empty?
-    pieces_dupefree.first.created_at
+  def last_change
+    #return 'now update recognized' if changes.empty?
+    changes.first
   end
 
   def last_piece
