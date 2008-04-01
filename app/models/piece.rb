@@ -1,4 +1,7 @@
 class Piece < ActiveRecord::Base
+
+  # das piece in chunk umbennenen?
+  # # 
   belongs_to :tracker
 
   def same_content(other)
