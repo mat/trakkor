@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'hpricot'
-require '/home/mat/svn_workspaces/ruby/scraper/hpricot/inspect-html'
+require 'hpricot/inspect-html'
 
 
 module XML
