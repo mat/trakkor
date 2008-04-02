@@ -1,13 +1,6 @@
 require 'digest/md5'
 require 'net/http'
-require 'xml/libxml'
-
-# Don't let errors go to stderr, collect them.
-msgs = []
-XML::Parser.register_error_handler lambda { |msg| msgs << msg }
-XML::Parser::default_line_numbers=true
-
-raise 'Ancient libxml-ruby bindings found, need >=0.5.2' unless defined? XML::HTMLParser
+require 'hpricot'
 
 class Tracker < ActiveRecord::Base
   R_URI = /^(http|https):\/\/.*?$/ix
@@ -95,16 +88,15 @@ class Tracker < ActiveRecord::Base
   def extract_piece(data, xpath)
 
   begin
-    doc  = XML::HTMLParser.string(data).parse
-    node = doc.find(xpath)
-    raise "No DOM node found for given XPath." if node.set.first.nil?
+   html, text = Tracker.extract(data, xpath)
+   # doc  = XML::HTMLParser.string(data).parse
+   # node = doc.find(xpath)
+    raise "No DOM node found for given XPath." if html.nil?
   rescue Exception => e
     return [nil, e.to_s]
   end
 
-  text = node.set.first.to_s
-
-  return [text, nil]
+  [text, nil]
 end
 
   def html_title
@@ -135,4 +127,23 @@ end
     p
 
   end
+
+  def Tracker.extract(data, xpath)
+    if Hpricot::Doc === data
+      doc = data
+    else
+      doc = Hpricot.parse(data.to_s)
+    end
+
+    piece = doc.at(xpath)
+
+    return nil unless piece
+    [piece.to_original_html, piece.inner_text]
+  end
+
+  def Tracker.replace_id_funtion(xpath)
+    xpath.gsub(/^id\((.*?)\)/x,"//[@id=\\1]")
+  end
+
+  
 end
