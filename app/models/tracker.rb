@@ -13,11 +13,13 @@ class Tracker < ActiveRecord::Base
   # order: oldest piece first, most recent last
   has_many :pieces, :order => 'created_at ASC' 
 
-  def before_create
-    payload = uri + xpath + created_at.to_s
-    self.md5sum = Digest::MD5.hexdigest(payload)
-
+  def before_create 
+    generate_md5_key
     set_name
+  end
+
+  def generate_md5_key
+    @attributes['md5sum'] = Digest::MD5.hexdigest((object_id + rand(255)).to_s)
   end
 
   def validate_on_create # is only run the first time a new object is save
