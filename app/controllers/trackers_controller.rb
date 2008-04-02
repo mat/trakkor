@@ -102,16 +102,14 @@ class TrackersController < ApplicationController
     raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
 
     begin
-      parsed_uri = URI.parse(@uri)
-      response = Net::HTTP.get_response(parsed_uri)
-      data = response.body
+      data = Tracker.fetch(@uri).body
       @foo = "/test?uri=#{@uri}&xpath=#{@xpath}"
 
       doc = Hpricot.parse(data)
       @complete_html = PP.pp(doc.root, "")
       @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
 
-      html, text = Tracker.extract_from_page(doc, @xpath)
+      html, text = Tracker.extract(doc, @xpath)
       if html and text
         flash[:notice] = "DOM elem found in uri, #{42} matches" 
     	@domnode_html = html

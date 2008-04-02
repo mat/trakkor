@@ -96,7 +96,7 @@ class Tracker < ActiveRecord::Base
     return [nil, e.to_s]
   end
 
-  [text, nil]
+  [html, nil]
 end
 
   def html_title
@@ -108,10 +108,8 @@ end
     p = Piece.new
     p.tracker = self
 
-    parsed_uri = URI.parse(self.uri)
-
     start = Time.now.to_f
-    response = Net::HTTP.get_response(parsed_uri)
+    response = Tracker.fetch(self.uri)
     p.duration = Time.now.to_f - start
     p.bytecount = response.body.length if response.body
 
@@ -143,6 +141,11 @@ end
 
   def Tracker.replace_id_funtion(xpath)
     xpath.gsub(/^id\((.*?)\)/x,"//[@id=\\1]")
+  end
+
+  def Tracker.fetch(uri)
+    parsed_uri = URI.parse(URI.escape(uri))
+    response = Net::HTTP.get_response(parsed_uri)
   end
 
   
