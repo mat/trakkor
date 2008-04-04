@@ -71,17 +71,22 @@ class TrackersController < ApplicationController
     raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
 
     begin
-      data = cache.get(@uri)
-      unless data
+      data, doc = cache.get(@uri), cache.get("#{@uri}.doc")
+      if data and doc
+        doc = Marshal.restore(doc)
+        @complete_html = cache.get("#{@uri}.pretty_html")
+      else
         data = Tracker.fetch(@uri).body
+        doc = Hpricot.parse(data)
+        @complete_html = PP.pp(doc.root, "")
+        @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
+
         cache.set(@uri, data)
+	cache.set("#{@uri}.doc", Marshal.dump(doc))
+	cache.set("#{@uri}.pretty_html", @complete_html)
       end
 
       @foo = "/test?uri=#{@uri}&xpath=#{@xpath}"
-
-      doc = Hpricot.parse(data)
-      @complete_html = PP.pp(doc.root, "")
-      @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
 
       html, text = Tracker.extract(doc, @xpath)
       if html and text

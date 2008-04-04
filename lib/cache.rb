@@ -30,10 +30,10 @@ class FileCache
             
             age = now-timestamp
             if age < maxage
-            	puts " and is Fresh (#{age}s old)."
+            	puts " is Fresh (#{age}s old)."
             	return value
             else
-            	puts " but is STALE (#{age}s old)."
+            	puts " is STALE (#{age}s old)."
             	return nil
             end
         rescue Exception => e
