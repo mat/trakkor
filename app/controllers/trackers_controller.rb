@@ -1,38 +1,7 @@
 require 'rubygems'
 require 'hpricot'
 require 'hpricot/inspect-html'
-
-
-module XML
-  class Node
-    def traverse(&block)
-      raise "ooops, got #{self.class}" unless self.class == XML::Node
-      yield self
-      self.to_a.each{ |child| child.traverse(&block) }
-    end
-
-    def id_path
-      return "id('#{self['id']}')" if self['id']
-     
-      id_parent = nearest_parent_with_id
-      if id_parent
-        self.path.sub(id_parent.path, "id('#{id_parent['id']}')")
-      else
-        self.path
-      end
-    end
-
-    def nearest_parent_with_id
-      return nil if parent.class == XML::Document
-      return parent if parent['id']       
-
-      parent.nearest_parent_with_id
-    end
-
-  end
-end
-
-
+require 'cache'
 
 class TrackersController < ApplicationController
 
@@ -102,7 +71,12 @@ class TrackersController < ApplicationController
     raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
 
     begin
-      data = Tracker.fetch(@uri).body
+      data = cache.get(@uri)
+      unless data
+        data = Tracker.fetch(@uri).body
+        cache.set(@uri, data)
+      end
+
       @foo = "/test?uri=#{@uri}&xpath=#{@xpath}"
 
       doc = Hpricot.parse(data)
@@ -191,4 +165,9 @@ class TrackersController < ApplicationController
     end
   end
 
+  private
+
+  def cache
+    FileCache.new('tmp/tracker_test_cache')
+  end
 end
