@@ -21,7 +21,7 @@ class FileCache
             data = File.read(cacheFullPath)
             print "Hit for #{key}"
             
-            timestamp, value = data.split("\n--\n\n")
+            _,timestamp, value = data.match(/(.*?)\n--\n\n(.*)/m).to_a
             timestamp = Time.rfc822(timestamp)
             
             now = Time.now
