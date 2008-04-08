@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 12) do
 
   create_table "pieces", :force => true do |t|
     t.datetime "created_at"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 11) do
     t.string   "error"
     t.integer  "bytecount"
     t.float    "duration"
+    t.text     "text"
   end
 
   create_table "trackers", :force => true do |t|
