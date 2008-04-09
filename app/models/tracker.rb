@@ -95,15 +95,16 @@ class Tracker < ActiveRecord::Base
    # node = doc.find(xpath)
     raise "No DOM node found for given XPath." if html.nil?
   rescue Exception => e
-    return [nil, e.to_s]
+    return [nil, nil, e.to_s]
   end
 
-  [html, nil]
+  [html, text, nil]
 end
 
   def html_title
     fetch_piece unless @body 
-    extract_piece(@body, '//head/title/text()').first
+    _, title_as_text, _ = extract_piece(@body, '//head/title/text()')
+    title_as_text
   end
 
   def fetch_piece
@@ -116,16 +117,14 @@ end
     p.bytecount = response.body.length if response.body
 
     if response.kind_of? Net::HTTPSuccess
-      p.text_raw, p.error = extract_piece(response.body, self.xpath)
+      p.text_raw, p.text, p.error = extract_piece(response.body, self.xpath)
       @body = response.body
     else
       p.error = "Error: #{response.code} #{response.message}"
       @body = nil
     end
     
-
     p
-
   end
 
   def Tracker.extract(data, xpath)

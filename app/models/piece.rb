@@ -10,7 +10,7 @@ class Piece < ActiveRecord::Base
   def same_content(other)
      return false if other.nil?
  
-     self.text_raw == other.text_raw
+     self.text == other.text
   end
 
 
