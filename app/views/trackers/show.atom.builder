@@ -1,15 +1,15 @@
   atom_feed(:root_url => url_for(@tracker)) do |feed|
-    feed.title("Tracker for #{@tracker.uri}")
+    feed.title("Mendono - #{@tracker.name}")
     feed.updated((@tracker.last_change.created_at))
-    feed.subtitle("hossa")
+    #feed.subtitle("view and change this tracker at #{link_to(@tracker)}", :type => 'html')
 
     for piece in @tracker.changes
       feed.entry(piece, :url => "#{url_for(@tracker)}") do |entry|
-        entry.title(piece.text_raw, :type => 'html')
-        entry.content(piece.text_raw, :type => 'html')
+        entry.title(piece.text, :type => 'text')
+        entry.content(piece.text, :type => 'text')
 
         entry.author do |author|
-          author.name("Extracted from #{@tracker.uri}")
+          author.name("via Mendono")
         end
       end
     end
