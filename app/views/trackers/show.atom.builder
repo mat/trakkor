@@ -1,3 +1,5 @@
+require 'atom_monkeypatch'
+
   atom_feed(:root_url => url_for(@tracker)) do |feed|
     feed.title("Mendono - #{@tracker.name}")
     feed.updated((@tracker.last_change.created_at))
