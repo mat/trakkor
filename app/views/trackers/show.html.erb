@@ -57,7 +57,7 @@ which could not be used due to an error.
 <% end %>
 
   <tr>
-    <td class='piece'><%= h change.text %></td>
+    <td class='piece'><pre><%= Piece.tidy_text(change.text) %></pre></td>
   </tr>
 
 <% end %>
