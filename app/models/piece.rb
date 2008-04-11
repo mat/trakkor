@@ -8,7 +8,7 @@ class Piece < ActiveRecord::Base
   belongs_to :tracker
 
   def before_save
-    self.text = Piece.tidy_text(self.text)
+    self.text = Piece.tidy_text(self.text) if self.text
   end
 
   def same_content(other)
