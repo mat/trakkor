@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 12) do
+ActiveRecord::Schema.define(:version => 13) do
 
   create_table "pieces", :force => true do |t|
     t.datetime "created_at"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 12) do
     t.string   "xpath"
     t.string   "name"
     t.string   "md5sum"
+    t.text     "web_hook"
   end
 
 end

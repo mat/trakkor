@@ -1,6 +1,7 @@
 require 'digest/md5'
 require 'net/http'
 require 'hpricot'
+require 'json'
 
 class Tracker < ActiveRecord::Base
   R_URI = /^(http|https):\/\/.*?$/ix
@@ -76,6 +77,11 @@ class Tracker < ActiveRecord::Base
     #return 'now update recognized' if changes.empty?
     changes.first
   end
+  alias :current :last_change
+
+  def first
+    changes.last
+  end
 
   def last_piece
     #return 'now pieces recorded' if pieces.empty?
@@ -149,5 +155,24 @@ end
     response = Net::HTTP.get_response(parsed_uri)
   end
 
+  def notify_change(old_piece, new_piece)
+    t = {:name => self.name, :uri => self.uri, :xpath => self.xpath }
+    n = {:timestamp => new_piece.created_at.xmlschema, :text => new_piece.text}
+    o = {:timestamp => old_piece.created_at.xmlschema, :text => old_piece.text}
+    payload = {:change => {:tracker => t, :new => n, :old => o}}
+  
+    begin
+    res = Net::HTTP.post_form(URI.parse(self.web_hook),
+                              {'payload' => payload.to_json})
+    pp res.body
+    rescue
+      logger.warn("Could not notify tracker #{self.id} via #{self.web_hook}")
+    end
+
+  end
+
+  def differs_from_newest?(piece)
+    current.same_content(piece)
+  end
   
 end
