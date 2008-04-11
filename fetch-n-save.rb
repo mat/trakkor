@@ -26,6 +26,19 @@ ActiveRecord::Base.logger = Logger.new(File.open(LOGFILE, 'a'))
 
 trackers = Tracker::find(:all)
 
+must_notify = []
+
 trackers.each do |tracker|
- tracker.fetch_piece.save!
+
+ old_piece = tracker.current
+ new_piece = tracker.fetch_piece
+ new_piece.save!
+
+ if tracker.should_notify?(old_piece,new_piece)
+   must_notify << [tracker, old_piece, new_piece]
+ end
 end
+
+must_notify.each{ |t, old, new| 
+  t.notify_change(old, new)
+}

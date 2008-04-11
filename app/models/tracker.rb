@@ -171,8 +171,8 @@ end
 
   end
 
-  def differs_from_newest?(piece)
-    current.same_content(piece)
+  def should_notify?(old_piece, new_piece)
+    self.web_hook && !new_piece.error && !old_piece.same_content(new_piece)
   end
   
 end
