@@ -118,7 +118,13 @@ end
     p.tracker = self
 
     start = Time.now.to_f
-    response = Tracker.fetch(self.uri)
+    begin
+      response = Tracker.fetch(self.uri)
+    rescue Exception => e
+      p.error = "Error: #{e.to_s}"
+      @body = nil
+    end
+
     p.duration = Time.now.to_f - start
     p.bytecount = response.body.length if response.body
 
