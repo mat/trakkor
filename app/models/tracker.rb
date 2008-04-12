@@ -156,17 +156,21 @@ end
   end
 
   def notify_change(old_piece, new_piece)
+    begin
     t = {:name => self.name, :uri => self.uri, :xpath => self.xpath }
     n = {:timestamp => new_piece.created_at.xmlschema, :text => new_piece.text}
     o = {:timestamp => old_piece.created_at.xmlschema, :text => old_piece.text}
     payload = {:change => {:tracker => t, :new => n, :old => o}}
+    rescue Exception => e
+      logger.error("Could not create notification Json: #{e}")
+    end
   
     begin
     res = Net::HTTP.post_form(URI.parse(self.web_hook),
                               {'payload' => payload.to_json})
     pp res.body
     rescue
-      logger.warn("Could not notify tracker #{self.id} via #{self.web_hook}")
+      logger.error("Could not notify tracker #{self.id} via #{self.web_hook}")
     end
 
   end
