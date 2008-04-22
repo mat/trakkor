@@ -16,16 +16,6 @@
 <% end -%>
 
 
-
-<% form_tag new_path, :action => :new, :method => :get, :class => 'cmxform' do -%>
-
- <%= hidden_field_tag 'uri', @uri, :size => 80 %>
- <%= hidden_field_tag 'search', @search, :size => 80 %>
-
- <%= submit_tag 'Create tracker' %>
-<% end -%>
-
-
 </li>
 
 
@@ -50,7 +40,8 @@ Found <%= @hits.size %> hits:
 <li> <span><%= h(hit.xpath) %></span>
 <a href='<%=  url_for(:action => 'new', :uri => @uri, :xpath => hit.xpath)  %>'>Proceed</a>
 
-<pre><%= Piece.tidy_text(hit.inner_text).gsub(@search, "<strong class='highlightsearch'>#{@search}</strong>") %>
+<pre>
+<%= Piece.tidy_text(hit.inner_text).gsub(/(#{Regexp.escape(@search)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
 </pre>
 
 </li>
