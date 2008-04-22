@@ -10,7 +10,7 @@
 <% form_tag test_path, :method => :get, :class => 'cmxform' do -%>
 <ul>
  <li><label for="name">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
- <li><label for="search">Find text</label><%= text_field_tag 'search', @search, :size => 80 %> </li>
+ <li><label for="xpath">XPath</label><%= text_field_tag 'xpath', @xpath, :size => 80 %> </li>
 
  <li><%= submit_tag 'Test again' %>
 <% end -%>
@@ -20,7 +20,7 @@
 <% form_tag new_path, :action => :new, :method => :get, :class => 'cmxform' do -%>
 
  <%= hidden_field_tag 'uri', @uri, :size => 80 %>
- <%= hidden_field_tag 'search', @search, :size => 80 %>
+ <%= hidden_field_tag 'xpath', @xpath, :size => 80 %>
 
  <%= submit_tag 'Create tracker' %>
 <% end -%>
@@ -39,23 +39,16 @@
 
 <%= error_messages_for :tracker %>
 
-<ul>
-
-<% if @hits %>
-Found <%= @hits.size %> hits:
-
-<%- @hits = @hits.sort_by{|h| h.inner_text.length}%>
-
-<% for hit in @hits %>
-<li> <span><%= h(hit.xpath) %></span>
-<a href='<%=  url_for(:action => 'new', :uri => @uri, :xpath => hit.xpath)  %>'>Proceed</a>
-
-<pre><%= Piece.tidy_text(hit.inner_text).gsub(@search, "<strong class='highlightsearch'>#{@search}</strong>") %>
+<h2>Piece HTML</h2>
+line: <%= @found_in_line %>
+<pre><%= h(@domnode_html) %>
 </pre>
 
-</li>
+<h2>Piece as text</h2>
+<pre><%= @domnode_text %></pre>
 
-<% end %>
-</ul>
-<% end %>
+
+<h2>Full page HTML</h2>
+<pre><%= @complete_html %>
+</pre>
 

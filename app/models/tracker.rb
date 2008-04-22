@@ -189,5 +189,28 @@ end
     ten_newest_pieces = pieces.find( :all, :order => 'created_at DESC', :limit => 10 )
     ten_newest_pieces.all? { |p| p.error }
   end
+
+  def Tracker.find_nodes_by_text(doc, str)
+    nodes = doc.search("//").select { |ele| ele.inner_text =~ /#{str}/i }
+
+    nodes = nodes.sort_by{ rand }
+    nodes = nodes.select{ |n| n.class == Hpricot::Elem }
+
+    parents = Set.new
+
+    nodes.each{ |n| Tracker.collect_parents(n, parents) }
+
+    nodes -= parents.to_a
+  end
+
+  private
+  def Tracker.collect_parents(n, parents)
+    return if n.class == Hpricot::Doc
+
+    if n.parent
+      parents << n.parent
+      collect_parents(n.parent, parents)
+    end
+  end
   
 end

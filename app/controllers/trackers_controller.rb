@@ -64,7 +64,7 @@ class TrackersController < ApplicationController
     render :text => "hossa we got #{uri}<br> and #{xpath}"
   end
 
-  def test
+  def testxpath
     @uri = params[:uri]
     @xpath = params[:xpath]
 
@@ -112,6 +112,49 @@ class TrackersController < ApplicationController
     end
   end
 
+  def test
+    @uri = params[:uri]
+    @search = params[:search]
+
+    raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
+
+    begin
+      data, doc = cache.get(@uri), cache.get("#{@uri}.doc")
+      if data and doc
+        doc = Marshal.restore(doc)
+        @complete_html = cache.get("#{@uri}.pretty_html")
+      else
+        data = Tracker.fetch(@uri).body
+        doc = Hpricot.parse(data)
+        @complete_html = PP.pp(doc.root, "")
+        @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
+
+        cache.set(@uri, data)
+	cache.set("#{@uri}.doc", Marshal.dump(doc))
+	cache.set("#{@uri}.pretty_html", @complete_html)
+      end
+
+      hits = Tracker.find_nodes_by_text(doc, @search)
+      if hits
+        @hits = hits
+        flash[:notice] = "DOM elem found in uri, #{42} matches" 
+      else
+        flash[:notice] = "Cannot find DOM elem containing #{@search}."
+        @hits = nil
+      end
+
+    rescue Exception => e
+       flash[:notice] = "Error: #{e.to_s}"
+       flash[:hint] = "Hint: #{e.to_s}"
+    end
+
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => nil }
+    end
+  end
+
   def stats
     @active_trackers = Tracker.find(:all).length
     @sick_trackers = Tracker.find(:all).find_all{ |t| t.sick? }
@@ -140,6 +183,7 @@ class TrackersController < ApplicationController
       end
     end
   end
+
 
   # PUT /trackers/1
   # PUT /trackers/1.xml

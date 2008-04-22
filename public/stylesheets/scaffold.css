@@ -47,6 +47,11 @@ a:visited { color: #333;}
   background-color: #ff0;
 }
 
+.highlightsearch {
+  background-color: green;
+  color: #fff;
+}
+
 .biglink {
   font-size: 1.5em;
 }

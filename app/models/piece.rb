@@ -23,18 +23,18 @@ class Piece < ActiveRecord::Base
   end
 
 
-  def self.tidy_text(str)
+  def Piece.tidy_text(str)
    str = tidy_tabby_lines(str)
    str = tidy_multiple_nl(str)
    str = str.strip
   end
 
   private
-  def self.tidy_tabby_lines(str)
+  def Piece.tidy_tabby_lines(str)
     str.gsub(/\n\t+\n/, "\n\n")
   end
 
-  def self.tidy_multiple_nl(str)
+  def Piece.tidy_multiple_nl(str)
     str.gsub(/\n\n+/, "\n")
   end
 end
