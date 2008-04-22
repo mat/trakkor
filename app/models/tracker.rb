@@ -184,5 +184,10 @@ end
   def should_notify?(old_piece, new_piece)
     self.web_hook && !new_piece.error && !old_piece.same_content(new_piece)
   end
+
+  def sick?
+    ten_newest_pieces = pieces.find( :all, :order => 'created_at DESC', :limit => 10 )
+    ten_newest_pieces.all? { |p| p.error }
+  end
   
 end

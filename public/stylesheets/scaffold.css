@@ -43,6 +43,10 @@ strong {
 a { color: #905029;}
 a:visited { color: #333;}
 
+.sick {
+  background-color: #ff0;
+}
+
 .biglink {
   font-size: 1.5em;
 }

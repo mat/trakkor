@@ -7,4 +7,15 @@ Moduri is currently running <%= @active_trackers %> trackers.
 This statistics were created at <%= Time.now %> 
 </p>
 
+<h3>Sick trackers</h3>
+<% if @sick_trackers %>
+ <ul>
+<% for t in @sick_trackers %>
+    <li><%= link_to(t.name, t) %></li>
+<% end %>
+</ul>
 
+
+<% else %>
+  No tracker is sick currently.
+<% end %>

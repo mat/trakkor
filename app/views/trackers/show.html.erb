@@ -12,6 +12,12 @@ and monitors changes to the element at <br />
 
 </p>
 
+<% if @tracker.sick? %>
+  <p class='sick'>
+    This tracker may be sick: Mendono failed to retrieve recent pieces. 
+  </p>
+<% end %>
+
 <p>
 md5sum: <%= @tracker.md5sum %>
 </p>
