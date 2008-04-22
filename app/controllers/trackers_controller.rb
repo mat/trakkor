@@ -137,9 +137,9 @@ class TrackersController < ApplicationController
       hits = Tracker.find_nodes_by_text(doc, @search)
       if hits
         @hits = hits
-        flash[:notice] = "DOM elem found in uri, #{42} matches" 
+        #flash[:notice] = "DOM elem found in uri, #{42} matches" 
       else
-        flash[:notice] = "Cannot find DOM elem containing #{@search}."
+        #flash[:notice] = "Cannot find DOM elem containing #{@search}."
         @hits = nil
       end
 

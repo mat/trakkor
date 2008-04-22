@@ -32,7 +32,7 @@
 <ul>
 
 <% if @hits %>
-Found <%= @hits.size %> hits:
+<p style="color: green">Found <%= @hits.size %> hits:</p>
 
 <%- @hits = @hits.sort_by{|h| h.inner_text.length}%>
 
