@@ -193,7 +193,6 @@ end
   def Tracker.find_nodes_by_text(doc, str)
     nodes = doc.search("//").select { |ele| ele.inner_text =~ /#{str}/i }
 
-    nodes = nodes.sort_by{ rand }
     nodes = nodes.select{ |n| n.class == Hpricot::Elem }
 
     parents = Set.new
