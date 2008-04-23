@@ -3,7 +3,7 @@ require 'atom_monkeypatch'
   atom_feed(:root_url => url_for(@tracker)) do |feed|
     feed.title("Mendono - #{@tracker.name}", :type => 'text')
     feed.updated((@tracker.last_change.created_at))
-    #feed.subtitle("view and change this tracker at #{link_to(@tracker)}", :type => 'html')
+    feed.subtitle("This tracker observes <a href='#{@tracker.uri}'>#{@tracker.uri}</a>.<br /> View and change tracker settings at <a href='#{url_for :only_path => false}'>#{@tracker.name}</a>", :type => 'html')
     feed.link(:href => url_for(:only_path => false, :format => 'atom'), :rel =>'self')
 
     for piece in @tracker.changes
