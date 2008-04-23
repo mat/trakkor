@@ -2,6 +2,34 @@
   require 'sinatra'
   require 'json'
   require 'yaml'
+  require 'net/smtp'
+
+MAIL_SERVER = 'mail.gmx.net'
+LOGIN  = File.read('/home/mat/.mail_login').reverse.strip
+PASSWORD = File.read('/home/mat/.mail_pw').reverse.strip
+
+
+FROM_EMAIL = 'matthias-luedtke@gmx.de'
+TO_EMAIL = 'email@matthias-luedtke.de'
+
+def message(from, to, body, subject='')
+msg = <<END_OF_MESSAGE
+From: #{from}
+To: #{to}
+Subject: #{subject}
+
+#{body}
+END_OF_MESSAGE
+
+end
+
+
+def send_mail(msg)
+Net::SMTP.start(MAIL_SERVER, 25, 'localhost.localdomain', LOGIN, PASSWORD, :login) do |smtp|
+  smtp.send_message msg, FROM_EMAIL, TO_EMAIL
+  end
+  puts 'k, send mail'
+  end
 
   get '/' do
     'Hello world! Visit /hook for the hook'
@@ -36,6 +64,7 @@
    raw_post_data = params[:payload]
    change = JSON.parse(params[:payload])
 
+  send_mail(message(FROM_EMAIL, TO_EMAIL, change['change']['new']['text'], 'Mendono change'))
   add(change)
   "#{change.to_json} \n"
 end
