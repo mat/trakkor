@@ -1,4 +1,4 @@
-<h1>New tracker</h1>
+<h1>Create a new tracker</h1>
 
 <%= error_messages_for :tracker %>
 
@@ -12,6 +12,12 @@
 
  <li><%= f.submit 'Create' %></li>
 </ul>
+
+<h2>Preview piece</h2>
+<pre>
+<%= @piece.text %>
+</pre>
+
 <% end -%>
 
 

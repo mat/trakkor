@@ -109,7 +109,11 @@ end
 
   def html_title
     fetch_piece unless @body 
-    _, title_as_text, _ = extract_piece(@body, '//head/title/text()')
+    fetch_title(@body)
+  end
+
+  def fetch_title(data=fetch_piece)
+    _, title_as_text, _ = extract_piece(data, '//head/title/text()')
     title_as_text
   end
 

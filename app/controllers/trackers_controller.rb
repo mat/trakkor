@@ -51,6 +51,14 @@ class TrackersController < ApplicationController
     @tracker = Tracker.new
     @tracker.uri = params[:uri]
     @tracker.xpath = params[:xpath]
+    @tracker.name = params[:name]
+    @tracker.web_hook = params[:web_hook]
+
+    if @tracker.uri && @tracker.xpath 
+       
+       @piece = @tracker.fetch_piece
+       @tracker.name = @tracker.fetch_title
+    end
 
     respond_to do |format|
       format.html # new.html.erb
