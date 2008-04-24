@@ -48,16 +48,15 @@ class TrackersController < ApplicationController
   # GET /trackers/new
   # GET /trackers/new.xml
   def new
-    @tracker = Tracker.new
-    @tracker.uri = params[:uri]
-    @tracker.xpath = params[:xpath]
-    @tracker.name = params[:name]
-    @tracker.web_hook = params[:web_hook]
-
+    @tracker = Tracker.new(params[:tracker])
+    #@tracker = Tracker.new
+    #@tracker.uri = params[:uri]
+    #@tracker.xpath = params[:xpath]
+    #@tracker.name = params[:name]
+    #@tracker.web_hook = params[:web_hook]
+    
     if @tracker.uri && @tracker.xpath 
-       
        @piece = @tracker.fetch_piece
-       @tracker.name = @tracker.fetch_title
     end
 
     respond_to do |format|
@@ -178,8 +177,6 @@ class TrackersController < ApplicationController
   # POST /trackers.xml
   def create
     @tracker = Tracker.new(params[:tracker])
-
-    #unless @tracker.uri =~ Tracker::R_URI
 
     respond_to do |format|
       if @tracker.save

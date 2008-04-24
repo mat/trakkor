@@ -3,6 +3,7 @@
 <%= error_messages_for :tracker %>
 
 <% form_for @tracker, :url => {:action => "create"}, :html => {:class => 'cmxform'} do |f| -%>
+
 <ul>
  <li><label for="uri">URI </label><%= f.text_field 'uri', :size => 80 %></li>
  <li><label for="xpath">XPath</label><%= f.text_field 'xpath', :size => 80 %> </li>
@@ -13,11 +14,13 @@
  <li><%= f.submit 'Create' %></li>
 </ul>
 
+<%- if @piece %>
 <h2>Preview piece</h2>
 <pre>
 <%= @piece.text %>
 </pre>
 
+<% end -%>
 <% end -%>
 
 

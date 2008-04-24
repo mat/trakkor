@@ -9,11 +9,18 @@ class Tracker < ActiveRecord::Base
 
   validates_presence_of :uri, :xpath
   validates_format_of :uri, :with =>  R_URI
-  validates_format_of :web_hook, :with =>  R_URI
   validates_uniqueness_of :md5sum
+
+  before_validation :nilify_web_hook
+  validate :web_hook_nil_or_uri
 
   # order: oldest piece first, most recent last
   has_many :pieces, :order => 'created_at ASC' 
+
+
+  def nilify_web_hook
+    @attributes['web_hook'] = nil if @attributes['web_hook'] && @attributes['web_hook'].empty?
+  end
 
   def before_create 
     generate_md5_key
@@ -22,6 +29,12 @@ class Tracker < ActiveRecord::Base
 
   def generate_md5_key
     @attributes['md5sum'] = Digest::MD5.hexdigest((object_id + rand(255)).to_s)
+  end
+
+  def web_hook_nil_or_uri
+    if web_hook && !(Tracker.uri?(web_hook))
+       errors.add("Web Hook", "must be an HTTP URI")
+    end
   end
 
   def validate_on_create # is only run the first time a new object is save
