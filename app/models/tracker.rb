@@ -9,6 +9,7 @@ class Tracker < ActiveRecord::Base
 
   validates_presence_of :uri, :xpath
   validates_format_of :uri, :with =>  R_URI
+  validates_format_of :web_hook, :with =>  R_URI
   validates_uniqueness_of :md5sum
 
   # order: oldest piece first, most recent last
