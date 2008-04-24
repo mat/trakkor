@@ -55,8 +55,15 @@ class TrackersController < ApplicationController
     #@tracker.name = params[:name]
     #@tracker.web_hook = params[:web_hook]
     
+    
     if @tracker.uri && @tracker.xpath 
        @piece = @tracker.fetch_piece
+
+       if @tracker.name.nil? || @tracker.name.empty?
+         html_title = @tracker.html_title
+         html_title = "#{html_title[0..50]}..." if html_title.length > 50
+         @tracker.name = "Tracking '#{html_title}'"
+       end
     end
 
     respond_to do |format|
