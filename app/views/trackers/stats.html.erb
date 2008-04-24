@@ -14,8 +14,19 @@ This statistics were created at <%= Time.now %>
     <li><%= link_to(t.name, t) %></li>
 <% end %>
 </ul>
-
-
 <% else %>
-  No tracker is sick currently.
+  No tracker is sick at the moment.
 <% end %>
+
+<h3>Web Hooks</h3>
+<% if @hook_trackers %>
+ <ul>
+<% for t in @hook_trackers %>
+    <li><%= link_to(t.name, t) %> - <%= t.web_hook %></li>
+<% end %>
+</ul>
+<% else %>
+  No tracker has defined a web hook.
+<% end %>
+
+
