@@ -1,2 +1,2 @@
 #!/bin/sh
-script/process/spawner -a 127.0.0.1 -p 2350 -i 1
+script/process/spawner -a 127.0.0.1 -p 3350 -i 1
