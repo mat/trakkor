@@ -64,7 +64,7 @@ Net::SMTP.start(MAIL_SERVER, 25, 'localhost.localdomain', LOGIN, PASSWORD, :logi
    raw_post_data = params[:payload]
    change = JSON.parse(params[:payload])
 
-  send_mail(message(FROM_EMAIL, TO_EMAIL, change['change']['new']['text'], 'Mendono change'))
+  send_mail(message(FROM_EMAIL, TO_EMAIL, change['change']['new']['text'], "Mendono: #{change['change']['tracker']['name']}"))
   add(change)
   "#{change.to_json} \n"
 end
