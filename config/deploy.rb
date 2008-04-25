@@ -1,5 +1,6 @@
 set :application, "mendono"
 set :repository,  "svn://cjs3f.de:4712/ruby/scraper/rails"
+set :runner,  "mat"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
