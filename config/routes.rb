@@ -2,19 +2,17 @@ ActionController::Routing::Routes.draw do |map|
   #map.resources :pieces
   prefix='moduri/'
   
-  map.index "#{prefix}", :controller => 'trackers', :action => 'index' 
-  map.test "#{prefix}test", :controller => 'trackers', :action => 'test' 
-  map.stats "#{prefix}stats", :controller => 'trackers', :action => 'stats' 
-  map.examples "#{prefix}examples", :controller => 'trackers', :action => 'examples' 
-  map.new "#{prefix}new", :controller => 'trackers', :action => 'new' 
+  map.test "/trackers/test", :controller => 'trackers', :action => 'test' 
+  map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats' 
+  map.examples "/trackers/examples", :controller => 'trackers', :action => 'examples' 
 
-  map.tracker "#{prefix}:id", :controller => 'trackers', :action => 'show' 
-  map.trackers "#{prefix}:id", :controller => 'trackers', :action => 'show' 
+  #map.tracker "#{prefix}:id", :controller => 'trackers', :action => 'show' 
+  #map.trackers ":id", :controller => 'trackers', :action => 'show' 
 
-  map.connect "#{prefix}:id.:format", :controller => 'trackers', :action => 'show'
+  #map.connect "#{prefix}:id.:format", :controller => 'trackers', :action => 'show'
 
 
-  #map.resources :trackers
+  map.resources :trackers
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -43,7 +41,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  #map.root :controller => "trackers"
+  map.root :controller => "trackers", :action => 'index'
 
   # See how all your routes lay out with "rake routes"
 
@@ -52,6 +50,6 @@ ActionController::Routing::Routes.draw do |map|
 
 
 
-  map.connect "#{prefix}:controller/:action/:id"
-  map.connect "#{prefix}:controller/:action/:id.:format"
+  map.connect ":controller/:action/:id"
+  map.connect ":controller/:action/:id.:format"
 end

@@ -32,7 +32,7 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 <% for tracker in @trackers %>
   <tr>
 
-    <td><a href="<%= "#{trackers_path(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
+    <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
     <td><%= link_to "#{tracker.name}", tracker %></td>
     <td class='piece'><%= tracker.last_change.text_raw %></td>
     <td>updated <%= relative_time(tracker.last_change.created_at) %></td>
