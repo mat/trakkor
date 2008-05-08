@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   #map.resources :pieces
   prefix='moduri/'
   
-  map.test "/trackers/test", :controller => 'trackers', :action => 'test' 
+  map.find_xpath "/trackers/find-xpath", :controller => 'trackers', :action => 'find_xpath' 
   map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats' 
   map.examples "/trackers/examples", :controller => 'trackers', :action => 'examples' 
 

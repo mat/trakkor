@@ -126,7 +126,7 @@ class TrackersController < ApplicationController
     end
   end
 
-  def test
+  def find_xpath
     @uri = params[:uri]
     @search = params[:search]
 
