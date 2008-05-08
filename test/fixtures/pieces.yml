@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+new_design_first_piece:
+  id: 1
+  created_at: 2006-01-29 08:03:56
+  text: "54,730"
+  tracker_id: "5"
+
+<% 1.upto(30) do |number| %>
+new_design_good_piece<%= number %>:
+  id: <%= number + 3 %>
+  created_at: 2006-01-30 08:03:56
+  text: "54,737"
+  tracker_id: "5"
+<% end %>
+
+
+<% 1.upto(20) do |number| %>
+new_design_dom_not_found_piece_<%= number %>:
+  id: <%= number + 50 %>
+  created_at: 2008-04-29 22:17:12
+  error: No DOM node found for given XPath.
+  tracker_id: "5"
+<% end %>
+
+

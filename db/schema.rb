@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(:version => 13) do
   create_table "pieces", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "tracker_id", :default => 0
-    t.text     "text_raw",   :default => "NULL"
+    t.integer  "tracker_id"
+    t.text     "text_raw"
     t.string   "error"
     t.integer  "bytecount"
     t.float    "duration"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(:version => 13) do
   create_table "trackers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "uri",        :default => "NULL"
-    t.string   "xpath",      :default => "NULL"
+    t.string   "uri"
+    t.string   "xpath"
     t.string   "name"
     t.string   "md5sum"
     t.text     "web_hook"
