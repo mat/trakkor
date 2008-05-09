@@ -1,0 +1,25 @@
+<h1>Choose an XPath</h1>
+
+<%= error_messages_for :tracker %>
+<% form_tag( '/trackers/test-xpath', :method => :get) do -%>
+
+
+<ul>
+ <li><label for="uri">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
+ <li><label for="xpath">XPath </label><%= text_field_tag 'xpath', @xpath, :size => 80 %></li>
+
+
+ <li><%= submit_tag 'Refresh preview' %></li>
+</ul>
+<% end -%>
+
+<%- if @piece %>
+<h2>Preview piece</h2>
+<a href='<%=  url_for(:action => 'new', :tracker => {:uri => @uri, :xpath => @xpath})  %>'>Create a tracker for this piece</a>
+<pre>
+<%= @piece.text %>
+</pre>
+
+<% end -%>
+
+

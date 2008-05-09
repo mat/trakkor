@@ -72,6 +72,24 @@ class TrackersController < ApplicationController
     end
   end
 
+  def test_xpath
+    @uri = params[:uri]
+    @xpath = params[:xpath]
+    
+    
+    if @uri && @xpath 
+       t = Tracker.new
+       t.uri, t.xpath = @uri, @xpath
+       @piece = t.fetch_piece
+    end
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @tracker }
+    end
+  end
+
+
   def ajax_get_piece
     uri = params[:uri]
     xpath = params[:xpath]
