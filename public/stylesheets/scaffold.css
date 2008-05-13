@@ -40,6 +40,18 @@ a:visited { color: #333;}
   color: #fff;
 }
 
+ol.hitlist {
+  list-style-type: circle;
+  list-style: circle;
+}
+
+ol.hitlist li {
+  list-style-type: circle;
+  background-color: grey;
+  margin-top: 300px;
+  padding-top: 300px;
+}
+
 .biglink {
   font-size: 1.5em;
 }
