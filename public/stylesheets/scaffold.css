@@ -36,8 +36,40 @@ a:visited { color: #333;}
 }
 
 .highlightsearch {
-  background-color: green;
+  background-color: #72c255;
   color: #fff;
+}
+
+.hit strong {
+  background-color: #72c255;
+  color: #fff;
+  padding: 3px;
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.nohit strong {
+  background-color: #ee8058;
+  color: #fff;
+  padding: 3px;
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.error strong {
+  background-color: #ee8058;
+  color: #fff;
+  padding: 3px;
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.hint {
+  background-color: #ee8058;
+  color: #fff;
+  padding: 3px;
+  margin-top: 30px;
+  font-weight: normal;
 }
 
 ol.hitlist {
@@ -220,11 +252,15 @@ form.cmxform label {
   letter-spacing: 0.1em;
 }
 
+.title a {
+  text-decoration: none;
+
+}
 .title strong {
   font-size: 2.5em;
   font-style: normal;
   letter-spacing: 0.1em;
-  font-family: courier;
+  padding-right: 10px;
 }
 
 .examples a {

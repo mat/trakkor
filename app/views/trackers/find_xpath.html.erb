@@ -1,5 +1,6 @@
 <h2>Step 1: Find piece by text</h2>
 
+Enter the location of the HTML document and (part of) the text you want to track.
 
 <% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
 
@@ -13,18 +14,23 @@
 <% end -%>
 
 
+<% if flash[:hint] %>
+  <p class='hint'><strong><%= flash[:hint] %></strong></p>
+<% end %>
 
-<p style="color: red"><%= flash[:error] %></p>
-<p style="color: green"><%= flash[:notice] %></p>
-<p style="color: yellow"><%= flash[:hint] %></p>
+
+<% if flash[:error] %>
+<p class='error'><strong><%= flash[:error] %></strong></p>
+<% else %>
 
 <%= error_messages_for :tracker %>
 
 
 
-<% if @hits %>
-<p style="color: green"><%= @hits.size %> elements found:</p>
-
+<% if @hits && !@hits.empty? %>
+<p class='hit'><strong><%= @hits.size %> elements have been found:</strong>
+Please choose one and poceed.
+</p>
 
 <ol class='hitlist'>
 
@@ -44,5 +50,9 @@
 
 <% end %>
 </ol>
+<% else %>
+<p class='nohit'><strong>No elements have been found:</strong>
+Try adjusting your search term.</p>
 <% end %>
 
+<% end # if flash['error'] %>
