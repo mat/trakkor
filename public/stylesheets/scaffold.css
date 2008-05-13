@@ -41,15 +41,29 @@ a:visited { color: #333;}
 }
 
 ol.hitlist {
-  list-style-type: circle;
-  list-style: circle;
 }
 
 ol.hitlist li {
-  list-style-type: circle;
-  background-color: grey;
-  margin-top: 300px;
-  padding-top: 300px;
+  list-style-type: decimal;
+  background-color: ligthgrey;
+  margin-bottom: 50px;
+  line-height: 1.0em;
+}
+
+.hitlist li span {
+padding: 0px;
+margin: 0px;
+/* font-style: italic; */
+font-size: 0.8em;
+}
+
+.hitlist li pre {
+padding: 15px;
+margin-top: 5px;
+}
+
+.hitlist li a {
+  font-size: 1.4em;
 }
 
 .biglink {
