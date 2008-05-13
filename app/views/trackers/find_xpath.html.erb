@@ -10,7 +10,7 @@
 <% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
 <ul>
  <li><label for="name">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
- <li><label for="search">Find text</label><%= text_field_tag 'search', @search, :size => 80 %> </li>
+ <li><label for="q">Find text</label><%= text_field_tag 'q', @q, :size => 80 %> </li>
 
  <li><%= submit_tag 'Find again' %>
 <% end -%>
@@ -32,7 +32,7 @@
 <ul>
 
 <% if @hits %>
-<p style="color: green">Found <%= @hits.size %> hits:</p>
+<p style="color: green"><%= @hits.size %> hits found:</p>
 
 <%- @hits = @hits.sort_by{|h| h.inner_text.length}%>
 
@@ -41,7 +41,7 @@
 <a href='<%=  url_for(:action => 'test_xpath', :uri => @uri, :xpath => hit.xpath)  %>'>Proceed</a>
 
 <pre>
-<%= Piece.tidy_text(hit.inner_text).gsub(/(#{Regexp.escape(@search)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
+<%= Piece.tidy_text(hit.inner_text).gsub(/(#{Regexp.escape(@q)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
 </pre>
 
 </li>

@@ -145,46 +145,46 @@ class TrackersController < ApplicationController
   end
 
   def find_xpath
-    @uri = params[:uri]
-    @search = params[:search]
+    @hits = flash[:hint] = flash[:error] = nil
+    @uri    = params[:uri]
+    @q = params[:q]
 
-    raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
+    if @uri.nil? || @q.nil? || @uri.empty? || @q.empty?
+      flash[:hint] = "Please provide an URI and a search term."
+      return 
+    end
+
+    unless Tracker.uri?(@uri)
+      flash[:error] = "Please provide a proper HTTP URI like http://w3c.org"
+      return
+    end
 
     begin
-      data, doc = cache.get(@uri), cache.get("#{@uri}.doc")
-      if data and doc
-        doc = Marshal.restore(doc)
-        @complete_html = cache.get("#{@uri}.pretty_html")
-      else
-        data = Tracker.fetch(@uri).body
-        doc = Hpricot.parse(data)
-        @complete_html = PP.pp(doc.root, "")
-        @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
+      response, data = Tracker.fetch(@uri)
 
-        cache.set(@uri, data)
-	cache.set("#{@uri}.doc", Marshal.dump(doc))
-	cache.set("#{@uri}.pretty_html", @complete_html)
+      unless response.kind_of? Net::HTTPSuccess
+        flash[:error] = "Could not fetch the document, " +
+           "server returned: #{response.code} #{response.message}"
+        return
       end
 
-      hits = Tracker.find_nodes_by_text(doc, @search)
-      if hits
-        @hits = hits
-        #flash[:notice] = "DOM elem found in uri, #{42} matches" 
-      else
-        #flash[:notice] = "Cannot find DOM elem containing #{@search}."
-        @hits = nil
+      unless response.content_type =~ /text/
+        flash[:hint] = "URI does not point to a text document " + 
+                       "but a #{response.content_type} file."
       end
+
+      doc = Hpricot(data)
+
+      unless doc
+        flash[:error] = 'URI does not point to a document that Mendono understands.'
+      end
+
+      @hits = Tracker.find_nodes_by_text(doc, @q)
 
     rescue Exception => e
-       flash[:notice] = "Error: #{e.to_s}"
-       flash[:hint] = "Hint: #{e.to_s}"
+       flash[:error] = "Error: #{e.to_s}"
     end
-
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => nil }
-    end
+ 
   end
 
   def stats
