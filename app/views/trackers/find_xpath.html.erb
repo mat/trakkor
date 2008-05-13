@@ -2,19 +2,16 @@
 
 
 <% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
+
 <ul>
  <li><label for="name">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
  <li><label for="q">Find text</label><%= text_field_tag 'q', @q, :size => 80 %> </li>
 
- <li><%= submit_tag 'Find again' %>
-</li>
+ <li><%= submit_tag 'Find again' %></li>
+</ul>
+
 <% end -%>
 
-
-
-
-
-</ul>
 
 
 <p style="color: red"><%= flash[:error] %></p>
