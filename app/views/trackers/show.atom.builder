@@ -1,6 +1,6 @@
 require 'atom_monkeypatch'
 
-  atom_feed(:root_url => url_for(@tracker)) do |feed|
+  atom_feed(:root_url => url_for(:only_path => false)) do |feed|
     feed.title("Mendono - #{@tracker.name}", :type => 'text')
     feed.updated((@tracker.last_change.created_at))
     feed.subtitle("This tracker observes <a href='#{@tracker.uri}'>#{@tracker.uri}</a>.<br /> View and change tracker settings at <a href='#{url_for :only_path => false}'>#{@tracker.name}</a>", :type => 'html')
