@@ -45,6 +45,12 @@ class PieceTest < ActiveSupport::TestCase
       assert_equal "matthias-luedtke.de - Startseite", @piece.text
     end
 
+    should "should have positive bytecount." do
+      assert @piece.bytecount > 0
+    end
+
+
+
 
   end
 

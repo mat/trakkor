@@ -12,18 +12,15 @@ class Piece < ActiveRecord::Base
       response = Piece.fetch_from_uri(uri)
     rescue Exception => e
       self.error = "Error: #{e.to_s}"
-      @body = nil
     end
 
-    self.duration = Time.now.to_f - start
-    self.bytecount = response.body.length if response.body
+    duration = Time.now.to_f - start
 
     if response.kind_of? Net::HTTPSuccess
       self.text_raw, self.text, self.error = Piece.extract_piece(response.body, xpath)
-      @body = response.body
+      self.bytecount = response.body.length if response.body
     else
       self.error = "Error: #{response.code} #{response.message}"
-      @body = nil
     end
     
     self
