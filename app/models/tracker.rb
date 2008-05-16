@@ -220,6 +220,10 @@ end
     nodes -= parents.to_a
   end
 
+  def Tracker.live_examples
+    Tracker.find(APP_CONFIG['example_trackers'])
+  end
+
   private
   def Tracker.collect_parents(n, parents)
     return if n.class == Hpricot::Doc
