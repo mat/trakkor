@@ -23,13 +23,11 @@ class PieceTest < ActiveSupport::TestCase
 
     should "should have no text." do
       assert_nil @piece.text
-      assert_nil @piece.text_raw
     end
 
     should "should have text after fetch." do
        @piece.fetch("http://better-idea.org", "//title" )
        assert @piece.text
-       assert @piece.text_raw
     end
  
   end

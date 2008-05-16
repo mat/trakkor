@@ -56,7 +56,6 @@ class TrackerTest < ActiveSupport::TestCase
       piece = @tracker.fetch_piece
       assert piece.error
       assert_nil piece.text
-      assert_nil piece.text_raw
     end
   end
 
