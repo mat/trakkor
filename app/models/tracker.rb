@@ -107,76 +107,18 @@ class Tracker < ActiveRecord::Base
      ActiveRecord::Base.connection.select_one(sql).to_a.first.last.to_i
   end
 
-  def extract_piece(data, xpath)
-
-  begin
-   html, text = Tracker.extract(data, xpath)
-   # doc  = XML::HTMLParser.string(data).parse
-   # node = doc.find(xpath)
-    raise "No DOM node found for given XPath." if html.nil?
-  rescue Exception => e
-    return [nil, nil, e.to_s]
-  end
-
-  [html, text, nil]
-end
-
   def html_title
-    fetch_piece unless @body 
-    fetch_title(@body)
-  end
-
-  def fetch_title(data=fetch_piece)
-    _, title_as_text, _ = extract_piece(data, '//head/title/text()')
-    title_as_text
+    Piece.fetch_title(self.uri)
   end
 
   def fetch_piece
-    p = Piece.new
+    p = Piece.new.fetch(uri, xpath)
     p.tracker = self
-
-    start = Time.now.to_f
-    begin
-      response = Tracker.fetch(self.uri)
-    rescue Exception => e
-      p.error = "Error: #{e.to_s}"
-      @body = nil
-    end
-
-    p.duration = Time.now.to_f - start
-    p.bytecount = response.body.length if response.body
-
-    if response.kind_of? Net::HTTPSuccess
-      p.text_raw, p.text, p.error = extract_piece(response.body, self.xpath)
-      @body = response.body
-    else
-      p.error = "Error: #{response.code} #{response.message}"
-      @body = nil
-    end
-    
     p
-  end
-
-  def Tracker.extract(data, xpath)
-    if Hpricot::Doc === data
-      doc = data
-    else
-      doc = Hpricot.parse(data.to_s)
-    end
-
-    piece = doc.at(xpath)
-
-    return nil unless piece
-    [piece.to_original_html, piece.inner_text]
   end
 
   def Tracker.replace_id_funtion(xpath)
     xpath.gsub(/^id\((.*?)\)/x,"//[@id=\\1]")
-  end
-
-  def Tracker.fetch(uri)
-    parsed_uri = URI.parse(URI.escape(uri))
-    response = Net::HTTP.get_response(parsed_uri)
   end
 
   def notify_change(old_piece, new_piece)

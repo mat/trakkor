@@ -108,7 +108,7 @@ class TrackersController < ApplicationController
         doc = Marshal.restore(doc)
         @complete_html = cache.get("#{@uri}.pretty_html")
       else
-        data = Tracker.fetch(@uri).body
+        data = Piece.fetch_from_uri(@uri).body
         doc = Hpricot.parse(data)
         @complete_html = PP.pp(doc.root, "")
         @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
@@ -160,7 +160,7 @@ class TrackersController < ApplicationController
     end
 
     begin
-      response, data = Tracker.fetch(@uri)
+      response, data = Piece.fetch_from_uri(@uri)
 
       unless response.kind_of? Net::HTTPSuccess
         flash[:error] = "Could not fetch the document, " +

@@ -29,4 +29,35 @@ class TrackerTest < ActiveSupport::TestCase
   def test_count_pieces_of_tracker_with_new_design
     assert_equal 51, @new_design.pieces.length
   end
+
+  ############
+  context "A Tracker for the //title from better-idea.org" do
+      setup do
+        @tracker = Tracker.new
+        @tracker.uri = "http://better-idea.org"
+        @tracker.xpath = "//title"
+      end
+
+    should "should fetch the right piece wo error." do
+      piece = @tracker.fetch_piece
+      assert_equal "matthias-luedtke.de - Startseite", piece.text
+      assert_nil piece.error
+    end
+  end
+
+  context "A Tracker for a non-existent DOM element" do
+      setup do
+        @tracker = Tracker.new
+        @tracker.uri = "http://www.wowwiki.com/Portal:Main" 
+        @tracker.xpath = "//foo"
+      end
+
+    should "should fetch an error piece wo text." do
+      piece = @tracker.fetch_piece
+      assert piece.error
+      assert_nil piece.text
+      assert_nil piece.text_raw
+    end
+  end
+
 end
