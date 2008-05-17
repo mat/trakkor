@@ -12,11 +12,11 @@ class TrackerTest < ActiveSupport::TestCase
       assert @tracker.sick?
     end
 
-    should "have some pieces." do
+    should "have some pieces" do
       assert_equal 51, @tracker.pieces.length
     end
 
-    should "have some changes." do
+    should "have some changes" do
       assert_equal 2, @tracker.changes.length
     end
 
@@ -78,7 +78,7 @@ class TrackerTest < ActiveSupport::TestCase
         @tracker.xpath = "//title"
       end
 
-    should "fetch the right piece wo error." do
+    should "fetch the right piece wo error" do
       piece = @tracker.fetch_piece
       assert_equal "matthias-luedtke.de - Startseite", piece.text
       assert_nil piece.error
@@ -92,11 +92,42 @@ class TrackerTest < ActiveSupport::TestCase
         @tracker.xpath = "//foo"
       end
 
-    should "fetch an error piece wo text." do
+    should "fetch an error piece wo text" do
       piece = @tracker.fetch_piece
       assert piece.error
       assert_nil piece.text
     end
   end
+
+  ############
+#  context "A Tracker that caches its changes" do
+#      setup do
+#        @tracker = trackers(:nice_tracker)
+#        @tracker.invalidate_changes
+#      end
+#
+#    should "deliver fresh pieces from db on the first invocation" do
+#      is_cached_result = [] # hack to get info out of changes()
+#      changes = @tracker.changes(is_cached_result)
+#      assert_equal 3, changes.length
+#      assert is_cached_result.include?(false)
+#    end
+
+ #   should "deliver cached pieces on the second invocation" do
+#      changes = @tracker.changes
+#      is_cached_result = [] # hack to get info out of changes()
+#      changes = @tracker.changes(is_cached_result)
+
+ #     assert_equal 3, changes.length
+ #     assert is_cached_result.include?(true)
+ #   end
+
+  #  should "deliver the same changes, whether fresh or cached" do
+  #    fresh_changes = @tracker.changes
+  #    cached_changes = @tracker.changes
+
+  #    assert_equal fresh_changes, cached_changes
+  #  end
+  #end
 
 end
