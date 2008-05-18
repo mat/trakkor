@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Mendono <%= (html_title = yield :html_title) ? html_title : '&mdash; No-frills change tracking.' %></title>
+  <title>Trakkor <%= (html_title = yield :html_title) ? html_title : '&mdash; No-frills webpage change tracking.' %></title>
   <%= stylesheet_link_tag 'scaffold' %>
   <%= javascript_include_tag 'prototype' %>
 
@@ -20,7 +20,7 @@
 <body>
 
 <div id='logodiv'>
-  <p class='title'><a href='<%= root_path %>'><strong>Mendono</strong></a> Tracking single web page elements via <b>Atom feed</b> and <b>Web Hook</b>.
+  <p class='title'><a href='<%= root_path %>'><strong>Trakkor</strong></a> Tracking single webpage elements via <b>Atom feed</b> and <b>Web Hook</b>.
 <br />
 
 </p>
@@ -34,7 +34,7 @@
 
 <div id='footer'>
   <hr />
-  <p><a href='<%= root_path %>'>Mendono</a>, tracking your changes since May 2008.<br />Created by Matthias Lüdtke</p>
+  <p><a href='<%= root_path %>'>Trakkor</a>, tracking your changes since May 2008.<br />Created by Matthias Lüdtke</p>
 </div>
 
 </body>
