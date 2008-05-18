@@ -58,6 +58,6 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 end
 
-ActionController::AbstractRequest.relative_url_root = "/mendono"
+ActionController::AbstractRequest.relative_url_root = "/trakkor"
 
 

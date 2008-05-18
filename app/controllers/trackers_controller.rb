@@ -176,7 +176,7 @@ class TrackersController < ApplicationController
       doc = Hpricot(data)
 
       unless doc
-        flash[:error] = 'URI does not point to a document that Mendono understands.'
+        flash[:error] = 'URI does not point to a document that Trakkor understands.'
       end
 
       @hits = Tracker.find_nodes_by_text(doc, @q)
