@@ -33,7 +33,7 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
   <tr>
 
     <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
-    <td><%= link_to "#{tracker.name}", tracker %></td>
+    <td><%= link_to "#{tracker.name}", tracker_path(tracker) %></td>
     <td class='piece'><%= tracker.last_change.text %></td>
     <td>updated <%= relative_time(tracker.last_change.created_at) %></td>
   </tr>
@@ -52,26 +52,26 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 
 <h2>What it is not</h2>
 <p>
-Moduri is just a change tracker for single web page elements which happens to present its findings via Atom feeds and Jabber messages. That is what it's good at.
+Trakkor is just a change tracker for single web page elements which happens to present its findings via Atom feeds and Jabber messages. That is what it's good at.
 </p>
 
-But Moduri is certainly...
+But Trakkor is certainly...
 
 <ul>
   <li>...not a tool to create Atom feeds for web sites which don't publish an Atom feed but probably should.</li>
-  <li>...not good at recognizing the structure of the HTML pieces it scrapes out of a document. That's why it treats those pieces as raw strings: If one character changes, it differs for Moduri.</li>
+  <li>...not good at recognizing the structure of the HTML pieces it scrapes out of a document. That's why it treats those pieces as raw strings: If one character changes, it differs for Trakkor.</li>
 </ul>
 
 It's really just a change tracker, believe me. As always, your mileage may vary.
 
 <h2>Caveats</h2>
 
-Finding an appropriate XPath that describes the desired page element page can be difficult and is the trickiest part of using Moduri: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. 
+Finding an appropriate XPath that describes the desired page element page can be difficult and is the trickiest part of using Trakkor: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. 
 
 <h2>FAQ</h2>
 
  <ul id='faq'>
    <li class='q'>I try to fetch the //head/style element but cannot fetch the content.</li>
-   <li class='q'>Were animals or software tools hurt during the creation of Moduri?</li>
-   <li class='a'>Moduri is written in <a href='http://ruby-lang.org' target='_blank'>Ruby</a> and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, <a href='http://www.sqlite.org' target='_blank'>SQLite</a> and <a href='http://code.whytheluckystiff.net/hpricot/' target='_blank'>Hpricot</a> are heavily abused, but certainly not hurt. No anmials have been hurt.</li>
+   <li class='q'>Were animals or software tools hurt during the creation of Trakkor?</li>
+   <li class='a'>Trakkor is written in <a href='http://ruby-lang.org' target='_blank'>Ruby</a> and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, <a href='http://www.sqlite.org' target='_blank'>SQLite</a> and <a href='http://code.whytheluckystiff.net/hpricot/' target='_blank'>Hpricot</a> are heavily abused, but certainly not hurt. No anmials have been hurt.</li>
  <ul>
