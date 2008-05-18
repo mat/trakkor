@@ -17,6 +17,9 @@ class Tracker < ActiveRecord::Base
   # order: oldest piece first, most recent last
   has_many :pieces, :order => 'created_at ASC' 
 
+  def to_param
+    "#{md5sum}"
+  end
 
   def nilify_web_hook
     @attributes['web_hook'] = nil if @attributes['web_hook'] && @attributes['web_hook'].empty?

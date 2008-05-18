@@ -29,8 +29,8 @@ class TrackersController < ApplicationController
   # GET /trackers/1
   # GET /trackers/1.xml
   def show
-    @tracker = Tracker.find(params[:id])
-    #@tracker = Tracker.find_by_md5sum(params[:md5sum])
+    #@tracker = Tracker.find(params[:id])
+    @tracker = Tracker.find_by_md5sum(params[:id])
     @changes = @tracker.changes
 
     if(params[:errors] == 'show')
@@ -195,7 +195,7 @@ class TrackersController < ApplicationController
 
   # GET /trackers/1/edit
   def edit
-    @tracker = Tracker.find(params[:id])
+    @tracker = Tracker.find_by_md5sum(params[:id])
   end
 
   # POST /trackers
@@ -219,7 +219,7 @@ class TrackersController < ApplicationController
   # PUT /trackers/1
   # PUT /trackers/1.xml
   def update
-    @tracker = Tracker.find(params[:id])
+    @tracker = Tracker.find_by_md5sum(params[:id])
 
     respond_to do |format|
       if @tracker.update_attributes(params[:tracker])
@@ -236,7 +236,7 @@ class TrackersController < ApplicationController
   # DELETE /trackers/1
   # DELETE /trackers/1.xml
   def destroy
-    @tracker = Tracker.find(params[:id])
+    @tracker = Tracker.find_by_md5sum(params[:id])
     @tracker.destroy
 
     flash[:notice] = 'Tracker was deleted.'
