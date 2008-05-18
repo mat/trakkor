@@ -1,7 +1,7 @@
 <h2>Optional Step 2: Try a parent element</h2>
 
 <%= error_messages_for :tracker %>
-<% form_tag( '/trackers/test-xpath', :method => :get, :class => 'cmxform' ) do -%>
+<% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get, :class => 'cmxform' ) do -%>
 
 
 <ul>
