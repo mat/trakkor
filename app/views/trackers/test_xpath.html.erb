@@ -14,11 +14,14 @@
 <% end -%>
 
 <%- if @piece %>
-<h2>Preview piece</h2>
+<h2>Exact piece</h2>
 <a href='<%=  url_for(:action => 'new', :tracker => {:uri => @uri, :xpath => @xpath})  %>'>Create a tracker for this piece</a>
 <pre>
 <%= @piece.text %>
 </pre>
+
+<h2>Some parent pieces</h2>
+
 
 <% end -%>
 
