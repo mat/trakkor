@@ -4,7 +4,6 @@
 <% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get, :class => 'cmxform' ) do -%>
 
 
-<ul>
  <li><label for="uri">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
  <li><label for="xpath">XPath </label><%= text_field_tag 'xpath', @xpath, :size => 80 %></li>
 
@@ -18,12 +17,14 @@
 <%= render :partial => "tracker_for_hit", :locals => { :hit => @elem } %>
 
 <h2>Some parent pieces</h2>
-
+<ol class='hitlist'>
 <% for p in @parents %>
- <li class='hitlist'> 
+ <li> 
   <%= render :partial => "tracker_for_hit", :locals => { :hit => p } %>
  </li>
 <% end %>
+
+</ol>
 
 <% end -%>
 
