@@ -15,24 +15,14 @@
 
 <%- if @elem %>
 <h2>Exact piece</h2>
-<a href='<%=  url_for(:action => 'new', :tracker => {:uri => @uri, :xpath => @xpath})  %>'>Create tracker</a> <span>for <%= @elem.xpath %></span>
-
-<pre>
-<%= h Piece.tidy_text(@elem.inner_text) %>
-</pre>
+<%= render :partial => "tracker_for_hit", :locals => { :hit => @elem } %>
 
 <h2>Some parent pieces</h2>
 
 <% for p in @parents %>
-<li class='hitlist'> 
-	<a href='<%=  url_for(:action => 'new', :tracker => {:uri => @uri, :xpath => p.xpath})  %>'>Create tracker</a> <span>for <%= p.xpath %></span>
-<pre class='piece'>
-<%= h Piece.tidy_text(p.inner_text) %>
-</pre>
-
-
-</li>
-
+ <li class='hitlist'> 
+  <%= render :partial => "tracker_for_hit", :locals => { :hit => p } %>
+ </li>
 <% end %>
 
 <% end -%>

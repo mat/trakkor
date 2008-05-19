@@ -1,0 +1,9 @@
+<a href='<%= url_for(:action => 'test_xpath', :uri => @uri, :xpath => hit.xpath)  %>'>Proceed</a>
+
+<span>with <%= h(hit.xpath) %></span>
+
+
+<pre class='piece'>
+<%=  htidy(hit.inner_text).gsub(/(#{Regexp.escape(@q)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
+</pre>
+

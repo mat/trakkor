@@ -57,4 +57,9 @@ module TrackersHelper
     float_size = float_size / 1024 
     return "%1.1f GiB" % float_size
   end
+
+
+  def htidy(text)
+    h(Piece.tidy_text(text))
+  end
 end
