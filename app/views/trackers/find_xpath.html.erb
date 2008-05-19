@@ -42,7 +42,7 @@ Please choose one and poceed.
 
 <span>with <%= h(hit.xpath) %></span>
 <pre class='piece'>
-<%= Piece.tidy_text(hit.inner_text).gsub(/(#{Regexp.escape(@q)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
+<%=  (h(Piece.tidy_text(hit.inner_text))).gsub(/(#{Regexp.escape(@q)})/i, "<strong class='highlightsearch'>\\1</strong>") %>
 </pre>
 
 

@@ -26,6 +26,16 @@ class Piece < ActiveRecord::Base
     self
   end
 
+  def Piece.create(source)
+    p = Piece.new
+
+    if Hpricot::Elem === source then
+      p.text = source.inner_text
+    end
+
+    p
+  end
+
 
   def Piece.fetch_from_uri(uri)
     parsed_uri = URI.parse(URI.escape(uri))
@@ -34,30 +44,42 @@ class Piece < ActiveRecord::Base
 
   def Piece.extract_piece(data, xpath)
 
-  begin
-   html, text = Piece.extract(data, xpath)
-   # doc  = XML::HTMLParser.string(data).parse
-   # node = doc.find(xpath)
-    raise "No DOM node found for given XPath." if html.nil?
-  rescue Exception => e
-    return [nil, nil, e.to_s]
+    begin
+      html, text = Piece.extract_text(data, xpath)
+      raise "No DOM node found for given XPath." if html.nil?
+    rescue Exception => e
+      return [nil, nil, e.to_s]
+    end
+ 
+    [html, text, nil]
   end
 
-  [html, text, nil]
-end
 
-
-  def Piece.extract(data, xpath)
+  def Piece.extract_elem(data,xpath)
     if Hpricot::Doc === data
       doc = data
     else
       doc = Hpricot.parse(data.to_s)
     end
 
-    piece = doc.at(xpath)
+    elem = doc.at(xpath)
+  end
 
-    return nil unless piece
-    [piece.to_original_html, piece.inner_text]
+  def Piece.extract_text(data, xpath)
+    elem = Piece.extract_elem(data, xpath)
+    return nil unless elem
+    [elem.to_original_html, elem.inner_text]
+  end
+
+
+  def Piece.extract_with_parents(doc, xpath)
+    piece = e = doc.at(xpath)
+    parents = []
+    while e.parent.class != Hpricot::Doc do
+      parents << e.parent
+      e = e.parent
+    end
+    [piece,parents[0..2]]
   end
 
   def Piece.fetch_title(uri)

@@ -62,25 +62,8 @@ class TrackersController < ApplicationController
        if @tracker.name.nil? || @tracker.name.empty?
          html_title = @tracker.html_title
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
-         @tracker.name = "Tracking '#{html_title}'"
+         @tracker.name = "#{html_title}"
        end
-    end
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @tracker }
-    end
-  end
-
-  def test_xpath
-    @uri = params[:uri]
-    @xpath = params[:xpath]
-    
-    
-    if @uri && @xpath 
-       t = Tracker.new
-       t.uri, t.xpath = @uri, @xpath
-       @piece = t.fetch_piece
     end
 
     respond_to do |format|
@@ -154,9 +137,22 @@ class TrackersController < ApplicationController
       return 
     end
 
-    unless Tracker.uri?(@uri)
+    begin
+      doc = fetch_doc_from(@uri)
+      @hits = Tracker.find_nodes_by_text(doc, @q) if doc
+
+    rescue Exception => e
+       flash[:error] = "Error: #{e.to_s}"
+    end
+ 
+  end
+
+
+  def fetch_doc_from(uri)
+
+    unless Tracker.uri?(@uri) then
       flash[:error] = "Please provide a proper HTTP URI like http://w3c.org"
-      return
+      return nil
     end
 
     begin
@@ -165,7 +161,7 @@ class TrackersController < ApplicationController
       unless response.kind_of? Net::HTTPSuccess
         flash[:error] = "Could not fetch the document, " +
            "server returned: #{response.code} #{response.message}"
-        return
+        return nil
       end
 
       unless response.content_type =~ /text/
@@ -176,15 +172,29 @@ class TrackersController < ApplicationController
       doc = Hpricot(data)
 
       unless doc
-        flash[:error] = 'URI does not point to a document that Trakkor understands.'
+        flash[:error] = 'URI does not point to a document that Trakkor understands.'        
+        return nil
       end
-
-      @hits = Tracker.find_nodes_by_text(doc, @q)
 
     rescue Exception => e
        flash[:error] = "Error: #{e.to_s}"
+       return nil
     end
- 
+
+    doc
+  end
+
+  def test_xpath
+    @uri = params[:uri]
+    @xpath = params[:xpath]
+    
+    if @uri.nil? || @xpath.nil? || @uri.empty? || @xpath.empty?
+      flash[:hint] = "Please provide an URI and an XPath."
+      return 
+    end
+      
+     doc = fetch_doc_from(@uri)
+     @elem, @parents = Piece.extract_with_parents(doc, @xpath) if doc
   end
 
   def stats
