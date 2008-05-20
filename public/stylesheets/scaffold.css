@@ -14,21 +14,21 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-  border: 1px solid #905029;
+  border: 1px solid #4d54b3;
 
 }
 
 
 hr {
- color: #905029;
+ color: #4d54b3;
  width: 300px;
  padding: 0px;
 }
 strong {
- color: #905029;
+ color: #4d54b3;
 }
 
-a { color: #905029;}
+a { color: #4d54b3;}
 a:visited { color: #333;}
 
 .sick {
@@ -192,21 +192,21 @@ div.progressBar div.background {
 
 
 #logodiv {
-  color: #905029;
+ color: #4d54b3;
  padding: 10px;
 }
 
 
 .subtitle {
   font-size: 0.8em;
-  color: #905029;
+  color: #4d54b3;
   padding: 0px;
   margin: 0px;
 }
 
 .logo {
  font-size: 2.5em;
-  color: #905029;
+  color: #4d54b3;
   padding: 0px;
 }
 
@@ -245,7 +245,7 @@ div.progressBar div.background {
   font-size: 2.5em;
   font-style: normal;
   letter-spacing: 0.1em;
-  padding-right: 10px;
+  padding-right: 0px;
 }
 
 .examples a {
@@ -275,9 +275,8 @@ div.progressBar div.background {
 input{	font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; 
 	font-size:12px;
 }
-h2{	color:#666666; 
+h1, h2 {color:#666666; 
 	margin-bottom:20px;
-	font-size:16px;
 }
 
 div.main{

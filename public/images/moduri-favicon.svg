@@ -33,7 +33,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.197802"
-     inkscape:cx="0.37193299"
+     inkscape:cx="16.267418"
      inkscape:cy="16.714426"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -57,17 +57,19 @@
   <g
      id="layer1"
      inkscape:label="Layer 1"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     style="display:inline">
     <text
        xml:space="preserve"
-       style="font-size:37.44252014px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#905029;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
-       x="4.754952"
-       y="26.429869"
+       style="font-size:37.44252014px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+       x="2.5223711"
+       y="28.841057"
        id="text2407"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan2409"
-         x="4.754952"
-         y="26.429869">M</tspan></text>
+         x="2.5223711"
+         y="28.841057"
+         style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:DejaVu Sans Mono;-inkscape-font-specification:DejaVu Sans Mono Oblique">T</tspan></text>
   </g>
 </svg>

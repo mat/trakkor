@@ -1,19 +1,24 @@
 
-<h2>Wanted: URI and XPath</h2>
+<h2>What is it?</h2>
 
-Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom feeds. But sometimes you just want to track changes to a single page element, for example a price for an item or. blabla
+<p>
+Monitoring complete webpages is easy. But have you ever wanted to track just a single piece of information from a webpage, like a <strong>product price</strong> or the <strong>headline</strong> of your favourite news site which does not provide an RSS feed? 
+</p>
+
+<p>
+Trakkor lets you create a tracker for just a <strong>single DOM element</strong> and informs you via Atom feed if it changes.
+</p>
 
 <%= error_messages_for :tracker %>
 
 <% 
  example_uri ='http://localhost:8808/doc_root/libxml-ruby-0.5.3/rdoc/classes/XML/Node.html' 
  example_uri ='http://better-idea.org'
- example_xpath = '//title/text()'
- example_search = 'welcome'
+ example_search = 'email'
 -%>
 
 
-<h2>Start tracking</h2>
+<h2>Try tracking</h2>
 <p>Enter a Webpage address and the text you want to track.</p>
 <%= render :partial => 'find_xpath_form', 
            :locals => { :q => example_search, :uri => example_uri } %>
@@ -26,7 +31,7 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 <% for tracker in @trackers %>
   <tr>
 
-    <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("06.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
+    <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("04.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
     <td><%= link_to "#{tracker.name}", tracker_path(tracker) %></td>
     <td class='piece'><%= tracker.last_change.text %></td>
     <td>updated <%= relative_time(tracker.last_change.created_at) %></td>

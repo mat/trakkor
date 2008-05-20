@@ -62,7 +62,7 @@ class TrackersController < ApplicationController
        if @tracker.name.nil? || @tracker.name.empty?
          html_title = @tracker.html_title
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
-         @tracker.name = "#{html_title}"
+         @tracker.name = "Tracking '#{html_title}'"
        end
     end
 
