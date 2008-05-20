@@ -7,44 +7,16 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 
 <% 
  example_uri ='http://localhost:8808/doc_root/libxml-ruby-0.5.3/rdoc/classes/XML/Node.html' 
- example_uri ='http://example.com'
+ example_uri ='http://better-idea.org'
  example_xpath = '//title/text()'
- example_search = 'example'
+ example_search = 'welcome'
 -%>
 
 
-<div class="box">
 <h2>Start tracking</h2>
-<p>Enter a Webpage adress and the text you want to track.</p>
-
-
-<% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
-
-<label><span>URI</span>
-<input type="text"name="email" id="email" class="input-text" size='80' />
-
-<%= text_field_tag 'uri', example_uri, :size => 80 %>
-
-</label>
-
-
-<label><span>Find text</span>
-<input type="password"name="psw" id="psw" class="input-text" size='80' />
-<%= text_field_tag 'q', example_search, :size => 80 %> 
-</label>
-
-</form>
-<div class="spacer">
- <%= submit_tag 'Test and track' %>
-</div>
-
-
-<% end -%>
-
-</div>
-
-
-
+<p>Enter a Webpage address and the text you want to track.</p>
+<%= render :partial => 'find_xpath_form', 
+           :locals => { :q => example_search, :uri => example_uri } %>
 
 
 <h2>Live examples</h2>
