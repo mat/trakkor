@@ -2,18 +2,37 @@
 
 <%= error_messages_for :tracker %>
 
-<% form_for @tracker, :url => {:action => "create"}, :html => {:class => 'cmxform'} do |f| -%>
+<div class="box">
+<% form_for @tracker, :url => {:action => "create"} do |f| -%>
 
-<ul>
- <li><label for="uri">URI </label><%= f.text_field 'uri', :size => 80 %></li>
- <li><label for="xpath">XPath</label><%= f.text_field 'xpath', :size => 80 %> </li>
 
- <li><label for="name">Name </label><%= f.text_field 'name', :size => 80 %></li>
- <li><label for="web_hook">Web Hook URI</label><%= f.text_field 'web_hook', :size => 80 %> </li>
+<label><span>URI</span>
+<%= f.text_field 'uri', :size => 80, :class => 'input-text' %>
+</label>
 
- <li><%= f.submit 'Create' %></li>
-</ul>
+<label><span>XPath</span>
+<%= f.text_field 'xpath', :size => 80, :class => 'input-text' %>
+</label>
+
+<label><span>Name</span>
+<%= f.text_field 'name', :size => 80, :class => 'input-text' %>
+</label>
+
+<label><span>Web Hook URI</span>
+<%= f.text_field 'web_hook', :size => 80, :class => 'input-text' %>
+</label>
+
+
+<div class="spacer">
+ <%= f.submit 'Create' %>
+</div>
 
 <% end -%>
+
+</div>
+
+
+
+
 
 

@@ -1,16 +1,29 @@
 <h2>Optional Step 2: Try a parent element</h2>
 
 <%= error_messages_for :tracker %>
-<% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get, :class => 'cmxform' ) do -%>
 
 
- <li><label for="uri">URI </label><%= text_field_tag 'uri', @uri, :size => 80 %></li>
- <li><label for="xpath">XPath </label><%= text_field_tag 'xpath', @xpath, :size => 80 %></li>
+<div class="box">
+<% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get ) do -%>
 
 
- <li><%= submit_tag 'Refresh preview' %></li>
-</ul>
+<label><span>URI</span>
+<%= text_field_tag 'uri', @uri, :size => 80, :class => 'input-text' %>
+</label>
+
+
+<label><span>XPath</span>
+<%= text_field_tag 'xpath', @xpath, :size => 80, :class => 'input-text' %> 
+</label>
+
+<div class="spacer">
+ <%= submit_tag 'Refresh preview' %>
+</div>
+
 <% end -%>
+
+</div>
+
 
 <%- if @elem %>
 <h2>Exact piece</h2>
