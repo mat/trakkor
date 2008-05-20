@@ -16,28 +16,34 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 <div class="box">
 <h2>Start tracking</h2>
 <p>Enter a Webpage adress and the text you want to track.</p>
-<form action="" method="post">
-<label><span>URI</span>
-<input type="text"name="email" id="email" class="input-text" size='80' />
-</label>
-<label><span>Find text</span>
-<input type="password"name="psw" id="psw" class="input-text" size='80' />
-</label>
-</form>
-<div class="spacer">
- <input name="commit" type="submit" value="Test and track" />
-</div>
-</div>
 
 
 <% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
-<ul>
- <li><label for="name">URI </label><%= text_field_tag 'uri', example_uri, :size => 80 %></li>
- <li><label for="q">Find text</label><%= text_field_tag 'q', example_search, :size => 80 %> </li>
 
- <li><%= submit_tag 'Test and track' %></li>
-</ul>
+<label><span>URI</span>
+<input type="text"name="email" id="email" class="input-text" size='80' />
+
+<%= text_field_tag 'uri', example_uri, :size => 80 %>
+
+</label>
+
+
+<label><span>Find text</span>
+<input type="password"name="psw" id="psw" class="input-text" size='80' />
+<%= text_field_tag 'q', example_search, :size => 80 %> 
+</label>
+
+</form>
+<div class="spacer">
+ <%= submit_tag 'Test and track' %>
+</div>
+
+
 <% end -%>
+
+</div>
+
+
 
 
 
