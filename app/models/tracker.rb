@@ -69,7 +69,6 @@ class Tracker < ActiveRecord::Base
 
   def error_pieces
     pieces.find( :all, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' )
-   # pieces.find( :all, :conditions => { :error => nil}, :order => 'created_at ASC' )
   end
 
   def changes(whether_from_cache = [])

@@ -14,6 +14,22 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 -%>
 
 
+<div class="box">
+<h2>Start tracking</h2>
+<p>Enter a Webpage adress and the text you want to track.</p>
+<form action="" method="post">
+<label><span>URI</span>
+<input type="text"name="email" id="email" class="input-text"/>
+</label>
+<label><span>Password</span>
+<input type="password"name="psw" id="psw" class="input-text"/>
+</label>
+</form>
+<div class="spacer"><a href="#" onClick="" class="green">Sign in</a></div>
+</div>
+</div>
+
+
 <% form_tag find_xpath_path, :method => :get, :class => 'cmxform' do -%>
 <ul>
  <li><label for="name">URI </label><%= text_field_tag 'uri', example_uri, :size => 80 %></li>

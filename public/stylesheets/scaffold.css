@@ -190,25 +190,6 @@ div.progressBar div.background {
   width: 0%;
 }
 
-form.cmxform label {
-  display: inline-block;
-  line-height: 1.4;
-  vertical-align: top;
-}
-form.cmxform ol {
-  margin: 0;
-  padding: 0;
-}
-form.cmxform li {
-  list-style: none;
-  padding: 3px;
-  margin: 0;
-}
-
-form.cmxform label {
-  width: 4em; /* Width of labels */
-}
-
 
 #logodiv {
   color: #905029;
@@ -285,4 +266,73 @@ form.cmxform label {
   font-weight: normal;
   letter-spacing: 0em;
   font-size: 1.1em;
+}
+
+/* ---- FORM DESIGN --- 
+ * http://woork.blogspot.com/2008/02/beautiful-css-form.html
+ ---- FORM DESIGN --- */
+
+input{	font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; 
+	font-size:12px;
+}
+h2{	color:#666666; 
+	margin-bottom:20px;
+	font-size:16px;
+}
+
+div.main{
+	margin:30px auto; 
+	width:340px;
+	}
+
+div.box{
+	border:solid 1px #c6cfe1;
+	background:#dfe4ee;
+	padding:10px;
+	color:#333333;
+	margin-bottom:20px;
+}
+div.box h1 {
+	font-size:14px;
+	color:#000000;
+	padding-bottom:4px;
+}
+div.box p{padding-bottom:14px;}
+
+div.box input .input-text{
+	border:1px solid #3b6e22;
+	color:#666666;
+	width:180px;
+}
+
+div.box label{
+	display:block;
+	margin-bottom:10px;
+	color:#555555;
+}
+
+div.box label span{
+	display:block;
+	float:left;
+	padding-right:6px;
+	width:70px;
+	text-align:right;
+	font-weight:bold;
+}
+.spacer{margin-left:80px; 
+	margin-bottom:10px;
+	font-size:11px;
+	color:#555555;
+}
+.green{
+	background:url(img/green.gif);
+	padding:0px 6px;
+	border:1px solid #3b6e22;
+	height:24px; 
+	line-height:24px;
+	color:#FFFFFF;
+	font-size:12px;
+	margin-right:10px;
+	display:inline-block;
+	text-decoration:none;
 }
