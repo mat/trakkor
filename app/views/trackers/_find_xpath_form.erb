@@ -1,0 +1,20 @@
+<div class="box">
+<% form_tag find_xpath_path, :method => :get do -%>
+
+<label><span>URI</span>
+<%= text_field_tag 'uri', uri, :size => 80, :class => 'input-text' %>
+</label>
+
+
+<label><span>Find text</span>
+<%= text_field_tag 'q', q, :size => 80, :class => 'input-text' %> 
+</label>
+
+<div class="spacer">
+ <%= submit_tag 'Test and track' %>
+</div>
+
+<% end -%>
+
+</div>
+
