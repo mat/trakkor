@@ -315,7 +315,7 @@ div.box label span{
 	display:block;
 	float:left;
 	padding-right:6px;
-	width:70px;
+	width:100px;
 	text-align:right;
 	font-weight:bold;
 }
@@ -324,15 +324,4 @@ div.box label span{
 	font-size:11px;
 	color:#555555;
 }
-.green{
-	background:url(img/green.gif);
-	padding:0px 6px;
-	border:1px solid #3b6e22;
-	height:24px; 
-	line-height:24px;
-	color:#FFFFFF;
-	font-size:12px;
-	margin-right:10px;
-	display:inline-block;
-	text-decoration:none;
-}
+

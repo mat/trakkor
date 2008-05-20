@@ -2,7 +2,6 @@
 <h2>Wanted: URI and XPath</h2>
 
 Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom feeds. But sometimes you just want to track changes to a single page element, for example a price for an item or. blabla
-<h2>Start tracking</h2>
 
 <%= error_messages_for :tracker %>
 
@@ -19,13 +18,14 @@ Trackin whole web pages is easy, blabla, many pages already provide RSS or Atom 
 <p>Enter a Webpage adress and the text you want to track.</p>
 <form action="" method="post">
 <label><span>URI</span>
-<input type="text"name="email" id="email" class="input-text"/>
+<input type="text"name="email" id="email" class="input-text" size='80' />
 </label>
-<label><span>Password</span>
-<input type="password"name="psw" id="psw" class="input-text"/>
+<label><span>Find text</span>
+<input type="password"name="psw" id="psw" class="input-text" size='80' />
 </label>
 </form>
-<div class="spacer"><a href="#" onClick="" class="green">Sign in</a></div>
+<div class="spacer">
+ <input name="commit" type="submit" value="Test and track" />
 </div>
 </div>
 
