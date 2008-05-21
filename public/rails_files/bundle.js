@@ -4952,5 +4952,3 @@ $(function() {
         $('.search_repos_link').click()
     })
 });
-
-
