@@ -20,7 +20,7 @@ class Piece < ActiveRecord::Base
       html, self.text, self.error = Piece.extract_piece(response.body, xpath)
       self.bytecount = response.body.length if response.body
     else
-      self.error = "Error: #{response.code} #{response.message}"
+      self.error ||= "Error: #{response.code} #{response.message}"
     end
     
     self
