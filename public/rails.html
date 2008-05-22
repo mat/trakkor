@@ -25,11 +25,24 @@
        return false;
      })
    .end();
-   
-   
-   
+
+
+    $.relatizeDate = function(element) {
+        return 'bla'
+       $(element).text('bla')
+  /** $.relatizeDate.timeAgoInWords(new Date($(element).text())) **/
+    }
+
+
+    function foo(datestring) {
+        return (new Date(datestring)).getDay();
+    }
+
+    $(".reltime").text(foo('Tue May 20 16:47:04 +0200 2008'));
+
    $(function() {
     $('.relatize').relatizeDate()
+
 });
 
 
@@ -39,6 +52,8 @@
   </head>
   <body>
   
+<p class='reltime'>foo with a reltime</p>
+<p>bar</p>
   <span class="relatize">Wed Apr 16 11:17:03 -0700 2008</span> 
   
     <a href="http://jquery.com/">jQuery</a>

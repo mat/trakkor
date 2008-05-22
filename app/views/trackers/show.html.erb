@@ -24,8 +24,8 @@ and monitors changes to the element at <br />
 <p>
 This tracker has been created on <%= @tracker.created_at %>, this was XXX days ago.
 The last change was recognized 
-<abbr class="foo" title="<%= @tracker.last_change.created_at.iso8601 %>">
- <%= relative_time(@tracker.last_change.created_at) %>
+<abbr class="reltime" title="<%= @tracker.last_change.created_at.iso8601 %>">
+ <%= @tracker.last_change.created_at %>
 </abbr>
 
 </p>
@@ -47,9 +47,10 @@ which could not be used due to an error.
   <tr>
     <th>
       <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
-      <abbr class="foo" title="<%= change.created_at.iso8601 %>">
-         <%= h relative_time(change.created_at) %>
+      <abbr class="reltime" title="<%= change.created_at %>">
+         <%= change.created_at %>
       </abbr>
+      ago
     </th>
   </tr>
 
