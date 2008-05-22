@@ -37,9 +37,18 @@ class Piece < ActiveRecord::Base
   end
 
 
-  def Piece.fetch_from_uri(uri)
-    parsed_uri = URI.parse(URI.escape(uri))
-    response = Net::HTTP.get_response(parsed_uri)
+  def Piece.fetch_from_uri(uri_str)
+    uri = URI.parse(URI.escape(uri_str))
+
+    req = Net::HTTP::Get.new(uri.path)
+    net = Net::HTTP.new(uri.host, uri.port)
+ 
+    net.open_timeout = 10
+    net.read_timeout = 10
+ 
+    res = net.start() {|http|
+      http.request(req)
+    }
   end
 
   def Piece.extract_piece(data, xpath)
