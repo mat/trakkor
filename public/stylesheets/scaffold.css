@@ -325,3 +325,12 @@ div.box label span{
 	color:#555555;
 }
 
+
+#faq li .q {
+  font-style: italic;
+  padding-bottom: 0.5em;
+}
+
+#faq li{
+  padding-bottom: 20px;
+}

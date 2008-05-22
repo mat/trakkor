@@ -74,10 +74,29 @@ Trakkor allows you to define a Web Hook for your tracker that will be triggered 
 <h2>FAQ</h2>
 
  <ul id='faq'>
-   <li class='q'>Were animals or software tools hurt during the creation of Trakkor?</li>
-   <li class='a'>Trakkor is written in <a href='http://ruby-lang.org' target='_blank'>Ruby</a> and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, <a href='http://www.sqlite.org' target='_blank'>SQLite</a> and <a href='http://code.whytheluckystiff.net/hpricot/' target='_blank'>Hpricot</a> are heavily abused, but certainly not hurt. No anmials have been hurt.</li>
+
+ <li>
+
+<div class='q'>
+How often is a webpage checked for changes?
+</div>
+
+<div class='a'>
+Currently each page is checked every 30 minutes.
+</div>
+
+</li>
+   <li><div class='q'>Have animals or software tools been hurt during the creation of Trakkor?</div>
+
+   <div class='a'>Trakkor is written in <a href='http://ruby-lang.org' target='_blank'>Ruby</a> and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, <a href='http://www.sqlite.org' target='_blank'>SQLite</a> and <a href='http://code.whytheluckystiff.net/hpricot/' target='_blank'>Hpricot</a> are heavily abused, but certainly not hurt. No anmials have been hurt.</div>
+</li>
 
 
-    <li class='a'>Finding an appropriate XPath that describes the desired page element page can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. </li>
+<li>
+<div class='q'>
+Are the any tools that might help me find a fitting XPath if Trakkor doesn't cut it?
+</div>
+    <div class='a'>Finding an appropriate XPath that selects the desired element can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. But please bear in mind that some of the XPathes created by these tools (e.g. the id() function) are not understood by Trakkor's Hpricot library, see <a href='http://code.whytheluckystiff.net/hpricot/wiki/SupportedXpathExpressions' target='_blank'>Supported XPath Expressions</a> for details.</div>
+</li>
 
- <ul>
+ </ul>
