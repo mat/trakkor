@@ -32,7 +32,7 @@ The last change was recognized
 
 <p>
 So far <%= @tracker.pieces_errorfree.length %> pieces have been fetched which comprise of <strong><%= bytes_to_human(@tracker.bytes_recorded) %></strong>.
-Additionaly Moduri tried to fetch 
+Additionaly Trakkor tried to fetch 
 <%= @tracker.error_pieces.length %> pieces
 which could not be used due to an error. 
 
@@ -46,10 +46,9 @@ which could not be used due to an error.
 
   <tr>
     <th>
-      <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
-      <abbr class="reltime" title="<%= change.created_at %>">
+      <span class="reltime"> 
          <%= change.created_at %>
-      </abbr>
+      </span>
       ago
     </th>
   </tr>
@@ -60,9 +59,11 @@ which could not be used due to an error.
   </tr>
 <% end %>
 
-  <tr>
+<% unless change.error %>
+  <tr class='errorchange'>
     <td class='piece'><pre><%= change.text %></pre></td>
   </tr>
+<% end %>
 
 <% end %>
 <% end %>
