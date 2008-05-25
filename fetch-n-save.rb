@@ -7,6 +7,7 @@ require "activerecord"
 SCRAPER_PATH = ENV['SCRAPER_PATH']
 
 raise 'Env variable SCRAPER_PATH not set.'if SCRAPER_PATH.nil?
+raise "SCRAPER_PATH (#{SCRAPER_PATH}) does not exist." unless File.exist? SCRAPER_PATH
 
 require "#{SCRAPER_PATH}/app/models/tracker.rb"
 require "#{SCRAPER_PATH}/app/models/piece.rb"
@@ -30,9 +31,11 @@ must_notify = []
 
 trackers.each do |tracker|
 
+ print "Fetching #{tracker.uri}... " ; STDOUT.flush
  old_piece = tracker.current
  new_piece = tracker.fetch_piece
  new_piece.save!
+ puts "ok."
 
  if tracker.should_notify?(old_piece,new_piece)
    must_notify << [tracker, old_piece, new_piece]
