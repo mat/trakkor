@@ -1,11 +1,26 @@
 
 <p>
-Moduri is currently running <%= @active_trackers %> trackers.
+Trakkor is currently running <%= @active_trackers %> trackers.
 </p>
 
 <p>
 This statistics were created at <%= Time.now %> 
 </p>
+
+<h3>Newest trackers</h3>
+<% if @newest_trackers %>
+ <ul>
+<% for t in @newest_trackers %>
+    <li><%= link_to(t.name, t) %> - 
+     <span class="reltime">
+        <%= t.created_at %>
+     </span>
+     </li>
+<% end %>
+</ul>
+<% else %>
+  Huh, now new Trackers am start?
+<% end %>
 
 <h3>Sick trackers</h3>
 <% if @sick_trackers %>

@@ -201,6 +201,7 @@ class TrackersController < ApplicationController
     @active_trackers = Tracker.find(:all).length
     @sick_trackers = Tracker.find(:all).find_all{ |t| t.sick? }
     @hook_trackers = Tracker.find(:all).find_all{ |t| t.web_hook }
+    @newest_trackers = Tracker.newest_trackers
   end
 
   # GET /trackers/1/edit

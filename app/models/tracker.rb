@@ -194,6 +194,10 @@ class Tracker < ActiveRecord::Base
   def Tracker.live_examples
     Tracker.find(APP_CONFIG['example_trackers'])
   end
+ 
+  def Tracker.newest_trackers
+    Tracker.find(:all, :order => 'created_at DESC', :limit => 5)
+  end
 
   private
   def Tracker.collect_parents(n, parents)
