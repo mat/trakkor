@@ -214,10 +214,10 @@ sudo apt-get install libxml-ruby1.8 libsqlite3-ruby
 
 == The cron job
 
-Executed every hour on :21 and :51, errors are logged.
+Executed every hour on :04 and :34, errors are logged.
 
-21,51 * * * * ruby /home/mat/svn_workspaces/ruby/scraper/rails/scrape-n-save.rb >> /home/mat/svn_workspaces/ruby/scraper/rails/log/cron.log 2>&1 
-
+SCRAPER_PATH=/home/mat/www/moduri
+04,34 * * * * /usr/local/bin/ruby $SCRAPER_PATH/fetch-n-save.rb >> $SCRAPER_PATH/log/cron.log 2>&1
 
 New variable in 
 /etc/environment
