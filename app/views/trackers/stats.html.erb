@@ -33,6 +33,17 @@ This statistics were created at <%= Time.now %>
   No tracker is sick at the moment.
 <% end %>
 
+<h3>Healthy trackers</h3>
+<% if @healthy_trackers %>
+ <ul>
+<% for t in @healthy_trackers %>
+    <li><%= link_to(t.name, t) %></li>
+<% end %>
+</ul>
+<% else %>
+  No tracker is healthy at the moment.
+<% end %>
+
 <h3>Web Hooks</h3>
 <% if @hook_trackers %>
  <ul>
