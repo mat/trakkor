@@ -40,7 +40,11 @@ class Piece < ActiveRecord::Base
   def Piece.fetch_from_uri(uri_str)
     uri = URI.parse(URI.escape(uri_str))
 
-    req = Net::HTTP::Get.new(uri.path)
+    path = uri.path
+    path = '/' if path.empty?
+    path += "?#{uri.query}" if uri.query
+
+    req = Net::HTTP::Get.new(path)
     net = Net::HTTP.new(uri.host, uri.port)
  
     net.open_timeout = 10
