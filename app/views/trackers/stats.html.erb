@@ -22,7 +22,7 @@ This statistics were created at <%= Time.now %>
   Huh, now new Trackers am start?
 <% end %>
 
-<h3>Sick trackers</h3>
+<h3>Sick trackers (<%= ( @sick_trackers || []).length %>)</h3>
 <% if @sick_trackers %>
  <ul>
 <% for t in @sick_trackers %>
@@ -33,7 +33,7 @@ This statistics were created at <%= Time.now %>
   No tracker is sick at the moment.
 <% end %>
 
-<h3>Healthy trackers</h3>
+<h3>Healthy trackers (<%= ( @healthy_trackers || []).length %>)</h3>
 <% if @healthy_trackers %>
  <ul>
 <% for t in @healthy_trackers %>
