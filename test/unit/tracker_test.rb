@@ -2,6 +2,17 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class TrackerTest < ActiveSupport::TestCase
 
+  should_require_attributes :uri, :xpath
+  should_require_unique_attributes :md5sum
+
+  should_have_many :pieces
+
+  #should_have_indices :md5sum
+  should_allow_values_for :uri, "http://example.com"
+
+  should_not_allow_values_for :uri, "bad 1"
+  should_not_allow_values_for :uri, "bad 1"
+
   ############
   context "A Tracker which recently changed its design" do
       setup do
@@ -80,7 +91,7 @@ class TrackerTest < ActiveSupport::TestCase
 
     should "fetch the right piece wo error" do
       piece = @tracker.fetch_piece
-      assert_equal "matthias-luedtke.de - Startseite", piece.text
+      assert_equal "Matthias Lüdtke", piece.text
       assert_nil piece.error
     end
   end

@@ -2,15 +2,17 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class PieceTest < ActiveSupport::TestCase
 
+  should_belong_to :tracker
+
   ############
   context "The class Piece" do
     setup do
       # on vacation
     end
 
-    should "should fetch a title." do
+    should "fetch a title." do
        uri = "http://better-idea.org"
-       assert_equal "matthias-luedtke.de - Startseite", Piece.fetch_title(uri)
+       assert_equal "Matthias Lüdtke", Piece.fetch_title(uri)
     end
  
   end
@@ -26,7 +28,7 @@ class PieceTest < ActiveSupport::TestCase
     #  assert_nil @piece.text 
     #end
 
-    should "should have text after fetch." do
+    should "have text after fetch." do
        @piece.fetch("http://better-idea.org", "//title" )
        assert @piece.text
     end
@@ -40,11 +42,11 @@ class PieceTest < ActiveSupport::TestCase
         @piece.fetch("http://better-idea.org", "//title" )
       end
 
-    should "should have text." do
-      assert_equal "matthias-luedtke.de - Startseite", @piece.text
+    should "have text." do
+      assert_equal "Matthias Lüdtke", @piece.text
     end
 
-    should "should have positive bytecount." do
+    should "have positive bytecount." do
       assert @piece.bytecount > 0
     end
 
