@@ -41,6 +41,7 @@ class TrackersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @tracker }
+      format.microsummary { render :text => "Trakkor: #{@tracker.last_change.text}" } 
       format.atom
     end
   end
