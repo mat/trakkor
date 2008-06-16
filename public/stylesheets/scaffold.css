@@ -277,6 +277,10 @@ h1, h2 {color:#666666;
 	margin-bottom:20px;
 }
 
+h2.cozy {
+  margin-bottom: 0px;
+}
+
 div.main{
 	margin:30px auto; 
 	width:340px;
@@ -331,4 +335,11 @@ div.box label span{
 
 #faq li{
   padding-bottom: 20px;
+}
+
+#created_on {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 0.8em;
+  font-style: italic;
 }

@@ -1,13 +1,14 @@
 <% html_title(@tracker.name) -%>
 
 
-<h2><%= @tracker.name %></h2>
+<h2 class='cozy'><%= @tracker.name %></h2>
+<p id='created_on'>created on <%= @tracker.created_at.strftime('%d %b %Y') %></p>
 
 <p>
 
 This tracker fetches the document at <br />
   <a id='tracker_uri' href='<%= @tracker.uri %>'><%= @tracker.uri %></a> <br/>
-and monitors changes to the element at <br />
+and monitors the element at <br />
   <strong id='tracker_xpath'><%= @tracker.xpath %></strong>
 
 </p>
@@ -20,24 +21,15 @@ and monitors changes to the element at <br />
 
 
 <%= link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete %>
-<h2>Stats</h2>
+
+
+
+<% if @tracker.error_pieces.length > 0 %>
 <p>
-This tracker has been created on <%= @tracker.created_at %>, this was XXX days ago.
-The last change was recognized 
-<abbr class="reltime" title="<%= @tracker.last_change.created_at.iso8601 %>">
- <%= @tracker.last_change.created_at %>
-</abbr>
-
+<%= @tracker.error_pieces.length %> pieces could not be used due to an error: 
+<a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Show errors</a>
 </p>
-
-<p>
-So far <%= @tracker.pieces_errorfree.length %> pieces have been fetched which comprise of <strong><%= bytes_to_human(@tracker.bytes_recorded) %></strong>.
-Additionaly Trakkor tried to fetch 
-<%= @tracker.error_pieces.length %> pieces
-which could not be used due to an error. 
-
-<a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Display errors</a>
-</p>
+<% end %>
 
 <h2>Changes</h2>
 <table id='changetable'>
