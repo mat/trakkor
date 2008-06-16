@@ -37,10 +37,12 @@ and monitors the element at <br />
 
   <tr>
     <th>
-      <span class="reltime"> 
-         <%= change.created_at %>
-      </span>
-      ago
+
+      <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
+      <abbr class="change_datetime" title="<%= change.created_at.iso8601 %>">
+         <%= time_ago_in_words(change.created_at) %> ago
+      </abbr>
+
     </th>
   </tr>
 
