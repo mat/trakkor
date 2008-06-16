@@ -32,7 +32,7 @@ class TrackerTest < ActiveSupport::TestCase
     end
 
     should "have some errors" do
-      assert_equal 20, @tracker.error_pieces.length
+      assert_equal 20, @tracker.errs.length
     end
 
     should "return the right change texts" do
@@ -47,7 +47,7 @@ class TrackerTest < ActiveSupport::TestCase
 
     should "return unnecessary pieces, but no errors or changes" do
       changes = @tracker.changes
-      errors  = @tracker.error_pieces
+      errors  = @tracker.errs
 
       #assert_equal '2nd change', @tracker.unnecessary_pieces
     end
@@ -73,7 +73,7 @@ class TrackerTest < ActiveSupport::TestCase
     end
 
     should "have no error pieces" do
-      assert @tracker.error_pieces.empty?
+      assert @tracker.errs.empty?
     end
 
     should "have only errorfree pieces" do

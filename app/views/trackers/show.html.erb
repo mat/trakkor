@@ -24,9 +24,9 @@ and monitors the element at <br />
 
 
 
-<% if @tracker.error_pieces.length > 0 %>
+<% if @tracker.errs.length > 0 %>
 <p>
-<%= @tracker.error_pieces.length %> pieces could not be used due to an error: 
+<%= @tracker.errs.length %> pieces could not be used due to an error: 
 <a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Show errors</a>
 </p>
 <% end %>

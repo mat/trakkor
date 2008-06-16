@@ -67,7 +67,7 @@ class Tracker < ActiveRecord::Base
     pieces.find( :all, :conditions => { :error => nil}, :order => 'created_at ASC' )
   end
 
-  def error_pieces
+  def errs
     pieces.find( :all, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' )
   end
 
