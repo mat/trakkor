@@ -34,7 +34,6 @@ and monitors the element at <br />
 <h2>Changes</h2>
 <table id='changetable'>
 <% for change in @changes %>
-<% div_for(change) do %>
 
   <tr>
     <th>
@@ -47,17 +46,16 @@ and monitors the element at <br />
 
 <% if change.error %>
   <tr class='errorchange'>
-    <td><span class='errorchange'><%= h change.error %></span></td>
+    <td><span><%= h change.error %></span></td>
   </tr>
 <% end %>
 
 <% unless change.error %>
-  <tr class='errorchange'>
+  <tr>
     <td class='piece'><pre><%= change.text %></pre></td>
   </tr>
 <% end %>
 
-<% end %>
 <% end %>
 </table>
 
