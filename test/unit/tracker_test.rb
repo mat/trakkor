@@ -42,14 +42,18 @@ class TrackerTest < ActiveSupport::TestCase
       assert_equal '1st change', @tracker.changes[2].text
     end
 
-   # error_pieces UMBENNEN nach errors
-   # und dann named_scoped fuer errors benutzen
+   # named_scoped fuer errors benutzen
 
     should "return unnecessary pieces, but no errors or changes" do
       changes = @tracker.changes
-      errors  = @tracker.errs
+      errs  = @tracker.errs
+      not_needed = @tracker.redundant_pieces
 
-      #assert_equal '2nd change', @tracker.unnecessary_pieces
+      assert_equal [], not_needed & errs
+      assert_equal [], not_needed & changes
+
+      remaining_pieces = changes + errs
+      assert_equal 23, remaining_pieces.length
     end
 
   end

@@ -71,6 +71,10 @@ class Tracker < ActiveRecord::Base
     pieces.find( :all, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' )
   end
 
+  def redundant_pieces
+    pieces.find( :all ) - changes - errs
+  end
+
   def changes(whether_from_cache = [])
     changes_impl
 #    key = ['changes',self.id]
