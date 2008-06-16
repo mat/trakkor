@@ -34,7 +34,7 @@ Trakkor lets you create a tracker for just a <strong>single DOM element</strong>
     <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("04.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
     <td><%= link_to "#{tracker.name}", tracker_path(tracker) %></td>
     <td class='piece'><%= tracker.last_change.text %></td>
-    <td>updated <span class='reltime'> <%= tracker.last_change.created_at %></span> ago</td>
+    <td>updated <span class='change_time'> <%= time_ago_in_words tracker.last_change.created_at %></span> ago</td>
   </tr>
 <% end %>
 
