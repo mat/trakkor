@@ -17,7 +17,7 @@ pre {
   border: 1px solid #4d54b3;
 }
 
-#tracker_uri{
+#uri_for_tracker {
   font-size: 1.4em;
   line-height: 2em;
   text-align: center;
@@ -25,7 +25,7 @@ pre {
   text-width: 100%;
 }
 
-#tracker_xpath{
+#xpath_for_tracker{
   font-size: 1.4em;
   line-height: 2em;
   text-align: center;
