@@ -18,6 +18,22 @@ pre {
 
 }
 
+#tracker_uri{
+  font-size: 1.4em;
+  line-height: 2em;
+  text-align: center;
+  padding-left: 2em;
+  text-width: 100%;
+}
+
+#tracker_xpath{
+  font-size: 1.4em;
+  line-height: 2em;
+  text-align: center;
+  padding-left: 2em;
+  text-width: 100%;
+}
+
 
 hr {
  color: #4d54b3;
@@ -32,7 +48,7 @@ a { color: #4d54b3;}
 a:visited { color: #333;}
 
 .sick {
-  background-color: #ff0;
+  background-color: #ee8058;
 }
 
 .highlightsearch {
@@ -105,7 +121,7 @@ margin-top: 5px;
 }
 
 .errorchange span {
-  background-color: #f9be40;
+  background-color: #ee8058;
 }
 
 .errorchange a {
