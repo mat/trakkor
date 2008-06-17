@@ -50,8 +50,8 @@ class Piece < ActiveRecord::Base
     req = Net::HTTP::Get.new(path)
     net = Net::HTTP.new(uri.host, uri.port)
  
-    net.open_timeout = 10
-    net.read_timeout = 10
+    net.open_timeout = 15
+    net.read_timeout = 15
  
     res = net.start() {|http|
       http.request(req)
