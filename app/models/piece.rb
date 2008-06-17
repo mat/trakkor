@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'hpricot'
+require 'hpricot_monkeypatch'
 
 class Piece < ActiveRecord::Base
 

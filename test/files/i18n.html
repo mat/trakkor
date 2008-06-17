@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="HTML Tidy for Linux/x86 (vers 1st December 2002), see www.w3.org"
+      name="generator" />
+<title>Survival guide to i18n</title>
+<link rel="stylesheet" href="/css/blog.css" type="text/css"
+media="screen" id="HideFromNetscape4" />
+<link rel="stylesheet" href="/css/print.css" type="text/css"
+media="print" />
+</head>
+<body id="intertwingly-net">
+<div class="banner">
+<h1><a class="banner-anchor"
+href="http://www.intertwingly.net/blog/">intertwingly</a></h1>
+<p>It's just data</p></div>
+<div class="content">
+<h2>Companion to Atom</h2>
+<div class="blogbody">
+<p><i>Work in progress.&nbsp; By Sam Ruby</i></p>
+<h3>I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n</h3>
+<p>Before we can talk about HTTP content types, or
+about URL
+escape sequences, or about XML encoding, we need to tackle the topic of
+what
+exactly a character is.</p>
+<p>Now admit it.&nbsp; Despite
+the fact that you know that there are some <a href="#FurtherReading">excellent
+introductions</a> to
+<a href="http://www.unicode.org/">Unicode</a>
+out there, you really don't want to learn Unicode, do you?
+What you really want is for someone to tell you what the
+<strong>minimum</strong> you need to do to not get your data garbled in
+transit or outright rejected upon receipt.&nbsp; So
+what I am going to provide here is a survival guide of sorts.&nbsp;
+What&#8217;s a survival guide, you ask?&nbsp;
+Well, before you travel to a foreign country
+that speaks a language you don't know, it always helps to learn a few
+key phrases like &#8220;parlez vous anglais?&#8221; or &#8220;una cerveza por
+favor&#8221;.</p>
+<p>OK, so we&#8217;ve established that you&#8217;ve got a tool
+that you want to ensure is internationalized.&nbsp; The first thing I
+want you to do is to copy the string</p>
+<blockquote><p><code>I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n</code></p></blockquote>
+<p>into your tool and
+observe what comes out the other side.&nbsp; If you
+have a weblogging tool, put it in the title, summary, content, and any
+other nook and cranny you can find.&nbsp; Comments
+too, if you have got them. &nbsp;Check every
+output that can be produced, including html and feeds.</p>
+<p>Here are some common examples of garbled output:</p>
+<blockquote>
+<table border="1" cellspacing="0" cellpadding="4">
+  <tbody>
+    <tr>
+      <td>cp437</td>
+      <td>I&curren;t&#8240;rn&#402;ti&#8220;n&#8230;liz&#8216;ti?n</td>
+    </tr>
+    <tr>
+      <td>macroman</td>
+      <td>I&#8211;t&#8216;rn&#8240;ti&#8482;n&#710;liz&frac34;ti&iquest;n</td>
+    </tr>
+    <tr>
+      <td>utf-8</td>
+      <td>I&Atilde;&plusmn;t&Atilde;&laquo;rn&Atilde;&cent;ti&Atilde;&acute;n&Atilde;&nbsp;liz&Atilde;&brvbar;ti&Atilde;&cedil;n</td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+<p>If what you see matches one of the values in the second
+column, then the value in the first column is the equivalent of &#8220;parlez
+vous anglais?&#8221;&nbsp; You can use this later.&nbsp; Unfortunately,
+&#8220;cp437&#8221; and &#8220;macroman&#8221; are not
+widely &#8220;spoken&#8221;, so you really should
+<a href="http://www.debian.org/doc/manuals/intro-i18n/">seek
+alternatives</a>.&nbsp; If you have &#8220;utf-8&#8221;, you are actually
+ahead of the game.</p>
+<h3 id="CleaningWindows">Cleaning windows</h3>
+<p>If you can successfully process text with
+<a href="http://en.wikipedia.org/wiki/Diacritic">Diacritic marks</a>, you
+are likely using either
+<a href="http://en.wikipedia.org/wiki/ISO_8859-1">iso-8859-1</a>, or
+its
+close cousin, <a
+ href="http://www.microsoft.com/globaldev/reference/sbcs/1252.htm">windows-1252</a>.&nbsp;
+There is no polite way to put this, so if you are running on a Microsoft
+platform, or cut and paste from documents produced by Microsoft software, or
+even allow comments to be posted by people who might be doing one of the
+above, you need to be aware of the 27 differences, summarized by the table
+below: </p>
+<blockquote>
+<table border="1" cellspacing="0" cellpadding="2">
+  <thead>
+<tr>
+  <th rowspan="2">character</th>
+  <th colspan="3">win-1252</th>
+  <th colspan="3">unicode</th>
+</tr>
+<tr>
+  <th>decimal</th><th>hex</th><th>octal</th>
+  <th>html</th>
+  <th>xml</th>
+  <th>url</th>
+</tr>
+  </thead>
+  <tbody>
+<tr>
+  <td align="center">&#8364;</td>
+  <td align="center"><code>128</code></td>
+  <td align="center"><code>80</code></td>
+  <td align="center"><code>200</code></td>
+  <td><code>&amp;euro;</code></td>
+  <td><code>&amp;#x20AC;</code></td>
+  <td><code>%E2%82%AC</code></td>
+</tr>
+<tr>
+  <td align="center">&#8218;</td>
+  <td align="center"><code>130</code></td>
+  <td align="center"><code>82</code></td>
+  <td align="center"><code>202</code></td>
+  <td><code>&amp;sbquo;</code></td>
+  <td><code>&amp;#x201A;</code></td>
+  <td><code>%E2%80%9A</code></td>
+</tr>
+<tr>
+  <td align="center">&#402;</td>
+  <td align="center"><code>131</code></td>
+  <td align="center"><code>83</code></td>
+  <td align="center"><code>203</code></td>
+  <td><code>&amp;fnof;</code></td>
+  <td><code>&amp;#x192;</code></td>
+  <td><code>%C6%92</code></td>
+</tr>
+<tr>
+  <td align="center">&#8222;</td>
+  <td align="center"><code>132</code></td>
+  <td align="center"><code>84</code></td>
+  <td align="center"><code>204</code></td>
+  <td><code>&amp;bdquo;</code></td>
+  <td><code>&amp;#x201E;</code></td>
+  <td><code>%E2%80%9E</code></td>
+</tr>
+<tr>
+  <td align="center">&#8230;</td>
+  <td align="center"><code>133</code></td>
+  <td align="center"><code>85</code></td>
+  <td align="center"><code>205</code></td>
+  <td><code>&amp;hellip;</code></td>
+  <td><code>&amp;#x2026;</code></td>
+  <td><code>%E2%80%A6</code></td>
+</tr>
+<tr>
+  <td align="center">&#8224;</td>
+  <td align="center"><code>134</code></td>
+  <td align="center"><code>86</code></td>
+  <td align="center"><code>206</code></td>
+  <td><code>&amp;dagger;</code></td>
+  <td><code>&amp;#x2020;</code></td>
+  <td><code>%E2%80%A0</code></td>
+</tr>
+<tr>
+  <td align="center">&#8225;</td>
+  <td align="center"><code>135</code></td>
+  <td align="center"><code>87</code></td>
+  <td align="center"><code>207</code></td>
+  <td><code>&amp;Dagger;</code></td>
+  <td><code>&amp;#x2021;</code></td>
+  <td><code>%E2%80%A1</code></td>
+</tr>
+<tr>
+  <td align="center">&#710;</td>
+  <td align="center"><code>136</code></td>
+  <td align="center"><code>88</code></td>
+  <td align="center"><code>210</code></td>
+  <td><code>&amp;circ;</code></td>
+  <td><code>&amp;#x2C6;</code></td>
+  <td><code>%CB%86</code></td>
+</tr>
+<tr>
+  <td align="center">&#8240;</td>
+  <td align="center"><code>137</code></td>
+  <td align="center"><code>89</code></td>
+  <td align="center"><code>211</code></td>
+  <td><code>&amp;permil;</code></td>
+  <td><code>&amp;#x2030;</code></td>
+  <td><code>%E2%80%B0</code></td>
+</tr>
+<tr>
+  <td align="center">&#352;</td>
+  <td align="center"><code>138</code></td>
+  <td align="center"><code>8A</code></td>
+  <td align="center"><code>212</code></td>
+  <td><code>&amp;Scaron;</code></td>
+  <td><code>&amp;#x160;</code></td>
+  <td><code>%C5%A0</code></td>
+</tr>
+<tr>
+  <td align="center">&#8249;</td>
+  <td align="center"><code>139</code></td>
+  <td align="center"><code>8B</code></td>
+  <td align="center"><code>213</code></td>
+  <td><code>&amp;lsaquo;</code></td>
+  <td><code>&amp;#x2039;</code></td>
+  <td><code>%E2%80%B9</code></td>
+</tr>
+<tr>
+  <td align="center">&#338;</td>
+  <td align="center"><code>140</code></td>
+  <td align="center"><code>8C</code></td>
+  <td align="center"><code>214</code></td>
+  <td><code>&amp;OElig;</code></td>
+  <td><code>&amp;#x152;</code></td>
+  <td><code>%C5%92</code></td>
+</tr>
+<tr>
+  <td align="center">&#381;</td>
+  <td align="center"><code>142</code></td>
+  <td align="center"><code>8E</code></td>
+  <td align="center"><code>216</code></td>
+  <td><code>&amp;#x17D;</code></td>
+  <td><code>&amp;#x17D;</code></td>
+  <td><code>%C5%BD</code></td>
+</tr>
+<tr>
+  <td align="center">&#8216;</td>
+  <td align="center"><code>145</code></td>
+  <td align="center"><code>91</code></td>
+  <td align="center"><code>221</code></td>
+  <td><code>&amp;lsquo;</code></td>
+  <td><code>&amp;#x2018;</code></td>
+  <td><code>%E2%80%98</code></td>
+</tr>
+<tr>
+  <td align="center">&#8217;</td>
+  <td align="center"><code>146</code></td>
+  <td align="center"><code>92</code></td>
+  <td align="center"><code>222</code></td>
+  <td><code>&amp;rsquo;</code></td>
+  <td><code>&amp;#x2019;</code></td>
+  <td><code>%E2%80%99</code></td>
+</tr>
+<tr>
+  <td align="center">&#8220;</td>
+  <td align="center"><code>147</code></td>
+  <td align="center"><code>93</code></td>
+  <td align="center"><code>223</code></td>
+  <td><code>&amp;ldquo;</code></td>
+  <td><code>&amp;#x201C;</code></td>
+  <td><code>%E2%80%9C</code></td>
+</tr>
+<tr>
+  <td align="center">&#8221;</td>
+  <td align="center"><code>148</code></td>
+  <td align="center"><code>94</code></td>
+  <td align="center"><code>224</code></td>
+  <td><code>&amp;rdquo;</code></td>
+  <td><code>&amp;#x201D;</code></td>
+  <td><code>%E2%80%9D</code></td>
+</tr>
+<tr>
+  <td align="center">&#8226;</td>
+  <td align="center"><code>149</code></td>
+  <td align="center"><code>95</code></td>
+  <td align="center"><code>225</code></td>
+  <td><code>&amp;bull;</code></td>
+  <td><code>&amp;#x2022;</code></td>
+  <td><code>%E2%80%A2</code></td>
+</tr>
+<tr>
+  <td align="center">&#8211;</td>
+  <td align="center"><code>150</code></td>
+  <td align="center"><code>96</code></td>
+  <td align="center"><code>226</code></td>
+  <td><code>&amp;ndash;</code></td>
+  <td><code>&amp;#x2013;</code></td>
+  <td><code>%E2%80%93</code></td>
+</tr>
+<tr>
+  <td align="center">&#8212;</td>
+  <td align="center"><code>151</code></td>
+  <td align="center"><code>97</code></td>
+  <td align="center"><code>227</code></td>
+  <td><code>&amp;mdash;</code></td>
+  <td><code>&amp;#x2014;</code></td>
+  <td><code>%E2%80%94</code></td>
+</tr>
+<tr>
+  <td align="center">&#732;</td>
+  <td align="center"><code>152</code></td>
+  <td align="center"><code>98</code></td>
+  <td align="center"><code>230</code></td>
+  <td><code>&amp;tilde;</code></td>
+  <td><code>&amp;#x2DC;</code></td>
+  <td><code>%CB%9C</code></td>
+</tr>
+<tr>
+  <td align="center">&#8482;</td>
+  <td align="center"><code>153</code></td>
+  <td align="center"><code>99</code></td>
+  <td align="center"><code>231</code></td>
+  <td><code>&amp;trade;</code></td>
+  <td><code>&amp;#x2122;</code></td>
+  <td><code>%E2%84%A2</code></td>
+</tr>
+<tr>
+  <td align="center">&#353;</td>
+  <td align="center"><code>154</code></td>
+  <td align="center"><code>9A</code></td>
+  <td align="center"><code>232</code></td>
+  <td><code>&amp;scaron;</code></td>
+  <td><code>&amp;#x161;</code></td>
+  <td><code>%C5%A1</code></td>
+</tr>
+<tr>
+  <td align="center">&#8250;</td>
+  <td align="center"><code>155</code></td>
+  <td align="center"><code>9B</code></td>
+  <td align="center"><code>233</code></td>
+  <td><code>&amp;rsaquo;</code></td>
+  <td><code>&amp;#x203A;</code></td>
+  <td><code>%E2%80%BA</code></td>
+</tr>
+<tr>
+  <td align="center">&#339;</td>
+  <td align="center"><code>156</code></td>
+  <td align="center"><code>9C</code></td>
+  <td align="center"><code>234</code></td>
+  <td><code>&amp;oelig;</code></td>
+  <td><code>&amp;#x153;</code></td>
+  <td><code>%C5%93</code></td>
+</tr>
+<tr>
+  <td align="center">&#382;</td>
+  <td align="center"><code>158</code></td>
+  <td align="center"><code>9E</code></td>
+  <td align="center"><code>236</code></td>
+  <td><code>&amp;#x17E;</code></td>
+  <td><code>&amp;#x17E;</code></td>
+  <td><code>%C5%BE</code></td>
+</tr>
+<tr>
+  <td align="center">&#376;</td>
+  <td align="center"><code>159</code></td>
+  <td align="center"><code>9F</code></td>
+  <td align="center"><code>237</code></td>
+  <td><code>&amp;Yuml;</code></td>
+  <td><code>&amp;#x178;</code></td>
+  <td><code>%C5%B8</code></td>
+</tr>
+  </tbody>
+</table>
+</blockquote>
+<p>The way to read this table is that the first column shows what the
+character should look like.&nbsp; The next three columns describe the
+input character in decimal, hex, and octal.&nbsp; The final three
+columns tell you what to replace this character with if your target is
+html, xml, or a url.</p>
+<p>Note: as these
+<a href="http://www.unicode.org/glossary/#code_point">code points</a> are
+defined as
+<a href="http://en.wikipedia.org/wiki/Control_character">control characters</a>
+in iso-8859-1, you are safe to assume that you will not encounter any of these
+bytes in the normal course of processing user input; and therefore mapping
+these characters is a safe thing to do.</p>
+<p>Alternatively, you can declare defeat, and use windows-1252 as your
+encoding.&nbsp; However, as this encoding is not univerally recognized, you
+may be shutting out a portion of your intended audience.</p>
+
+<h3 id="utf8">The next step</h3>
+<p>If all you are looking to do the absolute minimum, there is no problem
+stopping when you successfully get to iso-8859-1.&nbsp; The following is
+for people who want to make an informed decision on utf-8.&nbsp; First,
+the steps to convert from iso-8859-1 to utf-8:</p>
+<ul>
+<li>All characters in the range of 0-127 (hex 00 through 7F), are represented
+identically in both encodings.&nbsp; This covers the entire range of the original
+<a href="http://web.cs.mun.ca/%7Emichael/c/ascii-table.html">ASCII</a>
+characters.</li>
+<li>All iso-8859-1 characters in the range of 128-191 (hex 80 through BF) need
+to be preceeded by a byte with the value of 194 (hex C2) in utf-8, but
+otherwise are left intact.</li>
+<li>All iso-8859-1 characters in the range of 192-255 (hex C0 through FF) not
+only need to be preceede by a byte with the value of 195 (hex C3) in utf-8,
+but also need to have 64 (hex 40) subtracted from the iso-8859-1 character
+value.&nbsp; For example, a &#x201C;&#241;&#x201D; (decimal 241, hex F1)
+becomes a 195 followed by a 177 (hex C3 B1).</li>
+</ul>
+<p>Or, if you prefer, <a href="http://miscoranda.com/96">here</a>'s some
+working code.</p>
+<p>The primary advantage of utf-8 is that it can directly represent all
+Unicode characters (except
+<a href="http://ln.hixie.ch/?start=1066145333&amp;count=1">Klingon</a>).&nbsp;
+With other encoding systems there are only partial solutions like
+<a href="http://www.w3.org/TR/2004/REC-xml-20040204/#dt-charref">numeric
+character references</a> that work in many important contexts like (HTML and
+XML), but not in others (like FORM inputs).</p>
+<p>The primary disadvantage of utf-8 is that some less frequently used
+characters will require additional bytes in order to be stored or
+transmitted.</p>
+
+<h3 id="FurtherReading">Further reading</h3>
+<ul>
+<li>Introduction/motivation
+<ul>
+<li><a href="http://www.tbray.org/ongoing/When/200x/2003/04/06/Unicode">On the Goodness of Unicode</a> by Tim Bray</li>
+<li><a href="http://www.tbray.org/ongoing/When/200x/2003/04/26/UTF">Charcters vs. Bytes</a> by Tim Bray</li>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a> by Joel Spolsky</li>
+</ul>
+</li>
+<li>Reference
+<ul>
+<li><a href="http://www.cs.tut.fi/~jkorpela/chars.html">A tutorial on character code issues</a> by Jukka "Yucca" Korpela.</li>
+<li><a href="http://gedcom-parse.sourceforge.net/doc/encoding.html#The_character_encoding_problem">The character encoding problem</a> by Peter Verthez</li>
+<li><a href="http://www.debian.org/doc/manuals/intro-i18n/">Introduction to i18n</a> by Tomohiro KUBOTA</li>
+<li><a href="http://www.ifi.unizh.ch/mml/mduerst/papers/PDF/IUC11-UTF-8.pdf">The Properties and Promizes of UTF-8</a> by Martin J. D&#252;rst</li>
+</ul>
+</li>
+<li>Tool support
+<ul>
+<li><a href="http://ecto.kung-foo.tv/archives/000975.php">ecto and character encoding</a> by Adriaan Tijsseling</li>
+<li><a href="http://golem.ph.utexas.edu/~distler/blog/archives/000347.html">MTStripControlChars</a> by Jacques Distler</li>
+<li>Mozilla bugs:
+<a href="http://bugzilla.mozilla.org/show_bug.cgi?id=18643" title="Bug 18643 - add support for _charset_ field in form submissions [form sub]">18643</a>,
+<a href="http://bugzilla.mozilla.org/show_bug.cgi?id=81203" title="Bug 81203 - smart quote cannot be submit in html form">81203</a>,
+<a href="http://bugzilla.mozilla.org/show_bug.cgi?id=228779"
+title="Bug 228779 - Submitted characters not included in the iso-8859-1 charset for iso-8859-1 documents should be always encoded as numeric character references">228779</a>
+</li>
+<li><a href="http://weblogs.java.net/pub/wlg/1078">Displaying international characters in JSP</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="rightbar">
+<h2>Search</h2>
+<form method="get" action="http://www.intertwingly.net/blog/">
+<div class="navbar"><input type="text" size="12" name="q"
+value="" /> <input type="submit" value="Find" /></div></form>
+<p>
+<a href="http://validator.w3.org/check/referer"><img src="http://www.w3.org/Icons/valid-xhtml11"
+     alt="Valid XHTML 1.1!" height="31" width="88" /></a></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7627325548543983";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</body>
+</html>

@@ -8,6 +8,8 @@ class PieceTest < ActiveSupport::TestCase
   context "The class Piece" do
     setup do
       # on vacation
+      i18n_file = File.dirname(__FILE__) + '/../files/i18n.html'
+      @i18n_data = IO.read(i18n_file)
     end
 
     should "fetch a title." do
@@ -15,6 +17,11 @@ class PieceTest < ActiveSupport::TestCase
        assert_equal "Matthias Lüdtke", Piece.fetch_title(uri)
     end
  
+    should "extract an i18n string correctly." do
+       xpath = "//body[@id='intertwingly-net']/div[2]/div/blockquote[1]/p/code"
+       _, plain_text = Piece.extract_text(@i18n_data,xpath)
+       assert_equal 'Iñtërnâtiônàlizætiøn', plain_text
+    end
   end
 
   ############
