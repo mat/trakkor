@@ -1,7 +1,3 @@
-require 'rubygems'
-require 'hpricot'
-require 'hpricot_monkeypatch'
-
 class Piece < ActiveRecord::Base
 
   # das piece in chunk umbennenen?
