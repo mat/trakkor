@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'hpricot'
+
 class Piece < ActiveRecord::Base
 
   # das piece in chunk umbennenen?
