@@ -6,26 +6,28 @@
 
 <p>
 
-This tracker fetches the document at <br />
+This tracker monitors the document at <br />
   <a id='tracker_uri' href='<%= @tracker.uri %>'><%= @tracker.uri %></a> <br/>
-and monitors the element at <br />
+for changes to the element given by the XPath <br />
   <span id='tracker_xpath'><%= @tracker.xpath %></span>
 
 </p>
 
 <% if @tracker.sick? %>
   <p class='sick'>
-    This tracker may be sick: Mendono failed to retrieve recent pieces. 
+    This tracker may be sick: Trakkor failed to retrieve recent pieces. 
   </p>
 <% end %>
 
 
-<%= link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete %>
+<%= # link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete 
+%>
 
 
 
 <% if @tracker.errs.length > 0 %>
 <p>
+<strong>Note</strong>:
 <%= @tracker.errs.length %> pieces could not be used due to an error: 
 <a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Show errors</a>
 </p>
