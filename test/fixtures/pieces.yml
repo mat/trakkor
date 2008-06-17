@@ -20,30 +20,35 @@ nice_tracker_piece_3:
 
 new_design_first_piece:
   id: 1
-  created_at: 2006-01-30 08:03:56
+  created_at: 2008-01-01 00:01:01
   text: "1st change"
   tracker_id: "5"
 
 <% 1.upto(30) do |number| %>
 new_design_good_piece<%= number %>:
   id: <%= number + 3 %>
-  created_at: 2006-01-30 09:03:56
+  created_at: 2008-01-02 00:01:01
   text: "2nd change"
   tracker_id: "5"
 <% end %>
 
+new_design_second_piece_redundant:
+  id: 499
+  created_at: 2008-01-03 00:01:01
+  text: "2nd change"
+  tracker_id: "5"
+
+new_design_last_piece:
+  id: 500
+  created_at: 2008-01-04 00:01:01
+  text: "3rd change"
+  tracker_id: "5"
 
 <% 1.upto(20) do |number| %>
 new_design_dom_not_found_piece_<%= number %>:
   id: <%= number + 50 %>
-  created_at: 2008-04-30 10:01:12
+  created_at: 2008-01-05 00:01:01
   error: No DOM node found for given XPath.
   tracker_id: "5"
 <% end %>
 
-
-new_design_last_piece:
-  id: 500
-  created_at: 2006-01-30 10:03:56
-  text: "3rd change"
-  tracker_id: "5"

@@ -24,7 +24,7 @@ class TrackerTest < ActiveSupport::TestCase
     end
 
     should "have some pieces" do
-      assert_equal 52, @tracker.pieces.length
+      assert_equal 53, @tracker.pieces.length
     end
 
     should "have some changes" do
@@ -40,6 +40,13 @@ class TrackerTest < ActiveSupport::TestCase
       assert_equal '3rd change', @tracker.changes[0].text
       assert_equal '2nd change', @tracker.changes[1].text
       assert_equal '1st change', @tracker.changes[2].text
+    end
+
+    should "take the first occurence of '2nd change'" do
+      p = pieces(:new_design_good_piece1)
+      second_change = @tracker.changes[1]
+
+      assert_equal p.created_at, second_change.created_at
     end
 
    # named_scoped fuer errors benutzen
