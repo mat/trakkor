@@ -203,7 +203,7 @@ class TrackersController < ApplicationController
     @sick_trackers = Tracker.find(:all).find_all{ |t| t.sick? }
     @healthy_trackers = Tracker.find(:all).find_all{ |t| !t.sick? }
     @hook_trackers = Tracker.find(:all).find_all{ |t| t.web_hook }
-    @newest_trackers = Tracker.newest_trackers
+    @newest_trackers = Tracker.newest
   end
 
   # GET /trackers/1/edit

@@ -14,6 +14,8 @@ class Tracker < ActiveRecord::Base
   before_validation :nilify_web_hook
   validate :web_hook_nil_or_uri
 
+  named_scope :newest, :order => 'created_at DESC', :limit => 5
+
   # order: oldest piece first, most recent last
   has_many :pieces, :order => 'created_at ASC' 
 
