@@ -44,7 +44,7 @@ This statistics were created at <%= Time.now %>
   No tracker is healthy at the moment.
 <% end %>
 
-<h3>Web Hooks</h3>
+<h3>Web Hooks (<%= ( @hook_trackers || []).length %>)</h3>
 <% if @hook_trackers %>
  <ul>
 <% for t in @hook_trackers %>
