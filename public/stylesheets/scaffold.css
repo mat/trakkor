@@ -15,7 +15,6 @@ pre {
   padding: 10px;
   font-size: 11px;
   border: 1px solid #4d54b3;
-
 }
 
 #tracker_uri{
@@ -303,12 +302,12 @@ div.main{
 	}
 
 div.box{
-	border:solid 1px #c6cfe1;
-	background:#dfe4ee;
 	padding:10px;
 	color:#333333;
 	margin-bottom:20px;
 	width:70%;
+        background-color: #eee;
+        border: 1px solid #4d54b3;
 }
 div.box h1 {
 	font-size:14px;
