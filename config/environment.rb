@@ -11,9 +11,6 @@ RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 require 'rubygems'
-require 'digest/md5'
-require 'net/http'
-require 'json'
 require 'hpricot'
 require File.join(File.dirname(__FILE__), '..', 'lib', 'hpricot_monkeypatch.rb')
 

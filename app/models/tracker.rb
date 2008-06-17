@@ -1,3 +1,7 @@
+require 'digest/md5'
+require 'net/http'
+require 'json'
+
 class Tracker < ActiveRecord::Base
   R_URI = /^(http|https):\/\/.*?$/ix
 
