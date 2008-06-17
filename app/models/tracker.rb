@@ -71,7 +71,7 @@ class Tracker < ActiveRecord::Base
   end
 
   def errs
-    pieces.find( :all, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' )
+    pieces.errs
   end
 
   def redundant_pieces
@@ -134,7 +134,6 @@ class Tracker < ActiveRecord::Base
   end
 
   def last_piece
-    #return 'now pieces recorded' if pieces.empty?
     pieces.first.created_at
   end
 

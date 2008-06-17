@@ -6,6 +6,8 @@ class Piece < ActiveRecord::Base
   # das piece in chunk umbennenen?
   belongs_to :tracker
 
+  named_scope :errs, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' 
+
   def fetch(uri,xpath)
     start = Time.now.to_f
     begin
