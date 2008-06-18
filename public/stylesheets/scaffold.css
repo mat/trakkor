@@ -22,7 +22,6 @@ pre {
   line-height: 2em;
   text-align: center;
   padding-left: 2em;
-  text-width: 100%;
 }
 
 #xpath_for_tracker{
@@ -30,7 +29,6 @@ pre {
   line-height: 2em;
   text-align: center;
   padding-left: 2em;
-  text-width: 100%;
 }
 
 #web_hook_for_tracker{
