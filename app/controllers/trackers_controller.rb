@@ -198,6 +198,10 @@ class TrackersController < ApplicationController
      @elem, @parents = Piece.extract_with_parents(doc, @xpath) if doc
   end
 
+  def web_hook
+    #@active_trackers = Tracker.find(:all).length
+  end
+
   def stats
     @active_trackers = Tracker.find(:all).length
     @sick_trackers = Tracker.find(:all).find_all{ |t| t.sick? }

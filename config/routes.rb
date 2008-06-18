@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.test_xpath "/trackers/test-xpath", :controller => 'trackers', :action => 'test_xpath'
   map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats'
   map.examples "/trackers/examples", :controller => 'trackers', :action => 'examples'
+  map.web_hook "/trackers/web_hook", :controller => 'trackers', :action => 'web_hook'
 
   #map.tracker "#{prefix}:id", :controller => 'trackers', :action => 'show' 
   #map.trackers ":id", :controller => 'trackers', :action => 'show' 
