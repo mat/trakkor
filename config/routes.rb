@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats'
   map.examples "/trackers/examples", :controller => 'trackers', :action => 'examples'
   map.web_hook "/trackers/web_hook", :controller => 'trackers', :action => 'web_hook'
+  map.web_hook "/trackers/remove_all_redundant_pieces", :controller => 'trackers', :action => 'remove_all_redundant_pieces'
 
   #map.tracker "#{prefix}:id", :controller => 'trackers', :action => 'show' 
   #map.trackers ":id", :controller => 'trackers', :action => 'show' 

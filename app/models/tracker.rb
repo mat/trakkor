@@ -204,6 +204,12 @@ class Tracker < ActiveRecord::Base
     Tracker.find(:all, :order => 'created_at DESC', :limit => 5)
   end
 
+  def Tracker.remove_all_redundant_pieces
+    Tracker.find(:all).each do |t|
+      t.redundant_pieces.each { |p| p.destroy }
+    end
+  end
+
   private
   def Tracker.collect_parents(n, parents)
     return if n.class == Hpricot::Doc

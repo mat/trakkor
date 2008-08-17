@@ -7,6 +7,8 @@ Trakkor is currently running <%= @active_trackers %> trackers.
 This statistics were created at <%= Time.now %> 
 </p>
 
+<%= link_to "DESTROY all redundant pieces", :controller => 'trackers', :action => "remove_all_redundant_pieces" %>
+
 <h3>Newest trackers</h3>
 <% if @newest_trackers %>
  <ul>
@@ -37,7 +39,7 @@ This statistics were created at <%= Time.now %>
 <% if @healthy_trackers %>
  <ul>
 <% for t in @healthy_trackers %>
-    <li><%= link_to(t.name, t) %></li>
+    <li><%= link_to(t.name, t) %>(<%= (t.redundant_pieces.length.to_f / t.pieces.length.to_f)  %> redundant pieces)</li>
 <% end %>
 </ul>
 <% else %>
