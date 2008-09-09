@@ -6,8 +6,10 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Trakkor <%= (html_title = yield :html_title) ? html_title : '&mdash; No-frills web page change tracking.' %></title>
   <%= stylesheet_link_tag 'scaffold' %>
-
+  
+  <% if controller.action_name == 'index' %>
   <link rel="commands" href="http://gist.github.com/9767.txt" name="Trakkor Ubiquity Command" />
+  <% end %>
   <link rel="shortcut icon" href="<%= image_path('favicon.png') %>" />
 
 
