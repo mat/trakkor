@@ -11,7 +11,7 @@ class TrackersController < ApplicationController
   # GET /trackers.xml
   def index
     @trackers = Tracker.live_examples
-    raise Error
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @trackers }
