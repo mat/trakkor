@@ -181,7 +181,11 @@ class Tracker < ActiveRecord::Base
 
   def sick?
     ten_newest_pieces = pieces.find( :all, :order => 'created_at DESC', :limit => 10 )
-    ten_newest_pieces.length >= 10 && ten_newest_pieces.all? { |p| p.error }
+    if ten_newest_pieces.length >= 10 && ten_newest_pieces.all? { |p| p.error }
+      ten_newest_pieces
+    else
+      false
+    end
   end
 
   def Tracker.find_nodes_by_text(doc, str)

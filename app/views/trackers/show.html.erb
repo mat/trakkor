@@ -16,6 +16,7 @@ for changes to the element given by the XPath <br />
 <% if @tracker.sick? %>
   <p class='sick'>
     This tracker may be sick: Trakkor failed to retrieve recent pieces. 
+  <a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Most recent errors</a>
   </p>
 <% end %>
 
@@ -34,16 +35,6 @@ for changes to the element given by the XPath <br />
 
 <%= # link_to 'Destroy', @tracker, :confirm => 'Are you sure?', :method => :delete 
 %>
-
-
-
-<% if @tracker.errs.length > 0 %>
-<p>
-<strong>Note</strong>:
-<%= @tracker.errs.length %> pieces could not be used due to an error: 
-<a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Show errors</a>
-</p>
-<% end %>
 
 <h2>Changes</h2>
 <table id='changetable'>

@@ -34,7 +34,7 @@ class TrackersController < ApplicationController
     @changes = @tracker.changes
 
     if(params[:errors] == 'show')
-      @changes += @tracker.errs
+      @changes += @tracker.sick?  # add 10 most recent errors
       @changes = @changes.sort{ |a,b|  -(a.created_at <=> b.created_at) }
     end
 
