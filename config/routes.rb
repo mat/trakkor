@@ -16,6 +16,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :trackers
 
+  map.connect "no_one_may_see_my_exceptions/:action/:id", :controller => "logged_exceptions"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

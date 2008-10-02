@@ -26,4 +26,11 @@ class ApplicationController < ActionController::Base
   end   
 
 
+  include ExceptionLoggable # exception_logger
+
+  private
+  def local_request?
+    false
+  end
+
 end
