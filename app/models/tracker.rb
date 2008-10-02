@@ -208,6 +208,8 @@ class Tracker < ActiveRecord::Base
     Tracker.find(:all).each do |t|
       t.redundant_pieces.each { |p| p.destroy }
     end
+
+    :ok
   end
 
   private
