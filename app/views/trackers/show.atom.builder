@@ -4,7 +4,7 @@ updated = @tracker.last_change.created_at
 
 if @tracker.sick?
   updated = @tracker.pieces.last.created_at
-  sick_note = '</br>This tracker be SICK, inspect errors on Trakkor page above.'
+  sick_note = '<br> This tracker may be <strong>SICK</strong>, inspect errors on Trakkor page above.'
 end
 
   atom_feed(:root_url => url_for(:only_path => false)) do |feed|
