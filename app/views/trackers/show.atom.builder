@@ -1,7 +1,7 @@
 require 'atom_monkeypatch'
 
 updated = @tracker.last_change.created_at
-sick_note = nil
+sick_note = ''
 
 if @tracker.sick?
   updated = @tracker.pieces.last.created_at
@@ -9,7 +9,7 @@ if @tracker.sick?
 end
 
   atom_feed(:root_url => url_for(:only_path => false)) do |feed|
-  if sick_note
+  unless sick_note.empty?
     feed.title("Trakkor (sick!) - #{@tracker.name}", :type => 'text')
   else
     feed.title("Trakkor - #{@tracker.name}", :type => 'text')
