@@ -51,8 +51,12 @@ strong {
 a { color: #4d54b3;}
 a:visited { color: #333;}
 
-.sick {
+#sick {
   background-color: #ee8058;
+}
+
+#sick a {
+  color: #fff;
 }
 
 .highlightsearch {

@@ -14,9 +14,9 @@ for changes to the element given by the XPath <br />
 </p>
 
 <% if @tracker.sick? %>
-  <p class='sick'>
+  <p id='sick'>
     This tracker may be sick: Trakkor failed to retrieve recent pieces. 
-  <a class='errorchange' href='<%= "#{url_for @tracker}?errors=show" %>'>Most recent errors</a>
+  <%= link_to_remote "Most recent errors", :url => { :action => 'recent_errors', :id => @tracker.md5sum} %>
   </p>
 <% end %>
 
@@ -38,31 +38,6 @@ for changes to the element given by the XPath <br />
 
 <h2>Changes</h2>
 <table id='changetable'>
-<% for change in @changes %>
-
-  <tr>
-    <th>
-
-      <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
-      <abbr class="change_datetime" title="<%= change.created_at.iso8601 %>">
-         <%= time_ago_in_words(change.created_at) %> ago
-      </abbr>
-
-    </th>
-  </tr>
-
-<% if change.error %>
-  <tr class='errorchange'>
-    <td><span><%= h change.error %></span></td>
-  </tr>
-<% end %>
-
-<% unless change.error %>
-  <tr>
-    <td class='piece'><pre><%= change.text %></pre></td>
-  </tr>
-<% end %>
-
-<% end %>
+  <%= render :partial => "piece", :collection => @changes %>
 </table>
 
