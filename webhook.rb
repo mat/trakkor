@@ -9,8 +9,8 @@ LOGIN  = File.read('/home/mat/.mail_login').reverse.strip
 PASSWORD = File.read('/home/mat/.mail_pw').reverse.strip
 
 
-FROM_EMAIL = 'matthias-luedtke@gmx.de'
-TO_EMAIL = 'email@matthias-luedtke.de'
+FROM_EMAIL = 'foo@bar.com'
+TO_EMAIL = 'bar@foo.com'
 
 def message(from, to, body, subject='')
 msg = <<END_OF_MESSAGE
