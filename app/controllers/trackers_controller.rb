@@ -5,7 +5,7 @@ require 'cache'
 
 class TrackersController < ApplicationController
 
-  caches_page :index, :examples, :show
+  #caches_page :index, :examples, :show
 
   # GET /trackers
   # GET /trackers.xml
