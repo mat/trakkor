@@ -27,5 +27,5 @@ test:
 
 production:
   adapter: sqlite3
-  database: db/prod.sqlite3
+  database: db/production.sqlite3
 
