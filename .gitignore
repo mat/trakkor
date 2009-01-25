@@ -1,0 +1,9 @@
+log/*.log
+tmp/**/*
+db/test.sqlite3
+db/production.sqlite3
+*.swp
+current
+releases/**
+shared/**
+config/config.yml
