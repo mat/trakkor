@@ -13,7 +13,7 @@ require "#{SCRAPER_PATH}/app/models/tracker.rb"
 require "#{SCRAPER_PATH}/app/models/piece.rb"
 
 LOGFILE = "#{ENV['SCRAPER_PATH']}/log/scrape-n-save.log"
-DATABASE = "#{ENV['SCRAPER_PATH']}/db/development.sqlite3"
+DATABASE = "#{ENV['SCRAPER_PATH']}/db/production.sqlite3"
 
 #dbconfig = YAML::load(File.open('/home/mat/svn_workspaces/ruby/scraper/rails/config/database.yml'))  
 #ActiveRecord::Base.establish_connection(dbconfig)  
