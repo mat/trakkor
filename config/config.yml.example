@@ -1,0 +1,20 @@
+# config/config.yml
+development:
+  example_trackers: 
+  - 3
+  - 1
+  - 2
+  username: admin
+  password: secret
+
+test:
+  perform_authentication: false
+
+production:
+  example_trackers: 
+  - 3
+  - 1
+  - 2
+  username: admin
+  password: secret
+
