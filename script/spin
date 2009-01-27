@@ -1,2 +1,9 @@
 #!/bin/sh
-script/process/spawner -a 0.0.0.0 -p 3350 -i 1
+
+/home/mat/www/trakkor/current/script/process/spawner \
+  mongrel \
+  --environment=production \
+  --instances=1 \
+  --address=127.0.0.1 \
+  --port=3600
+

@@ -27,5 +27,5 @@ test:
 
 production:
   adapter: sqlite3
-  database: db/production.sqlite3
+  database: /home/mat/www/trakkor/shared/db/production.sqlite3
 
