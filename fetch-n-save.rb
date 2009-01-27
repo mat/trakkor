@@ -12,8 +12,8 @@ raise "SCRAPER_PATH (#{SCRAPER_PATH}) does not exist." unless File.exist? SCRAPE
 require "#{SCRAPER_PATH}/app/models/tracker.rb"
 require "#{SCRAPER_PATH}/app/models/piece.rb"
 
-LOGFILE = "#{ENV['SCRAPER_PATH']}/log/scrape-n-save.log"
-DATABASE = "#{ENV['SCRAPER_PATH']}/../shared/db/production.sqlite3"
+LOGFILE  = "/home/mat/www/trakkor/shared/log/scrape-n-save.log"
+DATABASE = "/home/mat/www/trakkor/shared/db/production.sqlite3"
 
 #dbconfig = YAML::load(File.open('/home/mat/svn_workspaces/ruby/scraper/rails/config/database.yml'))  
 #ActiveRecord::Base.establish_connection(dbconfig)  
