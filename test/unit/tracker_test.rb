@@ -123,7 +123,7 @@ class TrackerTest < ActiveSupport::TestCase
 
     should "fetch the right piece wo error" do
       piece = @tracker.fetch_piece
-      assert_equal "Matthias Lüdtke", piece.text
+      assert_equal "matthias lüdtke", piece.text
       assert_nil piece.error
     end
   end

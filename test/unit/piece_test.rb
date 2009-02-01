@@ -13,21 +13,8 @@ class PieceTest < ActiveSupport::TestCase
     end
 
     should "fetch a title." do
-
-       String.stubs(:foo).returns(10)
-       assert_equal 10, String.foo
-
-       Net.stubs(:foo).returns(42)
-       assert_equal 42, Net.foo
-
-       Net::HTTP.stubs(:foo).returns(4711)
-       assert_equal 4711, Net::HTTP.foo
-
-       Net::HTTP::Get.stubs(:foo).returns(666)
-       assert_equal 666, Net::HTTP::Get.foo
-
-#       uri = "http://better-idea.org"
-#       assert_equal "Matthias Lüdtke", Piece.fetch_title(uri)
+       uri = "http://better-idea.org"
+       assert_equal "matthias lüdtke", Piece.fetch_title(uri)
     end
  
   end
