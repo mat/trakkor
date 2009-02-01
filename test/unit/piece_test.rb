@@ -16,7 +16,20 @@ class PieceTest < ActiveSupport::TestCase
        uri = "http://better-idea.org"
        assert_equal "matthias lüdtke", Piece.fetch_title(uri)
     end
- 
+
+    should "filter old pieces" do
+       assert_equal 56 , Piece.old.length
+       p = Piece.create!
+       assert_equal [p], Piece.all - Piece.old
+    end
+
+    should "delete old pieces" do
+       assert_equal 56 , Piece.old.length
+       p = Piece.create!
+       Piece.delete_old_pieces
+       assert_equal 0, Piece.old.length
+       assert_equal [p], Piece.all
+    end
   end
 
 end

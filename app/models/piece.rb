@@ -3,10 +3,11 @@ require 'hpricot'
 
 class Piece < ActiveRecord::Base
 
-  # das piece in chunk umbennenen?
   belongs_to :tracker
 
   named_scope :errs, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' 
+
+  named_scope :old, :conditions => ['created_at < ?', 6.months.ago]
 
   def fetch(uri,xpath)
     start = Time.now.to_f
@@ -123,6 +124,10 @@ class Piece < ActiveRecord::Base
    str = tidy_tabby_lines(str)
    str = tidy_multiple_nl(str)
    str = str.strip
+  end
+
+  def Piece.delete_old_pieces
+    Piece.delete_all(['created_at < ?', 6.months.ago])
   end
 
   private
