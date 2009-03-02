@@ -5,6 +5,12 @@ namespace :db do
     Piece.delete_old_pieces
   end
 
+  desc "Destroy all sick trackers."
+  task :destroy_sick_trackers => :environment do
+    t = Tracker.destroy_sick_trackers
+    puts "#{t.length} sick trackers destroyed."
+  end
+
   desc "Remove redundant pieces from db."
   task :remove_redundant_pieces => :environment do
     Tracker.remove_all_redundant_pieces

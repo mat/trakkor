@@ -216,6 +216,11 @@ class Tracker < ActiveRecord::Base
     :ok
   end
 
+  def Tracker.destroy_sick_trackers
+    sick_trackers = Tracker.find(:all).select{ |t| t.sick? }
+    sick_trackers.each { |t| t.destroy }
+  end
+
   private
   def Tracker.collect_parents(n, parents)
     return if n.class == Hpricot::Doc
