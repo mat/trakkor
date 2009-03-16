@@ -1,4 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,7 +16,7 @@
    
       <div id="main-navigation">
         <ul>
-          <li class="first active"><a href="#block-text">Introduction</a></li>
+          <li class="first active"><a href="/">Introduction</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#faq">Create tracker...</a></li>
         </ul>
@@ -32,7 +34,7 @@
 <h2>What is it?</h2>
 
 <p>
-Monitoring complete web pages is easy. But have you ever wanted to track just a single piece of information from a web page, like a <strong>product price</strong> or the <strong>headline</strong> of your favorite news site which does not provide an RSS feed? 
+Monitoring complete web pages is easy. But have you ever wanted to track just a single piece of information from a web page, like a product price or the headline of your favorite news site which does not provide an RSS feed? 
 </p>
 
 <p>
@@ -50,8 +52,25 @@ Trakkor lets you create a tracker for just a single <strong>DOM element</strong>
 
 <h2>Try tracking</h2>
 <p>Enter a web page address and the text you want to track.</p>
-<%= render :partial => 'find_xpath_form', 
-           :locals => { :q => example_search, :uri => example_uri } %>
+<!-- <%= render :partial => 'find_xpath_form', 
+           :locals => { :q => example_search, :uri => example_uri } %> !-->
+
+              <form action="#" method="get" class="form">
+                <div class="group">
+
+                  <label class="label">URL</label>
+                  <input type="text" class="text_field" value="http://slashdot.org" />
+                </div>
+                <div class="group">
+                    <label class="label">Find text</label>
+                  <input type="text" class="text_field" value="poll" />
+                </div>
+                <div class="group navform">
+                  <input type="submit" class="button" value="Test &amp; track" />
+                </div>
+
+              </form>
+
 
 
 <h2>Live examples</h2>
@@ -84,79 +103,47 @@ Trakkor lets you create a tracker for just a single <strong>DOM element</strong>
 Trakkor is just a change tracker for single web page elements which happens to present its findings via Atom feeds. That is what it's good at.
 </p>
 
-But Trakkor is certainly...
+<p>But Trakkor is not good at recognizing the structure of the HTML pieces it scrapes out of a document. That's why it treats those pieces as raw strings: If one character changes, it differs for Trakkor.</p>
 
-<ul>
-  <li>...not a tool to create Atom feeds for web sites which don't publish an Atom feed but probably should.</li>
-  <li>...not good at recognizing the structure of the HTML pieces it scrapes out of a document. That's why it treats those pieces as raw strings: If one character changes, it differs for Trakkor.</li>
-</ul>
+<p>And Trakkor is probably not the tool you should use if you want to create Atom feeds for web sites which don't publish an Atom feed but perhaps better should.</p>
 
-It's really just a change tracker, believe me. But as always, your mileage may vary.
+<p>It's really just a very simple change tracker, believe me. Just try it out and see if it suits you.</p>
 
 <h2>Web Hooks</h2>
-<p>Web Hooks provide a simple hook mechanism for the Web. By using HTTP POST and a serialization format like <a href='http://www.json.org' target='_blank'>JSON</a> a web service may inform another via its Web Hook. You can find more information on the <a href='http://webhooks.pbwiki.com/' target='_blank'>Web Hooks Wiki</a>.
+<p>Web Hooks provide a simple hook mechanism for the Web. By using HTTP POST and a serialization format like JSON a web service may inform another via its Web Hook. You can find more information on the <a href='http://webhooks.pbwiki.com/' target='_blank'>Web Hooks Wiki</a>.
 </p>
 
 <p>
 Trakkor allows you to define a Web Hook for your tracker that will be triggered on every change. Your custom Web Hook may send you an email or Jabber message or log the changes to a custom log file format, whatever you implement.
 </p>
 
-<h2>FAQ</h2>
+<h2 id='faq'>FAQ</h2>
 
- <ul id='faq'>
+  <div id='faqblock'>
+ <ul>
 
- <li>
+ <li class='q'>How often is a web page checked for changes?</li>
+ <li class='a'>Currently each page is checked every 30 minutes.</li>
 
-<div class='q'>
-How often is a web page checked for changes?
-</div>
+ <li class='q'>Is there a Firefox extension which notifies me when Trakkor has detected a change?</li>
 
-<div class='a'>
-Currently each page is checked every 30 minutes.
-</div>
-
+ <li class='a'>
+  There is no such Firefox extension but an <a href='http://gist.github.com/9767' target='_blank'>Ubiquity command</a> that enables you to create Trakkors by selecting text on a web page. To use the command, install <a href='https://wiki.mozilla.org/Labs/Ubiquity' target='_blank'>the latest Ubiquity</a> and come back here to subscribe to the Trakkor Command.
+<br /><br />
+  The Atom feed should be the method of choice for most notification needs. Additionally each tracker provides a <a href='https://wiki.mozilla.org/Microsummaries' target='_blank'>Microsummary</a>, i.e. a live bookmark that changes its caption dynamically.
 </li>
 
- <li>
-
-<div class='q'>
-Is there a Firefox extension which notifies me when Trakkor has detected a change?
-</div>
-
-<div class='a'>
-<p>There is no such Firefox extension but an <a href='http://labs.mozilla.com/2008/08/introducing-ubiquity/' target='_blank'>Ubiquity</a> <a href='http://gist.github.com/9767' target='_blank'>command</a> that enables you to create Trakkors by selecting text on a web page. To use the command, install <a href='https://wiki.mozilla.org/Labs/Ubiquity' target='_blank'> the latest Ubiquity</a> and come back here to subscribe to the Trakkor Command.
-</p>
-
-The Atom feed should be the method of choice for most notification needs. Additionally each tracker provides a <a href='https://wiki.mozilla.org/Microsummaries' target='_blank'>Microsummary</a>, i.e. a live bookmark that changes its caption dynamically.
-</div>
-
-</li>
-   <li><div class='q'>Have animals or software tools been hurt during the creation of Trakkor?</div>
-
-   <div class='a'>Trakkor is written in <a href='http://ruby-lang.org' target='_blank'>Ruby</a> and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, <a href='http://www.sqlite.org' target='_blank'>SQLite</a> and <a href='http://code.whytheluckystiff.net/hpricot/' target='_blank'>Hpricot</a> are heavily abused, but certainly not hurt. No animals have been hurt.</div>
-</li>
+   <li class='q'>Have animals or software tools been hurt during the creation of Trakkor?</li>
+   <li class='a'>Trakkor is written in Ruby and uses <a href='http://rubyonrails.com' target='_blank'>Ruby on Rails</a>. Behind the scenes cron, SQLite and Hpricot are heavily abused, but certainly not hurt. No animals have been hurt.</li>
 
 
-<li>
-<div class='q'>
-Are the any tools that might help me find a fitting XPath if Trakkor doesn't cut it?
-</div>
-    <div class='a'>Finding an appropriate XPath that selects the desired element can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. But please bear in mind that some of the XPathes created by these tools (e.g. the id() function) are not understood by Trakkor's Hpricot library, see <a href='http://code.whytheluckystiff.net/hpricot/wiki/SupportedXpathExpressions' target='_blank'>Supported XPath Expressions</a> for details.</div>
-</li>
+<li class='q'>Are the any tools that might help me find a fitting XPath if Trakkor doesn't cut it?</li>
+<li class='a'>Finding an appropriate XPath that selects the desired element can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. But please bear in mind that some of the XPathes created by these tools (e.g. the id() function) are not understood by Trakkor's Hpricot library, see <a href='http://wiki.github.com/why/hpricot/supported-xpath-expressions' target='_blank'>Supported XPath Expressions</a> for details.</li>
 
  </ul>
 
-              <p class="first">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <p> <span class="small">small text</span></p>
-              <p> <span class="gray">gray text</span></p>
-              <hr />              
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span class="hightlight">Excepteur sint occaecat cupidatat non proident</span>, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
 
-
+              </div>
             </div>
           </div>
         </div>
@@ -164,7 +151,7 @@ Are the any tools that might help me find a fitting XPath if Trakkor doesn't cut
           
         <div id="footer">
           <div class="block">
-            <p>Copyright &copy; 2009 Your Site.</p>
+            <p>Trakkor, tracking your changes since May 2008. Created by Matthias Lüdtke.</p>
           </div>      
         </div>
       </div>

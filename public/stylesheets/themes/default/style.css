@@ -5,10 +5,15 @@
 a:link, a:visited, a:hover, a:active, h1, h2, h3 { color: #7A1818; }
 a { -moz-outline: none; }
 
+strong {
+  color: #7A1818;
+}
+
 body {
   color: #222;
   background: #f0f0ee;
   font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
 }
 
 hr {

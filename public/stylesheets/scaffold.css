@@ -1,15 +1,5 @@
 body { background-color: #fff; color: #333; }
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   15px;
-  line-height: 20px;
-}
-
-
-img {
- border: none;
-}
 pre {
   background-color: #eee;
   padding: 10px;
@@ -192,27 +182,6 @@ table#changetable tr th {
   list-style: square;
 }
 
-div.uploadStatus {
-  margin: 5px;
-}
-
-div.progressBar {
-  margin: 5px;
-}
-
-div.progressBar div.border {
-  background-color: #fff;
-  border: 1px solid gray;
-  width: 100%;
-}
-
-div.progressBar div.background {
-  background-color: #333;
-  height: 18px;
-  width: 0%;
-}
-
-
 #logodiv {
  color: #4d54b3;
  padding: 10px;
@@ -240,13 +209,6 @@ div.progressBar div.background {
 #contentdiv .textonly {
   padding-left: 50px;
   width: 500px;
-}
-
-#footer p {
-  font-style: italic;
-  text-align: center;
-  font-size: 0.8em;
-  padding: 0px;
 }
 
 .title {
@@ -297,13 +259,6 @@ div.progressBar div.background {
 input{	font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; 
 	font-size:12px;
 }
-h1, h2 {color:#666666; 
-	margin-bottom:20px;
-}
-
-h2.cozy {
-  margin-bottom: 0px;
-}
 
 div.main{
 	margin:30px auto; 
@@ -351,15 +306,6 @@ div.box label span{
 	color:#555555;
 }
 
-
-#faq li .q {
-  font-style: italic;
-  padding-bottom: 0.5em;
-}
-
-#faq li{
-  padding-bottom: 20px;
-}
 
 #created_on {
   margin-top: 0px;
