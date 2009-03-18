@@ -159,6 +159,9 @@ hr {
   padding: 0px;
 }
 
+#footer a {
+  color: #FFF;
+}
 /* pagination */
 
 .pagination span, .pagination a {
