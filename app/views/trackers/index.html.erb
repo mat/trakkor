@@ -12,33 +12,15 @@ Trakkor lets you create a tracker for just a single DOM element given by an XPat
 
 <% 
  example_uri ='http://localhost:8808/doc_root/libxml-ruby-0.5.3/rdoc/classes/XML/Node.html' 
- example_uri ='http://better-idea.org'
- example_search = 'blog'
+ example_uri ='http://slashdot.org'
+ example_search = 'votes'
 -%>
 
 
 <h2>Try tracking</h2>
 <p>Enter a web page address and the text you want to track.</p>
-<!-- <%= render :partial => 'find_xpath_form', 
-           :locals => { :q => example_search, :uri => example_uri } %> !-->
-
-              <form action="#" method="get" class="form">
-                <div class="group">
-
-                  <label class="label">URL</label>
-                  <input type="text" class="text_field" value="http://slashdot.org" />
-                </div>
-                <div class="group">
-                    <label class="label">Find text</label>
-                  <input type="text" class="text_field" value="poll" />
-                </div>
-                <div class="group navform">
-                  <input type="submit" class="button" value="Test &amp; track" />
-                </div>
-
-              </form>
-
-
+<%= render :partial => 'find_xpath_form', 
+           :locals => { :q => example_search, :uri => example_uri } %>
 
 <h2>Live examples</h2>
 

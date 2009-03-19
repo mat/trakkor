@@ -218,6 +218,8 @@ input.checkbox {
 
 .form .group {
   margin-bottom: 15px;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .form div.left {
@@ -243,7 +245,7 @@ input.checkbox {
 }
 
 .form label.label, .form input.text_field, .form textarea.text_area {
-  font-size: 1.2em;
+  font-size: 1.0em;
   padding: 1px 0;
   margin: 0;
 }
