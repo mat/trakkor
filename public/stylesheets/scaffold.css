@@ -1,8 +1,9 @@
 body { background-color: #fff; color: #333; }
 
 pre {
-  padding: 0.8em;
+  padding-left: 0.8em;
   font-size: 0.8em;
+  border-left: 1px solid #4d54b3;
 }
 
 #uri_for_tracker {
@@ -130,18 +131,21 @@ margin-top: 5px;
 }
 
 #changetable {
-  padding-left: 50px;
+  padding-left: 1em;
 }
 
 table#changetable tr td {
-  padding-top: 0px;
-  padding-bottom: 20px;
-  line-height: 20px;
+  line-height: 1em;
+  padding-bottom: 0.2em;
 }
 
-table#changetable tr th {
-  text-align: left;
+table#changetable tr td.change_datetime {
+  font-style: italic;
+  font-size: 0.8em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
 }
+
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
@@ -247,7 +251,7 @@ table#changetable tr th {
   font-family: courier;
   font-weight: normal;
   letter-spacing: 0em;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 /* ---- FORM DESIGN --- 

@@ -1,15 +1,4 @@
 
-  <tr>
-    <th>
-
-      <!-- like in http://microformats.org/wiki/datetime-design-pattern !-->
-      <abbr class="change_datetime" title="<%= piece.created_at.iso8601 %>">
-         <%= time_ago_in_words(piece.created_at) %> ago 
-      </abbr>
-
-    </th>
-  </tr>
-
 <% if piece.error %>
   <tr class='errorchange'>
     <td><span><%= h piece.error %></span></td>
@@ -22,4 +11,9 @@
   </tr>
 <% end %>
 
+  <tr>
+    <td class='change_datetime'>
+      about <%= time_ago_in_words(piece.created_at) %> ago
+    </td>
+  </tr>
 
