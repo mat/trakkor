@@ -2,37 +2,31 @@
 
 <%= error_messages_for :tracker %>
 
-<div class="box">
-<% form_for @tracker, :url => {:action => "create"} do |f| -%>
+<% form_for @tracker, :url => {:action => "create"}, :html => {:class => 'form'}  do |f| -%>
 
+<div class="group">
+  <label class="label">URL</label>
+  <%= f.text_field 'uri', :size => 80, :class => 'text_field' %>
+</div>
 
-<label><span>URI</span>
-<%= f.text_field 'uri', :size => 80, :class => 'input-text' %>
-</label>
+<div class="group">
+  <label class="label">XPath</label>
+  <%= f.text_field 'xpath', :size => 80, :class => 'text_field' %>
+</div>
 
-<label><span>XPath</span>
-<%= f.text_field 'xpath', :size => 80, :class => 'input-text' %>
-</label>
+<div class="group">
+  <label class="label">Name</label>
+  <%= f.text_field 'name', :size => 80, :class => 'text_field' %>
+</div>
 
-<label><span>Name</span>
-<%= f.text_field 'name', :size => 80, :class => 'input-text' %>
-</label>
+<div class="group">
+  <label class="label">Web Hook URL</label>
+  <%= f.text_field 'web_hook', :size => 80, :class => 'text_field' %>
+</div>
 
-<label><span>Web Hook URI</span>
-<%= f.text_field 'web_hook', :size => 80, :class => 'input-text' %>
-</label>
-
-
-<div class="spacer">
+<div class="group navform">
  <%= f.submit 'Create' %>
 </div>
 
 <% end -%>
-
-</div>
-
-
-
-
-
 

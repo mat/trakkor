@@ -3,26 +3,25 @@
 <%= error_messages_for :tracker %>
 
 
-<div class="box">
-<% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get ) do -%>
+<% form_tag( {:controller => 'trackers', :action => 'test_xpath'}, :method => :get, :class => 'form' ) do -%>
 
 
-<label><span>URI</span>
-<%= text_field_tag 'uri', @uri, :size => 80, :class => 'input-text' %>
-</label>
+<div class="group">
+  <label class="label">URL</label>
+  <%= text_field_tag 'uri', @uri, :size => 80, :class => 'text_field' %>
+</div>
 
 
-<label><span>XPath</span>
-<%= text_field_tag 'xpath', @xpath, :size => 80, :class => 'input-text' %> 
-</label>
+<div class="group">
+  <label class="label">Find text</label>
+  <%= text_field_tag 'xpath', @xpath, :size => 80, :class => 'text_field' %>
+</div>
 
-<div class="spacer">
+<div class="group navform">
  <%= submit_tag 'Refresh preview' %>
 </div>
 
 <% end -%>
-
-</div>
 
 
 <%- if @elem %>
