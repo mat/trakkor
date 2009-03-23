@@ -1,17 +1,18 @@
 <h2>What is it?</h2>
 <p>Trakkor notifies you when a single web page element changes via Atom Feed.</p>
-<p>
-Monitoring complete web pages is easy. But have you ever wanted to track just a single piece of information from a web page, like a product price or the headline of your favorite news site which does not provide an RSS feed? 
+<p>Monitoring complete web pages is easy. But have you ever wanted to track just a single
+piece of information from a web page, like a product price or the headline of your
+favorite news site which does not provide an RSS feed?
 </p>
 
 <p>
-Trakkor lets you create a tracker for just a single DOM element given by an XPath and informs you via Atom feed if it changes.
+Trakkor lets you create a tracker for just a single DOM element given
+by an XPath and informs you via Atom feed if it changes.
 </p>
 
 <%= error_messages_for :tracker %>
 
 <% 
- example_uri ='http://localhost:8808/doc_root/libxml-ruby-0.5.3/rdoc/classes/XML/Node.html' 
  example_uri ='http://slashdot.org'
  example_search = 'votes'
 -%>
@@ -25,24 +26,14 @@ Trakkor lets you create a tracker for just a single DOM element given by an XPat
 <h2>Live examples</h2>
 
 <table class='examples'>
-
 <% for tracker in @trackers %>
   <tr>
-
     <td><a href="<%= "#{url_for(tracker)}.atom" %>"><%= image_tag("04.png", :alt => "Tracker Feed for #{tracker.uri}") %></a></td>
     <td><%= link_to "#{tracker.name}", tracker_path(tracker) %></td>
     <td class='piece'><%= tracker.last_change.text %></td>
     <td>updated <span class='change_time'> <%= time_ago_in_words tracker.last_change.created_at %></span> ago</td>
   </tr>
 <% end %>
-
-
-<!--
-  <tr>
-   <td></td>
-   <td colspan="2"><%= link_to "more...", { :action => "examples" } %> </td>
-  </tr>
-!-->
 </table>
 
 <br />
@@ -67,8 +58,7 @@ Trakkor allows you to define a Web Hook for your tracker that will be triggered 
 </p>
 
 <h2 id='faq'>FAQ</h2>
-
-  <div id='faqblock'>
+<div id='faqblock'>
  <ul>
 
  <li class='q'>How often is a web page checked for changes?</li>
@@ -78,7 +68,6 @@ Trakkor allows you to define a Web Hook for your tracker that will be triggered 
  <li class='a'>Every change which is detected gets saved. But to keep our database tidy each tracker's changes are kept only for 6 months.</li>
 
  <li class='q'>Is there a Firefox extension which notifies me when Trakkor has detected a change?</li>
-
  <li class='a'>
   There is no such Firefox extension but an <a href='http://gist.github.com/9767' target='_blank'>Ubiquity command</a> that enables you to create Trakkors by selecting text on a web page. To use the command, install <a href='https://wiki.mozilla.org/Labs/Ubiquity' target='_blank'>the latest Ubiquity</a> and come back here to subscribe to the Trakkor Command.
 <br /><br />
@@ -93,6 +82,5 @@ Trakkor allows you to define a Web Hook for your tracker that will be triggered 
 <li class='a'>Finding an appropriate XPath that selects the desired element can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192">XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095">XPath Checker</a> Firefox plugins. Both allow you to right-click a page element and give you an XPath that describes it. But please bear in mind that some of the XPathes created by these tools (e.g. the id() function) are not understood by Trakkor's Hpricot library, see <a href='http://wiki.github.com/why/hpricot/supported-xpath-expressions' target='_blank'>Supported XPath Expressions</a> for details.</li>
 
  </ul>
-
 </div> <!-- faqblock !-->
 
