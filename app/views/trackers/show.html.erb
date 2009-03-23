@@ -14,10 +14,13 @@ for changes to the element given by the XPath <br />
 </p>
 
 <% if @tracker.sick? %>
-  <p id='sick'>
-    This tracker may be sick: Trakkor failed to retrieve recent pieces. 
-  <%= link_to_remote "Most recent errors", :url => { :action => 'recent_errors', :id => @tracker.md5sum} %>
-  </p>
+  <div class="flash">
+    <div class="message warning">
+      <p>This tracker may be sick, Trakkor failed to retrieve recent pieces:
+      <%= link_to_remote "Show errors", :url => { :action => 'recent_errors', :id => @tracker.md5sum} %>
+      </p>
+    </div>
+  </div>
 <% end %>
 
 <% if @tracker.web_hook %>

@@ -1,7 +1,7 @@
 
 <% if piece.error %>
-  <tr class='errorchange'>
-    <td><span><%= h piece.error %></span></td>
+  <tr>
+    <td class='flash'><div class='error'><%= h piece.error %></div></td>
   </tr>
 <% end %>
 

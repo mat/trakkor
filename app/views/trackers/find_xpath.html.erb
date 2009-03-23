@@ -19,9 +19,11 @@
 
 
 <% if @hits && !@hits.empty? %>
-<p class='hit'><strong><%= @hits.size %> elements have been found:</strong>
-Please choose one and poceed.
-</p>
+<div class="flash">
+  <div class="message notice">
+    <p><%= @hits.size %> elements have been found.</p>
+  </div>
+</div>
 
 <ol class='hitlist'>
 
@@ -36,9 +38,11 @@ Please choose one and poceed.
 </ol>
 
 <% else %>
-
-<p class='nohit'><strong>No elements have been found:</strong>
-Try adjusting your search term.</p>
+<div class="flash">
+  <div class="message error">
+    <p>No elements have been found matching <i><%= @q %></i></p>
+  </div>
+</div>
 <% end %>
 
 <% end # if flash['error'] %>
