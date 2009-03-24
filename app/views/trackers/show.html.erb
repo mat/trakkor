@@ -26,7 +26,7 @@ for changes to the element given by the XPath <br />
 <% if @tracker.web_hook %>
   <p class='web_hook'>
     The Web Hook at
-      <div id='web_hook_for_tracker'><%= h @tracker.web_hook %></div>
+      <span id='web_hook_for_tracker'><%= h @tracker.web_hook %></span>
     gets notified on every change.
   </p>
 <% else %>
