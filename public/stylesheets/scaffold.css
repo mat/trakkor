@@ -318,3 +318,8 @@ div.box label span{
   font-size: 0.8em;
   font-style: italic;
 }
+
+abbr.timeago {
+  border-bottom: none;
+}
+
