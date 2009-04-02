@@ -337,3 +337,13 @@ abbr.timeago {
   font-size: 1.4em;
 }
 
+h1 {
+  background-image: url(../images/trakkor-logo.png);
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+h1 a {
+  padding-left: 60px;
+}
+
