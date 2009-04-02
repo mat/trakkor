@@ -328,3 +328,12 @@ abbr.timeago {
   font-size: 1.8em;
 }
 
+#changes {
+  background-image: url(../images/feed-icon-28x28.png);
+  background-repeat: no-repeat;
+  line-height: 28px;
+  padding-left: 36px;
+  vertical-align: middle;
+  font-size: 1.4em;
+}
+
