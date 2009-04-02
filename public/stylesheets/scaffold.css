@@ -323,3 +323,8 @@ abbr.timeago {
   border-bottom: none;
 }
 
+#tracker_title {
+  margin-bottom: 0.2em;
+  font-size: 1.8em;
+}
+

@@ -1,7 +1,7 @@
 <% html_title(@tracker.name) -%>
 
 
-<h2 class='cozy'><%= @tracker.name %></h2>
+<h2 id='tracker_title'><%= @tracker.name %></h2>
 <p id='created_on'>created on <%= @tracker.created_at.strftime('%d %b %Y') %></p>
 
 <p>
