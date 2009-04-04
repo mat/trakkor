@@ -11,7 +11,6 @@ class TrackerTest < ActiveSupport::TestCase
   should_allow_values_for :uri, "http://example.com"
 
   should_not_allow_values_for :uri, "bad 1"
-  should_not_allow_values_for :uri, "bad 1"
 
   ############
   context "A Tracker which recently changed its design" do
