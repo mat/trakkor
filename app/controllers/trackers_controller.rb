@@ -47,13 +47,6 @@ class TrackersController < ApplicationController
     end
   end
 
-  def recent_errors
-     @tracker = Tracker.find_by_md5sum(params[:id])
-     @errors = @tracker.sick?
-     respond_to do |format|
-       format.js
-     end
-
   def changes_and_errors
     @tracker = Tracker.find_by_md5sum(params[:id])
     unless @tracker
