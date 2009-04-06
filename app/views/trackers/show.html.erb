@@ -14,13 +14,22 @@ for changes to the element given by the XPath <br />
 </p>
 
 <% if @tracker.sick? %>
-  <div class="flash">
+  <div class="flash" id="sick_tracker_message">
     <div class="message warning">
       <p>This tracker may be sick, Trakkor failed to retrieve recent pieces:
-      <%= link_to_remote "Show errors", :url => { :action => 'recent_errors', :id => @tracker.md5sum} %>
+        <%= link_to "Show errors", '#', :id => 'show_errors' %>
       </p>
     </div>
   </div>
+
+  <script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery("#show_errors").click(function () {
+      jQuery("#changetable").load("/trackers/changes_and_errors/<%= @tracker.md5sum%>");
+      jQuery("#sick_tracker_message").hide();
+    });
+  });
+  </script>
 <% end %>
 
 <% if @tracker.web_hook %>

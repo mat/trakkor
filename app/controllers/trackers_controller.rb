@@ -4,6 +4,7 @@ require 'hpricot/inspect-html'
 require 'cache'
 
 class TrackersController < ApplicationController
+  protect_from_forgery :except => [:changes_and_errors]
 
   #caches_page :index, :examples, :show
 
@@ -52,6 +53,20 @@ class TrackersController < ApplicationController
      respond_to do |format|
        format.js
      end
+
+  def changes_and_errors
+    @tracker = Tracker.find_by_md5sum(params[:id])
+    unless @tracker
+      render :text => "Tracker id missing or wrong."
+    else
+      @pieces = @tracker.changes
+
+      if(@tracker.sick?)
+        @pieces += @tracker.sick?  # add 10 most recent errors
+        @pieces = @pieces.sort{ |a,b|  -(a.created_at <=> b.created_at) }
+      end
+      render :layout => false
+    end
   end
 
   # GET /trackers/new
