@@ -19,14 +19,6 @@ class TrackersController < ApplicationController
     end
   end
 
-  def examples
-    @trackers = Tracker.find(:all)
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
-  end
-
   # GET /trackers/1
   # GET /trackers/1.xml
   def show
