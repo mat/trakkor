@@ -196,6 +196,7 @@ class TrackersController < ApplicationController
   end
 
   def stats
+    authenticate
     @active_trackers = Tracker.find(:all).length
     @sick_trackers = Tracker.find(:all).find_all{ |t| t.sick? }
     @healthy_trackers = Tracker.find(:all).find_all{ |t| !t.sick? }
@@ -221,6 +222,12 @@ class TrackersController < ApplicationController
   end
 
   private
+
+  def authenticate
+    authenticate_or_request_with_http_basic("Trakkor stats") do |username, password|
+      username == "admin" && password == APP_CONFIG['password']
+    end
+  end
 
   def cache
     FileCache.new('tmp/tracker_test_cache')
