@@ -6,8 +6,6 @@ require 'cache'
 class TrackersController < ApplicationController
   protect_from_forgery :except => [:changes_and_errors]
 
-  #caches_page :index, :examples, :show
-
   # GET /trackers
   # GET /trackers.xml
   def index
@@ -58,12 +56,6 @@ class TrackersController < ApplicationController
   # GET /trackers/new.xml
   def new
     @tracker = Tracker.new(params[:tracker])
-    #@tracker = Tracker.new
-    #@tracker.uri = params[:uri]
-    #@tracker.xpath = params[:xpath]
-    #@tracker.name = params[:name]
-    #@tracker.web_hook = params[:web_hook]
-    
     
     if @tracker.uri && @tracker.xpath 
        @piece = @tracker.fetch_piece
@@ -79,13 +71,6 @@ class TrackersController < ApplicationController
       format.html # new.html.erb
       format.xml  { render :xml => @tracker }
     end
-  end
-
-
-  def ajax_get_piece
-    uri = params[:uri]
-    xpath = params[:xpath]
-    render :text => "hossa we got #{uri}<br> and #{xpath}"
   end
 
   def testxpath

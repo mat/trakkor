@@ -2,12 +2,10 @@ require 'rubygems'
 require 'hpricot'
 
 class Piece < ActiveRecord::Base
-
   belongs_to :tracker
 
   named_scope :errs, :conditions => 'NOT error IS NULL', :order => 'created_at ASC' 
-
-  named_scope :old, :conditions => ['created_at < ?', 6.months.ago]
+  named_scope :old,  :conditions => ['created_at < ?', 6.months.ago]
 
   def fetch(uri,xpath)
     start = Time.now.to_f

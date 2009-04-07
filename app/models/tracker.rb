@@ -79,30 +79,7 @@ class Tracker < ActiveRecord::Base
 
   def changes(whether_from_cache = [])
     changes_impl
-#    key = ['changes',self.id]
-#    cached_changes = Cache[key]
-#
-#    if cached_changes
-#     cached_changes = YAML::load(cached_changes)
-#      whether_from_cache << true
-#      cached_changes
-#    else
-#
-#      fresh_changes = changes_impl
-#      whether_from_cache << false
-#      Cache[key] = YAML::dump(fresh_changes)
-#      fresh_changes
-#    end
   end
-
-#  def invalidate_changes
-#    key = ['changes',self.id]
-#    Cache.delete key
-#  end
-#
-#  def before_destroy
-#     invalidate_changes
-#   end
 
   def changes_impl
     all_changes = pieces_errorfree

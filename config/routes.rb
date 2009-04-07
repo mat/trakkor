@@ -1,16 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  #map.resources :pieces
-  
   map.find_xpath "/trackers/find-xpath", :controller => 'trackers', :action => 'find_xpath'
   map.test_xpath "/trackers/test-xpath", :controller => 'trackers', :action => 'test_xpath'
   map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats'
   map.web_hook "/trackers/web_hook", :controller => 'trackers', :action => 'web_hook'
-
-  #map.tracker "#{prefix}:id", :controller => 'trackers', :action => 'show' 
-  #map.trackers ":id", :controller => 'trackers', :action => 'show' 
-
-  #map.connect "#{prefix}:id.:format", :controller => 'trackers', :action => 'show'
-
 
   map.resources :trackers
 
