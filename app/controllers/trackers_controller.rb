@@ -279,12 +279,6 @@ class TrackersController < ApplicationController
     end
   end
 
-  def remove_all_redundant_pieces
-    Tracker.remove_all_redundant_pieces
-    redirect_to :action => "stats"
-  end
-
-
   private
 
   def cache
