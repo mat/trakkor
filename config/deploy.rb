@@ -11,6 +11,8 @@ server "better-idea.org", :app, :web, :db, :primary => true
 depend :remote, :file, "#{shared_path}/config/config.yml"
 depend :remote, :file, "#{shared_path}/config/thin.yml"
 depend :remote, :file, "#{shared_path}/db/production.sqlite3"
+depend :remote, :directory, "/var/tmp/trakkor/cache/rack/meta"
+depend :remote, :directory, "/var/tmp/trakkor/cache/rack/body"
 
 desc "A setup task to put shared system, log, and database directories in place"
 task :setup, :roles => [:app, :db, :web] do
