@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'hpricot'
 require 'hpricot/inspect-html'
-require 'cache'
 
 class TrackersController < ApplicationController
   protect_from_forgery :except => [:changes_and_errors]
@@ -56,54 +55,6 @@ class TrackersController < ApplicationController
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
          @tracker.name = "Tracking '#{html_title}'"
        end
-    end
-  end
-
-  def testxpath
-    @uri = params[:uri]
-    @xpath = params[:xpath]
-
-    raise "this is not an http uri: #{@uri}" unless Tracker.uri?(@uri)
-
-    begin
-      data, doc = cache.get(@uri), cache.get("#{@uri}.doc")
-      if data and doc
-        doc = Marshal.restore(doc)
-        @complete_html = cache.get("#{@uri}.pretty_html")
-      else
-        data = Piece.fetch_from_uri(@uri).body
-        doc = Hpricot.parse(data)
-        @complete_html = PP.pp(doc.root, "")
-        @complete_html.gsub!(/#XPATH#(.*)#\/XPATH#/, "/moduri/test?uri=#{@uri}&xpath=#{"\\1"}")
-
-        cache.set(@uri, data)
-	cache.set("#{@uri}.doc", Marshal.dump(doc))
-	cache.set("#{@uri}.pretty_html", @complete_html)
-      end
-
-      @foo = "/test?uri=#{@uri}&xpath=#{@xpath}"
-
-      html, text = Tracker.extract(doc, @xpath)
-      if html and text
-        flash[:notice] = "DOM elem found in uri, #{42} matches" 
-    	@domnode_html = html
-        @domnode_text = text
-        @found_in_line = 4711
-      else
-        flash[:notice] = 'Cannot find DOM elem designated by given xpath.'
-    	@domnode_html = 'nix'
-	@domnode_text = 'nix'
-      end
-
-    rescue Exception => e
-       flash[:notice] = "Error: #{e.to_s}"
-       flash[:hint] = "Hint: #{e.to_s}"
-    end
-
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => nil }
     end
   end
 
@@ -207,9 +158,5 @@ class TrackersController < ApplicationController
     authenticate_or_request_with_http_basic("Trakkor stats") do |username, password|
       username == "admin" && password == APP_CONFIG['password']
     end
-  end
-
-  def cache
-    FileCache.new('tmp/tracker_test_cache')
   end
 end
