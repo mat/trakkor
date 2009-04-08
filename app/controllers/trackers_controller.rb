@@ -20,7 +20,7 @@ class TrackersController < ApplicationController
   # GET /trackers/1
   # GET /trackers/1.xml
   def show
-    #@tracker = Tracker.find(params[:id])
+    expires_in 5.minutes, :private => false
     @tracker = Tracker.find_by_md5sum(params[:id])
 
     if stale?(:last_modified => @tracker.last_modified, :public => true)
