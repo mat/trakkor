@@ -22,19 +22,23 @@ class TrackersController < ApplicationController
   def show
     #@tracker = Tracker.find(params[:id])
     @tracker = Tracker.find_by_md5sum(params[:id])
-    @changes = @tracker.changes
 
-    if(params[:errors] == 'show')
-      @changes += @tracker.sick?  # add 10 most recent errors
-      @changes = @changes.sort{ |a,b|  -(a.created_at <=> b.created_at) }
+    if stale?(:last_modified => @tracker.last_modified, :public => true)
+      @changes = @tracker.changes
+
+      if(params[:errors] == 'show')
+        @changes += @tracker.sick?  # add 10 most recent errors
+        @changes = @changes.sort{ |a,b|  -(a.created_at <=> b.created_at) }
+      end
+
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @tracker }
+        format.microsummary { render :text => "Trakkor: #{@tracker.last_change.text}" }
+        format.atom
+      end
     end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @tracker }
-      format.microsummary { render :text => "Trakkor: #{@tracker.last_change.text}" } 
-      format.atom
-    end
   end
 
   def changes_and_errors

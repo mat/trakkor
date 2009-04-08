@@ -113,6 +113,10 @@ class Tracker < ActiveRecord::Base
     pieces.first.created_at
   end
 
+  def last_modified
+    last_change.updated_at.utc
+  end
+
   def bytes_recorded
      sql = "SELECT SUM(bytecount) FROM pieces WHERE tracker_id=#{self.id}"
      ActiveRecord::Base.connection.select_one(sql).to_a.first.last.to_i
