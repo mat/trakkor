@@ -24,6 +24,13 @@ Rails::Initializer.run do |config|
   # To use Rails without a database, you must remove the Active Record framework
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
+  config.gem "rack-cache", :lib => 'rack/cache', :version => '0.4'
+
+  config.middleware.use("Rack::Cache",
+    :verbose => true,
+    :metastore   => 'file:/var/tmp/trakkor/cache/rack/meta',
+    :entitystore => 'file:/var/tmp/trakkor/cache/rack/body')
+
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
