@@ -6,19 +6,10 @@ require 'cache'
 class TrackersController < ApplicationController
   protect_from_forgery :except => [:changes_and_errors]
 
-  # GET /trackers
-  # GET /trackers.xml
   def index
     @trackers = Tracker.live_examples
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @trackers }
-    end
   end
 
-  # GET /trackers/1
-  # GET /trackers/1.xml
   def show
     expires_in 5.minutes, :private => false
     @tracker = Tracker.find_by_md5sum(params[:id])
@@ -33,12 +24,10 @@ class TrackersController < ApplicationController
 
       respond_to do |format|
         format.html # show.html.erb
-        format.xml  { render :xml => @tracker }
         format.microsummary { render :text => "Trakkor: #{@tracker.last_change.text}" }
         format.atom
       end
     end
-
   end
 
   def changes_and_errors
@@ -56,8 +45,6 @@ class TrackersController < ApplicationController
     end
   end
 
-  # GET /trackers/new
-  # GET /trackers/new.xml
   def new
     @tracker = Tracker.new(params[:tracker])
     
@@ -69,11 +56,6 @@ class TrackersController < ApplicationController
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
          @tracker.name = "Tracking '#{html_title}'"
        end
-    end
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @tracker }
     end
   end
 
@@ -208,20 +190,14 @@ class TrackersController < ApplicationController
     @newest_trackers = Tracker.newest
   end
 
-  # POST /trackers
-  # POST /trackers.xml
   def create
     @tracker = Tracker.new(params[:tracker])
 
-    respond_to do |format|
-      if @tracker.save
-        flash[:notice] = 'Tracker was successfully created.'
-        format.html { redirect_to(@tracker) }
-        format.xml  { render :xml => @tracker, :status => :created, :location => @tracker }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @tracker.errors, :status => :unprocessable_entity }
-      end
+    if @tracker.save
+      flash[:notice] = 'Tracker was successfully created.'
+      redirect_to(@tracker)
+    else
+      render :action => "new"
     end
   end
 
