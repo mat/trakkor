@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.find_xpath "/trackers/find-xpath", :controller => 'trackers', :action => 'find_xpath'
-  map.test_xpath "/trackers/test-xpath", :controller => 'trackers', :action => 'test_xpath'
-  map.stats "/trackers/stats", :controller => 'trackers', :action => 'stats'
+  map.find_xpath  "/find",       :controller => 'trackers', :action => 'find_xpath'
+  map.test_xpath  "/test-xpath", :controller => 'trackers', :action => 'test_xpath'
+  map.stats       "/stats",      :controller => 'trackers', :action => 'stats'
 
   map.resources :trackers
 
