@@ -9,6 +9,7 @@ set :branch, "master"
 server "better-idea.org", :app, :web, :db, :primary => true
 
 depend :remote, :file, "#{shared_path}/config/config.yml"
+depend :remote, :file, "#{shared_path}/config/thin.yml"
 depend :remote, :file, "#{shared_path}/db/production.sqlite3"
 
 desc "A setup task to put shared system, log, and database directories in place"
@@ -26,12 +27,36 @@ task :symlink_shared do
 end
 
 
-#namespace :cache do
-#  desc "rake cache:sweep"
-#  task :sweep do
-#    run "cd #{current_path} && rake cache:sweep"
-#  end
-#end
+namespace :deploy do
+  %w(start stop restart).each do |action|
+    desc "#{action} our server"
+    task action.to_sym do
+      find_and_execute_task("thin:#{action}")
+    end
+  end
+end
 
-#after :deploy, "cache:sweep"
+
+namespace :thin do
+  desc "Generate a thin configuration file"
+  task :build_configuration, :roles => :app do
+    config_options = {
+        "log" => "#{current_path}/log/thin.log",
+        "chdir" => current_path,
+        "port" => 3600,
+        "servers" => 1,
+        "environment" => "production",
+        "address" => "localhost",
+        "pid" => "#{current_path}/pids/thin.pid"
+    }.to_yaml
+    put config_options, "#{shared_path}/config/thin.yml"
+  end
+
+  %w(start stop restart).each do |action|
+    desc "#{action} this app's Thin Cluster"
+    task action.to_sym, :roles => :app do
+      run "thin #{action} -C #{shared_path}/config/thin.yml"
+    end
+  end
+end
 
