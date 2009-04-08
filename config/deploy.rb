@@ -41,13 +41,13 @@ namespace :thin do
   desc "Generate a thin configuration file"
   task :build_configuration, :roles => :app do
     config_options = {
-        "log" => "#{current_path}/log/thin.log",
+        "log" => "#{shared_path}/log/thin.log",
         "chdir" => current_path,
         "port" => 3600,
         "servers" => 1,
         "environment" => "production",
         "address" => "localhost",
-        "pid" => "#{current_path}/pids/thin.pid"
+        "pid" => "#{shared_path}/pids/thin.pid"
     }.to_yaml
     put config_options, "#{shared_path}/config/thin.yml"
   end
