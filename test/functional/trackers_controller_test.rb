@@ -49,6 +49,11 @@ class TrackersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  def test_show_on_missing_tracker
+    get :show, :id => 'does-not-exist'
+    assert_response 404
+  end
+
   def test_simple_show
     get :show, :id => '68b329da9893e34099c7d8ad5cb9c940'
     assert_response :success # HTTP 200

@@ -13,6 +13,11 @@ class TrackersController < ApplicationController
     expires_in 5.minutes, :private => false
     @tracker = Tracker.find_by_md5sum(params[:id])
 
+    unless @tracker
+      render :text => 'No tracker found for this id.', :status => 404
+      return
+    end
+
     if stale?(:last_modified => @tracker.last_modified, :public => true)
       @changes = @tracker.changes
 
