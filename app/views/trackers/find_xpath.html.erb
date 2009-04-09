@@ -21,7 +21,7 @@
 <% if @hits && !@hits.empty? %>
 <div class="flash">
   <div class="message notice">
-    <p><%= @hits.size %> elements have been found.</p>
+    <p><%= pluralize(@hits.size, "element") %> found.</p>
   </div>
 </div>
 
