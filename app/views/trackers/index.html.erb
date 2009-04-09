@@ -32,7 +32,7 @@ by an XPath and informs you via Atom feed if it changes.
     <td><%= link_to "#{tracker.name}", tracker_path(tracker) %>
       <br/><span class='change_time'>discovered  <%= timeago(tracker.last_change.created_at) %></span>
     </td>
-    <td class='piece'><%= tracker.last_change.text %></td>
+    <td class='piece'><%= htidy tracker.last_change.text %></td>
   </tr>
 <% end %>
 </table>
