@@ -74,10 +74,6 @@ Trakkor allows you to define a Web Hook for your tracker that will be triggered 
   Additionally each tracker provides a <a href='https://wiki.mozilla.org/Microsummaries'>Microsummary</a>, i.e. a live bookmark that changes its caption dynamically.
 </li>
 
-   <li class='q'>Have animals or software tools been hurt during the creation of Trakkor?</li>
-   <li class='a'>Trakkor is written in Ruby and uses <a href='http://rubyonrails.org'>Ruby on Rails</a>. Behind the scenes cron, SQLite and Hpricot are heavily abused, but certainly not hurt. No animals have been hurt.</li>
-
-
 <li class='q'>Are the any tools that might help me find a fitting XPath if Trakkor doesn't cut it?</li>
 <li class='a'>Finding an appropriate XPath that selects the desired element can be difficult: I suggest using either the <a href="https://addons.mozilla.org/en-US/firefox/addon/1192" title='XPather Firefox addon'>XPather</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/1095" title='XPath Checker Firefox addon'>XPath Checker</a> Firefox addons. Both allow you to right-click a page element and give you an XPath that describes it. But please bear in mind that some of the XPathes created by these tools (e.g. the id() function) are not understood by Trakkor's Hpricot library, see <a href='http://wiki.github.com/why/hpricot/supported-xpath-expressions' title='XPath expressions supported by Trakkor'>Supported XPath Expressions</a> for details.</li>
 
