@@ -305,19 +305,19 @@ ul.list li .item .avatar {
 
 
 /* FAQ */
-#faqblock { margin-left: 1em; }
-ul {list-style-type:none;}
+.listblock { margin-left: 1em; }
+.listblock li { list-style-type:none; padding-bottom: 0.4em; }
 
-#faqblock .q {
+.listblock .q {
   font-style: italic;
   padding-bottom: 0.5em;
 }
 
-#faqblock .a {
+.listblock .a {
   padding-bottom: 20px;
 }
 
-#faqblock li p {
+.listblock li p {
   margin: 0;
   padding: 0;
 }
