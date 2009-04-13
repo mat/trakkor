@@ -110,10 +110,6 @@ margin-top: 5px;
   font-size: 1.4em;
 }
 
-.biglink {
-  font-size: 1.5em;
-}
-
 .errorchange span {
   background-color: #ee8058;
 }
@@ -187,19 +183,6 @@ table#changetable tr td.change_datetime {
 }
 
 
-.subtitle {
-  font-size: 0.8em;
-  color: #4d54b3;
-  padding: 0px;
-  margin: 0px;
-}
-
-.logo {
- font-size: 2.5em;
-  color: #4d54b3;
-  padding: 0px;
-}
-
 #contentdiv {
   padding-left: 50px;
   width: 90%;
@@ -208,27 +191,6 @@ table#changetable tr td.change_datetime {
 #contentdiv .textonly {
   padding-left: 50px;
   width: 500px;
-}
-
-.title {
-  font-style: italic;
-}
-
-.title #title {
-  font-size: 2.5em;
-  font-style: normal;
-  letter-spacing: 0.1em;
-}
-
-.title a {
-  text-decoration: none;
-
-}
-.title strong {
-  font-size: 2.5em;
-  font-style: normal;
-  letter-spacing: 0.1em;
-  padding-right: 0px;
 }
 
 .examples {
