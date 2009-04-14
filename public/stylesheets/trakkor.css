@@ -25,18 +25,6 @@ pre {
   line-height: 1em;
 }
 
-
-
-hr {
- color: #4d54b3;
- width: 300px;
- padding: 0px;
-}
-strong {
- color: #4d54b3;
-}
-
-
 #sick {
   background-color: #ee8058;
 }
@@ -139,44 +127,6 @@ table#changetable tr td.change_datetime {
   padding-left: 1em;
 }
 
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
-
 #logodiv {
  color: #4d54b3;
  padding: 10px;
@@ -218,61 +168,6 @@ table#changetable tr td.change_datetime {
   font-family: courier;
   font-size: 1.2em;
 }
-
-/* ---- FORM DESIGN --- 
- * http://woork.blogspot.com/2008/02/beautiful-css-form.html
- ---- FORM DESIGN --- */
-
-input{	font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; 
-	font-size:12px;
-}
-
-div.main{
-	margin:30px auto; 
-	width:340px;
-	}
-
-div.box{
-	padding:10px;
-	color:#333333;
-	margin-bottom:20px;
-	width:70%;
-        background-color: #eee;
-        border: 1px solid #4d54b3;
-}
-div.box h1 {
-	font-size:14px;
-	color:#000000;
-	padding-bottom:4px;
-}
-div.box p{padding-bottom:14px;}
-
-div.box input .input-text{
-	border:1px solid #3b6e22;
-	color:#666666;
-	width:180px;
-}
-
-div.box label{
-	display:block;
-	margin-bottom:10px;
-	color:#555555;
-}
-
-div.box label span{
-	display:block;
-	float:left;
-	padding-right:6px;
-	width:100px;
-	text-align:right;
-	font-weight:bold;
-}
-.spacer{margin-left:80px; 
-	margin-bottom:10px;
-	font-size:11px;
-	color:#555555;
-}
-
 
 #created_on {
   margin-top: 0px;
