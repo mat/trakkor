@@ -1,0 +1,8 @@
+TRAKKOR_PATH=/home/mat/www/trakkor
+04,34 * * * * /usr/local/bin/ruby $TRAKKOR_PATH/fetch-n-save.rb >> $TRAKKOR_PATH/log/cron.log 2>&1
+
+New variable in 
+/etc/environment
+must be named:
+TRAKKOR_PATH=/home/mat/repos/git/trakkor
+

@@ -12,15 +12,3 @@ The libs, gems and whatnot.
 Under Debian:
 sudo apt-get install libxml-ruby1.8 libsqlite3-ruby 
 
-== The cron job
-
-Executed every hour on :04 and :34, errors are logged.
-
-TRAKKOR_PATH=/home/mat/www/trakkor
-04,34 * * * * /usr/local/bin/ruby $TRAKKOR_PATH/fetch-n-save.rb >> $TRAKKOR_PATH/log/cron.log 2>&1
-
-New variable in 
-/etc/environment
-must be named:
-TRAKKOR_PATH=/home/mat/repos/git/trakkor
-
