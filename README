@@ -1,14 +1,4 @@
 === Trakkor
 
-TODO
-
-* caching
-* rakify fetch-n-save.rb
-
-==
-
-The libs, gems and whatnot.
-
-Under Debian:
-sudo apt-get install libxml-ruby1.8 libsqlite3-ruby 
+Code of http://trakkor.better-idea.org
 
