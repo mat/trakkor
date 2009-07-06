@@ -25,6 +25,7 @@ Rails::Initializer.run do |config|
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
   config.gem "rack-cache", :lib => 'rack/cache', :version => '0.4'
+  config.gem "RedCloth"
 
   config.middleware.use("Rack::Cache",
     :verbose => true,
