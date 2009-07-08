@@ -114,7 +114,10 @@ class Tracker < ActiveRecord::Base
   end
 
   def last_modified
-    last_change.updated_at.utc
+    last_anything = last_change || pieces.first
+    return last_anything.updated_at.utc if last_anything
+
+    Time.now.utc
   end
 
   def bytes_recorded

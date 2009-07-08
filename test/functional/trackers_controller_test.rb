@@ -6,6 +6,8 @@ class TrackersControllerTest < ActionController::TestCase
 #    assert_response :success
 #    assert_not_nil assigns(:trackers)
 #  end
+  fixtures :trackers
+  fixtures :pieces
 
   def test_should_get_new
     get :new
@@ -92,6 +94,15 @@ class TrackersControllerTest < ActionController::TestCase
     should "do something else really cool" do
       #assert_equal 1, assigns(:user).id
     end
+  end
+
+  def test_show_on_tracker_with_no_pieces
+    get :show, :id => '16cb80c98c24a346a5d5cbbdb3a86499'
+    assert_response :success # HTTP 200
+    assert_not_nil assigns(:tracker)
+    assert_not_nil assigns(:changes)
+
+    assert @response['Last-Modified']
   end
 
 
