@@ -1,6 +1,6 @@
 require 'atom_monkeypatch'
 
-updated = @tracker.last_change.created_at
+updated = @tracker.last_modified
 sick_note = ''
 
 if @tracker.sick?
