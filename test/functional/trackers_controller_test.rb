@@ -114,6 +114,15 @@ class TrackersControllerTest < ActionController::TestCase
     assert @response['Last-Modified']
   end
 
+  def test_show_with_errors_on_tracker_with_no_errors
+    get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :errors => "show"
+    assert_response :success # HTTP 200
+    assert_not_nil assigns(:tracker)
+    assert_not_nil assigns(:changes)
+
+    assert @response['Last-Modified']
+  end
+
 
 #  def test_should_create_tracker
 #    assert_difference('tracker.count') do
