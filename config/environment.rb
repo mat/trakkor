@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   # To use Rails without a database, you must remove the Active Record framework
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
-  config.gem "rack-cache", :lib => 'rack/cache', :version => '0.4'
+  config.gem "rack-cache", :lib => 'rack/cache'
   config.gem "RedCloth"
 
   config.middleware.use("Rack::Cache",
