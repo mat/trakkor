@@ -1,6 +1,14 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
+require 'fakeweb'
+
+FakeWeb.allow_net_connect = false
+FakeWeb.register_uri(:get, "http://better-idea.org", :body => File.read('test/files/better-idea.html'))
+FakeWeb.register_uri(:get, "http://example.com", :body => File.read('test/files/example.html'))
+FakeWeb.register_uri(:get, "http://better-idea.org/img/jichtplaner_plan.gif", :content_type => "image/gif", :body => 'nothing')
+FakeWeb.register_uri(:get, "http://better-idea.org/foo", :status => ["404", "Not Found"], :body => 'nothing')
+
 
 #require 'mocha'
 
