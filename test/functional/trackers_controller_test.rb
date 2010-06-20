@@ -118,4 +118,11 @@ class TrackersControllerTest < ActionController::TestCase
 
     assert @response['Last-Modified']
   end
+
+  def test_create_amazon
+    params = {:tracker => { :uri => "http://www.amazon.de/Driven-Development-Example-Addison-Wesley-Signature/dp/0321146530",
+                  :xpath => "//div[@id=''priceBlock'']/table/tr[1]/td[2]/b[1]" } }
+    get :new, params
+    assert_response :success # HTTP 200"
+  end
 end

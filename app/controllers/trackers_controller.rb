@@ -64,7 +64,7 @@ class TrackersController < ApplicationController
        @piece = @tracker.fetch_piece
 
        if @tracker.name.nil? || @tracker.name.empty?
-         html_title = @tracker.html_title
+         html_title = @tracker.html_title.to_s
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
          @tracker.name = "Tracking '#{html_title}'"
        end
