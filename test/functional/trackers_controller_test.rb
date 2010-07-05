@@ -76,7 +76,12 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_show_with_microsummary
     get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :format => "microsummary" 
+    assert_response :success # HTTP 200
+    end
 
+  def test_show_with_microsummary_on_tracker_with_no_pieces
+    get :show, :id => '16cb80c98c24a346a5d5cbbdb3a86499', :format => "microsummary"
+    assert_response :success # HTTP 200
   end
 
   context "on GET to :show" do

@@ -36,8 +36,12 @@ class TrackersController < ApplicationController
 
       respond_to do |format|
         format.html # show.html.erb
-        format.microsummary { render :text => "Trakkor: #{@tracker.last_change.text}" }
         format.atom
+        format.microsummary do
+          txt = ''
+          txt = @tracker.last_change.text unless @tracker.last_change.nil?
+          render :text => "Trakkor: #{txt}"
+        end
       end
     end
   end
