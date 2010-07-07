@@ -87,14 +87,9 @@ class TrackersControllerTest < ActionController::TestCase
   context "on GET to :show" do
     setup { get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :format => "microsummary" }
 
-
     should_assign_to :tracker
     should_respond_with :success
     should_not_set_the_flash
-
-    should "do something else really cool" do
-      #assert_equal 1, assigns(:user).id
-    end
   end
 
   def test_show_on_tracker_with_no_pieces
