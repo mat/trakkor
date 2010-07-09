@@ -5,6 +5,8 @@ class TrackersControllerTest < ActionController::TestCase
   fixtures :trackers
   fixtures :pieces
 
+  GOOD_ID = '68b329da9893e34099c7d8ad5cb9c940'
+
   def test_should_get_new
     get :new
     assert_response :success
@@ -53,29 +55,29 @@ class TrackersControllerTest < ActionController::TestCase
   end
 
   def test_simple_show
-    get :show, :id => '68b329da9893e34099c7d8ad5cb9c940'
+    get :show, :id => GOOD_ID
     assert_response :success # HTTP 200
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
 
     assert @response['Last-Modified']
 
-    last_modified = Tracker.find_by_md5sum("68b329da9893e34099c7d8ad5cb9c940").last_modified
+    last_modified = Tracker.find_by_md5sum(GOOD_ID).last_modified
     assert_equal last_modified.httpdate, @response['Last-Modified']
   end
 
   def test_cached_show_with_fresh_if_modified_since
     return #FIXME Make cache test work
-    last_modified = Tracker.find_by_md5sum("68b329da9893e34099c7d8ad5cb9c940").last_modified
+    last_modified = Tracker.find_by_md5sum(GOOD_ID).last_modified
 
-    get(:show, {:id => '68b329da9893e34099c7d8ad5cb9c940', 'HTTP_IF_MODIFIED_SINCE' => last_modified.httpdate})
+    get(:show, {:id => GOOD_ID, 'HTTP_IF_MODIFIED_SINCE' => last_modified.httpdate})
     assert_response 304
     assert @response['Last-Modified']
     assert_equal last_modified.httpdate, @response['Last-Modified']
   end
 
   def test_show_with_microsummary
-    get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :format => "microsummary" 
+    get :show, :id => GOOD_ID, :format => "microsummary"
     assert_response :success # HTTP 200
     end
 
@@ -85,7 +87,7 @@ class TrackersControllerTest < ActionController::TestCase
   end
 
   context "on GET to :show" do
-    setup { get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :format => "microsummary" }
+    setup { get :show, :id => GOOD_ID, :format => "microsummary" }
 
     should_assign_to :tracker
     should_respond_with :success
@@ -111,7 +113,7 @@ class TrackersControllerTest < ActionController::TestCase
   end
 
   def test_show_with_errors_on_tracker_with_no_errors
-    get :show, :id => '68b329da9893e34099c7d8ad5cb9c940', :errors => "show"
+    get :show, :id => GOOD_ID, :errors => "show"
     assert_response :success # HTTP 200
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
