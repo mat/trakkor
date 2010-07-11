@@ -7,3 +7,4 @@ current
 releases/**
 shared/**
 config/config.yml
+.bundle
