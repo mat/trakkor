@@ -67,7 +67,7 @@ class TrackersController < ApplicationController
     if @tracker.uri && @tracker.xpath 
        @piece = @tracker.fetch_piece
 
-       if @tracker.name.nil? || @tracker.name.empty?
+       if @tracker.name.blank?
          html_title = @tracker.html_title.to_s
          html_title = "#{html_title[0..50]}..." if html_title.length > 50
          @tracker.name = "Tracking '#{html_title}'"
@@ -80,7 +80,7 @@ class TrackersController < ApplicationController
     @uri    = params[:uri]
     @q = params[:q]
 
-    if @uri.nil? || @q.nil? || @uri.empty? || @q.empty?
+    if @uri.blank? || @q.blank?
       flash[:hint] = "Please provide an URI and a search term."
       return 
     end
@@ -136,7 +136,7 @@ class TrackersController < ApplicationController
     @uri = params[:uri]
     @xpath = params[:xpath]
     
-    if @uri.nil? || @xpath.nil? || @uri.empty? || @xpath.empty?
+    if @uri.blank? || @xpath.blank?
       flash[:hint] = "Please provide an URI and an XPath."
       return 
     end
