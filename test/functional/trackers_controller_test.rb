@@ -24,9 +24,9 @@ class TrackersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def test_find_xpath_should_display_hint_unless_uri_and_search_given
+  def test_find_xpath_should_display_error_unless_uri_and_search_given
     get :find_xpath, :uri => "" , :q => "" 
-    assert_equal "Please provide an URI and a search term." , flash[:hint]
+    assert_equal "Please provide an URI and a search term." , flash[:error]
     assert_response :success
   end
 
@@ -45,7 +45,7 @@ class TrackersControllerTest < ActionController::TestCase
   def test_find_xpath_should_display_error_if_uri_points_to_non_html_document
     get :find_xpath, :uri => "http://better-idea.org/img/jichtplaner_plan.gif" , :q => "foo" 
     assert_nil assigns(:piece)
-    assert_equal "URI does not point to a text document but a image/gif file." , flash[:hint]
+    assert_equal "URI does not point to a text document but a image/gif file." , flash[:error]
     assert_response :success
   end
 

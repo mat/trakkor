@@ -62,14 +62,6 @@ pre {
   font-weight: normal;
 }
 
-.hint {
-  background-color: #ee8058;
-  color: #fff;
-  padding: 3px;
-  margin-top: 30px;
-  font-weight: normal;
-}
-
 ul.hitlist li {
   list-style-type: decimal;
   margin-bottom: 50px;

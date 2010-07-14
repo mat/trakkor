@@ -76,12 +76,12 @@ class TrackersController < ApplicationController
   end
 
   def find_xpath
-    @hits = flash[:hint] = flash[:error] = nil
+    @hits = flash[:error] = nil
     @uri    = params[:uri]
     @q = params[:q]
 
     if @uri.blank? || @q.blank?
-      flash[:hint] = "Please provide an URI and a search term."
+      flash[:error] = "Please provide an URI and a search term."
       return 
     end
 
@@ -113,7 +113,7 @@ class TrackersController < ApplicationController
       end
 
       unless response.content_type =~ /text/
-        flash[:hint] = "URI does not point to a text document " + 
+        flash[:error] = "URI does not point to a text document " +
                        "but a #{response.content_type} file."
       end
 
@@ -137,7 +137,7 @@ class TrackersController < ApplicationController
     @xpath = params[:xpath]
     
     if @uri.blank? || @xpath.blank?
-      flash[:hint] = "Please provide an URI and an XPath."
+      flash[:error] = "Please provide an URI and an XPath."
       return 
     end
       

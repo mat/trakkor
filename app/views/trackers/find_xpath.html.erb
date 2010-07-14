@@ -5,14 +5,14 @@
 <%= render :partial => 'find_xpath_form', 
            :locals => { :q => @q, :uri => @uri } %>
 
-<% if flash[:hint] %>
-  <p class='hint'><strong><%= flash[:hint] %></strong></p>
-<% end %>
-
-
 <% if flash[:error] %>
-<p class='error'><strong><%= flash[:error] %></strong></p>
+<div class="flash">
+  <div class="message error">
+    <p><%= flash[:error] %></p>
+  </div>
+</div>
 <% else %>
+
 
 <%= error_messages_for :tracker %>
 
