@@ -90,6 +90,14 @@ class TrackerTest < ActiveSupport::TestCase
       assert @tracker.pieces_errorfree == @tracker.pieces
     end
 
+    should "vanish and destroy its pieces when destroyed" do
+      assert_equal 3, Piece.find_all_by_tracker_id(@tracker.id).length
+
+      @tracker.destroy
+      assert @tracker.destroyed?
+      assert_equal 0, Piece.find_all_by_tracker_id(@tracker.id).length
+    end
+
   end
   ############
   context "A fresh Tracker" do

@@ -127,4 +127,15 @@ class TrackersControllerTest < ActionController::TestCase
     get :new, params
     assert_response :success # HTTP 200"
   end
+
+  def test_destroy
+    get :show, :id => GOOD_ID
+    assert_response 200
+
+    delete :destroy, :id => GOOD_ID
+    assert_response 302 # redirect to confirmation page
+
+    get :show, :id => GOOD_ID
+    assert_response 404
+  end
 end

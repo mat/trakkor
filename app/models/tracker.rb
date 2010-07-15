@@ -17,7 +17,7 @@ class Tracker < ActiveRecord::Base
   named_scope :web_hooked, :conditions => 'web_hook IS NOT NULL'
 
   # order: oldest piece first, most recent last
-  has_many :pieces, :order => 'created_at ASC' 
+  has_many :pieces, :order => 'created_at ASC', :dependent => :destroy
 
   def to_param
     "#{md5sum}"

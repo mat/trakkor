@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.stats       "/stats",      :controller => 'trackers', :action => 'stats'
 
   map.resources :trackers
+  map.resources :trackers, :member => { :delete => :get }
 
   map.connect "no_one_may_see_my_exceptions/:action/:id", :controller => "logged_exceptions"
 

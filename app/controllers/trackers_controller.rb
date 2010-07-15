@@ -165,6 +165,22 @@ class TrackersController < ApplicationController
     end
   end
 
+  def destroy
+    @tracker = Tracker.find_by_md5sum(params[:id])
+    redirect_to(stats_path) and return if params[:cancel]
+    @tracker.destroy
+    respond_to do |format|
+      format.html { redirect_to stats_path }
+    end
+  end
+
+  def delete
+    @tracker = Tracker.find_by_md5sum(params[:id])
+    respond_to do |format|
+      format.html # delete.html.erb
+    end
+  end
+
   private
 
   def authenticate
