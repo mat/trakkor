@@ -63,7 +63,7 @@ class TrackersController < ApplicationController
 
   def new
     @tracker = Tracker.new(params[:tracker])
-    
+
     if @tracker.uri && @tracker.xpath 
        @piece = @tracker.fetch_piece
 
@@ -77,8 +77,8 @@ class TrackersController < ApplicationController
 
   def find_xpath
     @hits = flash[:error] = nil
-    @uri    = params[:uri]
-    @q = params[:q]
+    @uri  = params[:uri]
+    @q    = params[:q]
 
     if @uri.blank? || @q.blank?
       flash[:error] = "Please provide an URI and a search term."
@@ -120,7 +120,7 @@ class TrackersController < ApplicationController
       doc = Hpricot(data)
 
       unless doc
-        flash[:error] = 'URI does not point to a document that Trakkor understands.'        
+        flash[:error] = 'URI does not point to a document that Trakkor understands.'
         return nil
       end
 
@@ -135,12 +135,12 @@ class TrackersController < ApplicationController
   def test_xpath
     @uri = params[:uri]
     @xpath = params[:xpath]
-    
+
     if @uri.blank? || @xpath.blank?
       flash[:error] = "Please provide an URI and an XPath."
       return 
     end
-      
+
      doc = fetch_doc_from(@uri)
      @elem, @parents = Piece.extract_with_parents(doc, @xpath) if doc
   end
