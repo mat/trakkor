@@ -171,6 +171,7 @@ class TrackersController < ApplicationController
     @tracker.destroy
     respond_to do |format|
       format.html { redirect_to stats_path }
+      format.js { render :nothing => true }
     end
   end
 

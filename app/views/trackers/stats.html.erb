@@ -57,4 +57,25 @@ This statistics were created at <%= Time.now %>
   No tracker has defined a web hook.
 <% end %>
 
+<script type="text/javascript">
+  // http://brandonaaron.net/blog/2009/02/25/unobtrusive-destroy-links-in-rails-using-jquery
+  jQuery(document).ready(function() {
+    $('a.delete').live('click', function(event) {
 
+        if ( confirm("Delete this tracker?") )
+            $.ajax({
+                url: this.href.replace(/\/delete$/,''),
+                type: 'post',
+                dataType: 'script',
+                data: { '_method': 'delete' },
+                success: function() {
+                  // the item has been deleted
+                  // reload by setting window.location
+                  window.location = '/stats'
+                }
+            });
+
+        return false;
+    });
+  });
+</script>
