@@ -6,6 +6,7 @@ class TrackersControllerTest < ActionController::TestCase
   fixtures :pieces
 
   GOOD_ID = '68b329da9893e34099c7d8ad5cb9c940'
+  NO_PIECES_ID = '16cb80c98c24a346a5d5cbbdb3a86499'
 
   def test_should_get_new
     get :new
@@ -82,7 +83,7 @@ class TrackersControllerTest < ActionController::TestCase
     end
 
   def test_show_with_microsummary_on_tracker_with_no_pieces
-    get :show, :id => '16cb80c98c24a346a5d5cbbdb3a86499', :format => "microsummary"
+    get :show, :id => NO_PIECES_ID, :format => "microsummary"
     assert_response :success # HTTP 200
   end
 
@@ -95,7 +96,7 @@ class TrackersControllerTest < ActionController::TestCase
   end
 
   def test_show_on_tracker_with_no_pieces
-    get :show, :id => '16cb80c98c24a346a5d5cbbdb3a86499'
+    get :show, :id => NO_PIECES_ID
     assert_response :success # HTTP 200
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
@@ -104,7 +105,7 @@ class TrackersControllerTest < ActionController::TestCase
   end
 
   def test_show_atom_on_tracker_with_no_pieces
-    get :show, :id => '16cb80c98c24a346a5d5cbbdb3a86499', :format => "atom"
+    get :show, :id => NO_PIECES_ID, :format => "atom"
     assert_response :success # HTTP 200
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
