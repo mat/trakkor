@@ -7,7 +7,7 @@ gem "fastercsv", "1.5.3"
 gem "RedCloth", "4.2.3"
 gem "will_paginate", "2.3.12"
 gem "sqlite3-ruby", "1.3.1"
-gem "json", "1.2.3"
+gem "json", "1.4.3"
 gem "thin", "1.2.7"
 
 group :test do
