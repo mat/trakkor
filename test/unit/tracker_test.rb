@@ -12,7 +12,7 @@ class TrackerTest < ActiveSupport::TestCase
 
   should_not_allow_values_for :uri, "bad 1"
 
-  ############
+
   context "A Tracker which recently changed its design" do
       setup do
         @tracker = trackers(:new_design_tracker)
@@ -64,7 +64,7 @@ class TrackerTest < ActiveSupport::TestCase
 
   end
 
-  ############
+
   context "A nice Tracker without flaws" do
       setup do
         @tracker = trackers(:nice_tracker)
@@ -99,7 +99,8 @@ class TrackerTest < ActiveSupport::TestCase
     end
 
   end
-  ############
+
+
   context "A fresh Tracker" do
       setup do
         @tracker = Tracker.new
@@ -120,7 +121,7 @@ class TrackerTest < ActiveSupport::TestCase
     end
   end
 
-  ############
+
   context "A Tracker for the //title from better-idea.org" do
       setup do
         @tracker = Tracker.new
@@ -148,36 +149,4 @@ class TrackerTest < ActiveSupport::TestCase
       assert_nil piece.text
     end
   end
-
-  ############
-#  context "A Tracker that caches its changes" do
-#      setup do
-#        @tracker = trackers(:nice_tracker)
-#        @tracker.invalidate_changes
-#      end
-#
-#    should "deliver fresh pieces from db on the first invocation" do
-#      is_cached_result = [] # hack to get info out of changes()
-#      changes = @tracker.changes(is_cached_result)
-#      assert_equal 3, changes.length
-#      assert is_cached_result.include?(false)
-#    end
-
- #   should "deliver cached pieces on the second invocation" do
-#      changes = @tracker.changes
-#      is_cached_result = [] # hack to get info out of changes()
-#      changes = @tracker.changes(is_cached_result)
-
- #     assert_equal 3, changes.length
- #     assert is_cached_result.include?(true)
- #   end
-
-  #  should "deliver the same changes, whether fresh or cached" do
-  #    fresh_changes = @tracker.changes
-  #    cached_changes = @tracker.changes
-
-  #    assert_equal fresh_changes, cached_changes
-  #  end
-  #end
-
 end

@@ -4,7 +4,7 @@ class PieceTest < ActiveSupport::TestCase
 
   should_belong_to :tracker
 
-  ############
+
   context "The class Piece" do
     setup do
       # on vacation

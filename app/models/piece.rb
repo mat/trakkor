@@ -8,17 +8,14 @@ class Piece < ActiveRecord::Base
   named_scope :old,  :conditions => ['created_at < ?', 6.months.ago]
 
   def fetch(uri,xpath)
-    start = Time.now.to_f
     begin
       response = Piece.fetch_from_uri(uri)
     rescue Exception => e
       self.error = "Error: #{e.to_s}"
     end
 
-    duration = Time.now.to_f - start
-
     if response.kind_of? Net::HTTPSuccess
-      html, self.text, self.error = Piece.extract_piece(response.body, xpath)
+      _, self.text, self.error = Piece.extract_piece(response.body, xpath)
       self.bytecount = response.body.length if response.body
     else
       self.error ||= "Error: #{response.code} #{response.message}"
@@ -51,9 +48,7 @@ class Piece < ActiveRecord::Base
     net.open_timeout = 15
     net.read_timeout = 15
  
-    res = net.start() {|http|
-      http.request(req)
-    }
+    net.start() { |http| return http.request(req) }
   end
 
   def Piece.extract_piece(data, xpath)
@@ -76,7 +71,7 @@ class Piece < ActiveRecord::Base
       doc = Hpricot.parse(data.to_s)
     end
 
-    elem = doc.at(xpath)
+    doc.at(xpath)
   end
 
   def Piece.extract_text(data, xpath)
@@ -107,9 +102,7 @@ class Piece < ActiveRecord::Base
   end
 
   def same_content(other)
-     return false if other.nil?
- 
-     self.text == other.text
+     !other.nil? && other.text == self.text
   end
 
 
@@ -121,7 +114,7 @@ class Piece < ActiveRecord::Base
   def Piece.tidy_text(str)
    str = tidy_tabby_lines(str)
    str = tidy_multiple_nl(str)
-   str = str.strip
+   str.strip
   end
 
   def Piece.delete_old_pieces

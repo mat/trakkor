@@ -57,7 +57,7 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_simple_show
     get :show, :id => GOOD_ID
-    assert_response :success # HTTP 200
+    assert_response :success
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
 
@@ -79,12 +79,12 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_show_with_microsummary
     get :show, :id => GOOD_ID, :format => "microsummary"
-    assert_response :success # HTTP 200
+    assert_response :success
     end
 
   def test_show_with_microsummary_on_tracker_with_no_pieces
     get :show, :id => NO_PIECES_ID, :format => "microsummary"
-    assert_response :success # HTTP 200
+    assert_response :success
   end
 
   context "on GET to :show" do
@@ -97,7 +97,7 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_show_on_tracker_with_no_pieces
     get :show, :id => NO_PIECES_ID
-    assert_response :success # HTTP 200
+    assert_response :success
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
 
@@ -106,7 +106,7 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_show_atom_on_tracker_with_no_pieces
     get :show, :id => NO_PIECES_ID, :format => "atom"
-    assert_response :success # HTTP 200
+    assert_response :success
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
 
@@ -115,7 +115,7 @@ class TrackersControllerTest < ActionController::TestCase
 
   def test_show_with_errors_on_tracker_with_no_errors
     get :show, :id => GOOD_ID, :errors => "show"
-    assert_response :success # HTTP 200
+    assert_response :success
     assert_not_nil assigns(:tracker)
     assert_not_nil assigns(:changes)
 
@@ -126,7 +126,7 @@ class TrackersControllerTest < ActionController::TestCase
     params = {:tracker => { :uri => "http://www.amazon.de/Driven-Development-Example-Addison-Wesley-Signature/dp/0321146530",
                   :xpath => "//div[@id=''priceBlock'']/table/tr[1]/td[2]/b[1]" } }
     get :new, params
-    assert_response :success # HTTP 200"
+    assert_response :success
   end
 
   def test_destroy

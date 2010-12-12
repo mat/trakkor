@@ -42,7 +42,7 @@ class Tracker < ActiveRecord::Base
     end
   end
 
-  def validate_on_create # is only run the first time a new object is save
+  def validate_on_create
     @first_piece = fetch_piece
     if @first_piece.error
        errors.add("URI and XPath", "yield no content")
@@ -87,20 +87,15 @@ class Tracker < ActiveRecord::Base
 
     prev_change = nil
     all_changes.each do |c|
-
-      unless c.same_content(prev_change) then
- 	dupefree_changes << c
-      end
-     
+      dupefree_changes << c unless c.same_content(prev_change)
       prev_change = c
     end
 
     # return most recent change first and on top
-    dupefree_changes.reverse!
+    dupefree_changes.reverse
   end
 
   def last_change
-    #return 'now update recognized' if changes.empty?
     changes.first
   end
   alias :current :last_change
@@ -181,7 +176,7 @@ class Tracker < ActiveRecord::Base
 
     nodes.each{ |n| Tracker.collect_parents(n, parents) }
 
-    nodes -= parents.to_a
+    nodes - parents.to_a
   end
 
   def Tracker.live_examples

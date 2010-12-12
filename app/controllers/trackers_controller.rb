@@ -98,13 +98,13 @@ class TrackersController < ApplicationController
 
   def fetch_doc_from(uri)
 
-    unless Tracker.uri?(@uri) then
+    unless Tracker.uri?(uri) then
       flash[:error] = "Please provide a proper HTTP URI like http://w3c.org"
       return nil
     end
 
     begin
-      response, data = Piece.fetch_from_uri(@uri)
+      response, data = Piece.fetch_from_uri(uri)
 
       unless response.kind_of? Net::HTTPSuccess
         flash[:error] = "Could not fetch the document, " +
