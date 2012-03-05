@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081002131448) do
+ActiveRecord::Schema.define(:version => 20120305222744) do
 
   create_table "logged_exceptions", :force => true do |t|
     t.string   "exception_class"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(:version => 20081002131448) do
     t.text     "text"
   end
 
+  add_index "pieces", ["tracker_id", "created_at"], :name => "index_pieces_on_tracker_id_and_created_at"
+  add_index "pieces", ["tracker_id", "error"], :name => "index_pieces_on_tracker_id_and_error"
+
   create_table "trackers", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -41,5 +44,7 @@ ActiveRecord::Schema.define(:version => 20081002131448) do
     t.string   "md5sum"
     t.text     "web_hook"
   end
+
+  add_index "trackers", ["md5sum"], :name => "index_trackers_on_md5sum"
 
 end
