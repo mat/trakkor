@@ -1,5 +1,3 @@
-require 'atom_monkeypatch'
-
 updated = @tracker.last_modified
 sick_note = ''
 
