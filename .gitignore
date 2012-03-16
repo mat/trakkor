@@ -6,5 +6,4 @@ db/production.sqlite3
 current
 releases/**
 shared/**
-config/config.yml
 .bundle
