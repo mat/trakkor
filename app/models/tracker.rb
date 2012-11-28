@@ -187,6 +187,12 @@ class Tracker < ActiveRecord::Base
     Tracker.find(:all, :order => 'created_at DESC', :limit => 5)
   end
 
+  def remove_redundant_pieces!
+    redundant_pieces_ids = redundant_pieces.map(&:id).join(",")
+    sql = "DELETE FROM pieces WHERE id IN(%s)" % redundant_pieces_ids
+    connection.execute(sql)
+  end
+
   def Tracker.remove_all_redundant_pieces
     Tracker.find(:all).each do |t|
       t.redundant_pieces.each { |p| p.destroy }
